@@ -25,9 +25,9 @@ export default function Navbar() {
 
   // Calculate responsive sizes
   const getLogoSize = () => {
-    if (!mounted) return { width: 45, height: 22, fontSize: '1.1rem' }
-    if (windowWidth < 400) return { width: 45, height: 22, fontSize: '1.1rem' }
-    if (windowWidth < 640) return { width: 50, height: 25, fontSize: '1.15rem' }
+    if (!mounted) return { width: 55, height: 27, fontSize: '1.25rem' }
+    if (windowWidth < 400) return { width: 55, height: 27, fontSize: '1.25rem' }
+    if (windowWidth < 640) return { width: 60, height: 30, fontSize: '1.3rem' }
     if (windowWidth < 768) return { width: 40, height: 20, fontSize: '1.2rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
   }
@@ -41,25 +41,25 @@ export default function Navbar() {
         
         @media (max-width: 640px) {
           .navbar {
-            min-height: 60px;
-            padding-top: 4px;
-            padding-bottom: 4px;
+            min-height: 65px;
+            padding-top: 6px;
+            padding-bottom: 6px;
           }
           .navbar .container {
-            padding-left: 10px;
-            padding-right: 10px;
-            gap: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            gap: 10px;
           }
           .navbar-brand {
-            max-width: calc(100vw - 130px);
+            max-width: calc(100vw - 140px);
             overflow: visible;
           }
           .btn-primary.mobile-login {
-            padding: 6px 14px !important;
-            font-size: 1rem !important;
+            padding: 7px 16px !important;
+            font-size: 1.1rem !important;
             min-width: auto !important;
             margin-left: auto;
-            height: 36px !important;
+            height: 40px !important;
             display: flex !important;
             align-items: center !important;
           }
@@ -85,7 +85,7 @@ export default function Navbar() {
                   quality={100}
                   style={{ 
                     objectFit: 'contain',
-                    marginRight: mounted && windowWidth < 640 ? '4px' : '2px'
+                    marginRight: mounted && windowWidth < 640 ? '5px' : '2px'
                   }}
                 />
                 <span style={{ 
@@ -109,9 +109,9 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: mounted && windowWidth < 640 ? '1rem' : '1rem',
+                fontSize: mounted && windowWidth < 640 ? '1.1rem' : '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: mounted && windowWidth < 640 ? '85px' : '120px'
+                minWidth: mounted && windowWidth < 640 ? '95px' : '120px'
               }}
             >
               Client Login

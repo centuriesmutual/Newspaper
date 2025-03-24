@@ -6,14 +6,33 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="hero-section position-relative" style={{ 
-      minHeight: '100dvh',
-      backgroundColor: '#14432A',
-      paddingTop: '0',
-      paddingBottom: '1rem'
-    }}>
+    <section 
+      className="hero-section position-relative" 
+      style={{ 
+        minHeight: '60vh',
+        backgroundColor: '#14432A',
+        paddingTop: '0',
+        paddingBottom: '1rem'
+      }}
+    >
+      <style jsx>{`
+        @media (max-width: 640px) {
+          .hero-section {
+            min-height: 100dvh !important;
+          }
+          .hero-row {
+            min-height: 100dvh !important;
+          }
+        }
+      `}</style>
       <div className="container position-relative">
-        <div className="row align-items-center" style={{ minHeight: '100dvh', paddingTop: '4rem' }}>
+        <div 
+          className="row align-items-center hero-row" 
+          style={{ 
+            minHeight: '60vh',
+            paddingTop: '4rem'
+          }}
+        >
           <div className="col-lg-6 order-lg-2">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

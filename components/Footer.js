@@ -56,7 +56,7 @@ export default function Footer() {
                 <Link href="/about" className="text-white text-decoration-none">About Us</Link>
               </li>
               <li className="mb-2">
-                <Link href="/services" className="text-white text-decoration-none">Services</Link>
+                <Link href="/documents" className="text-white text-decoration-none">Documents</Link>
               </li>
               <li className="mb-2">
                 <Link href="/contact" className="text-white text-decoration-none">Contact</Link>
