@@ -109,9 +109,30 @@ export default function Contact() {
                   <h3 className="h5 mb-0">Call Us</h3>
                 </div>
                 <p className="text-muted mb-0">
-                  Main Office: (555) 123-4567<br />
-                  Toll Free: 1-800-123-4567<br />
-                  Fax: (555) 123-4568
+                  Main Office: 888-324-6642<br />
+                  Toll Free: 888-324-6642<br />
+                  Fax: 888-324-6642
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="bg-white p-4 rounded-3 shadow-sm h-100">
+                <div className="d-flex align-items-center mb-3">
+                  <div className="me-3" style={{
+                    width: '50px',
+                    height: '50px',
+                    backgroundColor: '#14432A15',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <i className="bi bi-envelope text-primary" style={{ fontSize: '1.5rem' }}></i>
+                  </div>
+                  <h3 className="h5 mb-0">Email Us</h3>
+                </div>
+                <p className="text-muted mb-0">
+                  support@centuriesmutual.com
                 </p>
               </div>
             </div>
