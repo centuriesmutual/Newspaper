@@ -21,9 +21,9 @@ export default function Navbar() {
 
   // Calculate responsive sizes
   const getLogoSize = () => {
-    if (windowWidth < 400) return { width: 40, height: 20, fontSize: '1rem' }
-    if (windowWidth < 640) return { width: 60, height: 30, fontSize: '1.2rem' }
-    if (windowWidth < 768) return { width: 100, height: 50, fontSize: '2rem' }
+    if (windowWidth < 400) return { width: 30, height: 15, fontSize: '0.9rem' }
+    if (windowWidth < 640) return { width: 40, height: 20, fontSize: '1.1rem' }
+    if (windowWidth < 768) return { width: 60, height: 30, fontSize: '1.5rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
   }
 
@@ -36,8 +36,19 @@ export default function Navbar() {
         
         @media (max-width: 640px) {
           .navbar .container {
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+          .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+            height: 60px;
+          }
+          body {
+            padding-top: 60px;
           }
         }
       `}</style>
@@ -65,12 +76,13 @@ export default function Navbar() {
               />
               <span style={{ 
                 color: '#14432A',
-                marginLeft: windowWidth < 640 ? '-2px' : '-10px',
+                marginLeft: windowWidth < 640 ? '-1px' : '-10px',
                 fontFamily: "'Playfair Display', serif",
                 fontSize: fontSize,
                 fontWeight: '500',
                 letterSpacing: windowWidth < 640 ? '0' : '0.5px',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                lineHeight: windowWidth < 640 ? '1.2' : 'normal'
               }}>
                 Centuries Mutual
               </span>
