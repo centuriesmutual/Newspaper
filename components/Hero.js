@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 export default function Hero() {
   return (
     <section 
-      className="hero-section position-relative" 
+      className="hero-section position-relative overflow-hidden" 
       style={{ 
         minHeight: '60vh',
         backgroundColor: '#14432A',
@@ -19,9 +19,14 @@ export default function Hero() {
         @media (max-width: 640px) {
           .hero-section {
             min-height: 100dvh !important;
+            overflow-x: hidden !important;
           }
           .hero-row {
             min-height: 100dvh !important;
+            overflow-x: hidden !important;
+          }
+          .hero-content {
+            overflow-x: hidden !important;
           }
         }
       `}</style>
@@ -35,6 +40,7 @@ export default function Hero() {
         >
           <div className="col-lg-6 order-lg-2">
             <motion.div 
+              className="hero-content"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
