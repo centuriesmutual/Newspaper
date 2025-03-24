@@ -87,7 +87,7 @@ export default function Contact() {
                 </div>
                 <p className="text-muted mb-0">
                   123 Financial District, Suite 100<br />
-                  New York, NY 10004<br />
+                  Dallas, TX 75201<br />
                   Monday - Friday: 9:00 AM - 5:00 PM
                 </p>
               </div>
@@ -112,29 +112,6 @@ export default function Contact() {
                   Main Office: (555) 123-4567<br />
                   Toll Free: 1-800-123-4567<br />
                   Fax: (555) 123-4568
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="bg-white p-4 rounded-3 shadow-sm h-100">
-                <div className="d-flex align-items-center mb-3">
-                  <div className="me-3" style={{
-                    width: '50px',
-                    height: '50px',
-                    backgroundColor: '#14432A15',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <i className="bi bi-envelope text-primary" style={{ fontSize: '1.5rem' }}></i>
-                  </div>
-                  <h3 className="h5 mb-0">Email Us</h3>
-                </div>
-                <p className="text-muted mb-0">
-                  info@centuriesmutual.com<br />
-                  support@centuriesmutual.com<br />
-                  careers@centuriesmutual.com
                 </p>
               </div>
             </div>
@@ -235,27 +212,6 @@ export default function Contact() {
                     </div>
                   </div>
                 </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="rounded-3 overflow-hidden shadow-lg" style={{ height: '400px' }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2218089997!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s123%20Financial%20District%2C%20New%20York%2C%20NY%2010004!5e0!3m2!1sen!2sus!4v1648123456789!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
               </div>
             </div>
           </div>
