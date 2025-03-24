@@ -27,7 +27,13 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="position-relative mb-5" style={{ height: '400px' }}>
+          <div className="position-relative mb-5" style={{ 
+            height: '800px',
+            width: '100%',
+            maxWidth: '1000px',
+            margin: '0 auto',
+            backgroundColor: '#f8f9fa'
+          }}>
             <Image
               src="/deer.jpeg"
               alt="Legacy and Tradition"
@@ -36,8 +42,10 @@ export default function About() {
               quality={100}
               className="rounded-3"
               style={{
-                objectFit: 'cover',
-                objectPosition: 'center'
+                objectFit: 'contain',
+                objectPosition: 'center',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
+                padding: '20px'
               }}
             />
           </div>
