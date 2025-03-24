@@ -102,7 +102,7 @@ export default function Navbar() {
               </div>
             </Link>
           )}
-          {!isLoginPage && (
+          {!isLoginPage && pathname === '/' && (
             <Link 
               href="/login" 
               className="btn btn-primary px-2 px-lg-4 py-1 py-lg-2 mobile-login"

@@ -27,6 +27,20 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
+          <div className="position-relative mb-5" style={{ height: '400px' }}>
+            <Image
+              src="/deer.jpeg"
+              alt="Legacy and Tradition"
+              fill
+              priority
+              quality={100}
+              className="rounded-3"
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center'
+              }}
+            />
+          </div>
           <p className="text-center mb-4" style={{ fontSize: '1.1rem' }}>
             At Centuries Mutual, we are dedicated to providing exceptional financial services and insurance solutions to our clients.
             Our commitment to excellence and personalized approach sets us apart in the industry.
@@ -56,13 +70,22 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <div className="card h-100 border-0 shadow-sm">
-              <div className="position-relative" style={{ height: '300px' }}>
+              <div className="position-relative mx-auto" style={{ 
+                width: '280px', 
+                height: '280px', 
+                marginTop: '20px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                border: '3px solid #14432A'
+              }}>
                 <Image
                   src="/me.jpeg"
                   alt={teamMember.name}
                   fill
-                  style={{ objectFit: 'cover' }}
-                  className="card-img-top"
+                  style={{ 
+                    objectFit: 'cover',
+                    objectPosition: 'top center'
+                  }}
                 />
               </div>
               <div className="card-body text-center">
