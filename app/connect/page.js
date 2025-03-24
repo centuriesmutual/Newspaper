@@ -30,14 +30,14 @@ export default function Connect() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 className="position-relative"
-                style={{ height: '300px' }}
+                style={{ height: '400px' }}
               >
                 <Image
                   src="/mountians.jpeg"
                   alt="Connect with Advisor"
                   fill
                   className="rounded-4"
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
               </motion.div>
             </div>

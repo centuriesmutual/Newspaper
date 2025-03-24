@@ -18,13 +18,13 @@ export default function Tax() {
               </p>
             </div>
             <div className="col-lg-6">
-              <div className="position-relative" style={{ height: '300px' }}>
+              <div className="position-relative" style={{ height: '400px' }}>
                 <Image
                   src="/mountians.jpeg"
                   alt="Tax Preparation"
                   fill
                   className="rounded-4"
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
               </div>
             </div>
