@@ -18,7 +18,7 @@ export default function Login() {
     <div className="min-h-screen bg-light py-5 d-flex flex-column">
       <div className="container flex-grow-1 d-flex align-items-center">
         <div className="row justify-content-center w-100">
-          <div className="col-md-6 col-lg-5">
+          <div className="col-11 col-sm-8 col-md-6 col-lg-5 mx-auto">
             <div className="card border-0 shadow-sm">
               {/* Card Header with Logo */}
               <div className="card-header bg-white border-0 text-center pt-4">
