@@ -6,11 +6,15 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200)
+  const [mounted, setMounted] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(0)
   const pathname = usePathname()
   const isLoginPage = pathname === '/login'
 
   useEffect(() => {
+    setMounted(true)
+    setWindowWidth(window.innerWidth)
+    
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
     }
@@ -21,8 +25,9 @@ export default function Navbar() {
 
   // Calculate responsive sizes
   const getLogoSize = () => {
-    if (windowWidth < 400) return { width: 20, height: 10, fontSize: '0.75rem' }
-    if (windowWidth < 640) return { width: 25, height: 12, fontSize: '0.85rem' }
+    if (!mounted) return { width: 25, height: 12, fontSize: '0.8rem' }
+    if (windowWidth < 400) return { width: 25, height: 12, fontSize: '0.8rem' }
+    if (windowWidth < 640) return { width: 30, height: 15, fontSize: '0.9rem' }
     if (windowWidth < 768) return { width: 40, height: 20, fontSize: '1.2rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
   }
@@ -36,7 +41,7 @@ export default function Navbar() {
         
         @media (max-width: 640px) {
           .navbar {
-            min-height: 50px;
+            min-height: 48px;
           }
           .navbar .container {
             padding-left: 6px;
@@ -44,14 +49,17 @@ export default function Navbar() {
             gap: 4px;
           }
           .navbar-brand {
-            max-width: calc(100vw - 100px);
+            max-width: calc(100vw - 95px);
             overflow: visible;
           }
           .btn-primary.mobile-login {
-            padding: 3px 6px !important;
+            padding: 3px 8px !important;
             font-size: 0.75rem !important;
             min-width: auto !important;
             margin-left: auto;
+            height: 26px !important;
+            display: flex !important;
+            align-items: center !important;
           }
         }
       `}</style>
@@ -75,7 +83,7 @@ export default function Navbar() {
                   quality={100}
                   style={{ 
                     objectFit: 'contain',
-                    marginRight: '2px'
+                    marginRight: mounted && windowWidth < 640 ? '2px' : '2px'
                   }}
                 />
                 <span style={{ 
@@ -83,7 +91,7 @@ export default function Navbar() {
                   fontFamily: "'Playfair Display', serif",
                   fontSize: fontSize,
                   fontWeight: '500',
-                  letterSpacing: windowWidth < 640 ? '-0.2px' : '0.5px',
+                  letterSpacing: mounted && windowWidth < 640 ? '-0.2px' : '0.5px',
                   whiteSpace: 'nowrap',
                   display: 'inline-block'
                 }}>
@@ -99,9 +107,9 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: windowWidth < 640 ? '0.75rem' : '1rem',
+                fontSize: mounted && windowWidth < 640 ? '0.75rem' : '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: windowWidth < 640 ? '50px' : '120px'
+                minWidth: mounted && windowWidth < 640 ? '55px' : '120px'
               }}
             >
               Client Login
