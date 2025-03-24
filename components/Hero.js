@@ -113,9 +113,10 @@ export default function Hero() {
                 />
               </div>
               <div className="mb-3 overflow-hidden d-lg-none" style={{ 
-                height: '250px',
+                height: '300px',
                 position: 'relative',
-                marginTop: '0'
+                marginTop: '0',
+                marginBottom: '1.5rem'
               }}>
                 <Image
                   src="/mountians.jpeg"
@@ -134,7 +135,7 @@ export default function Hero() {
               </div>
               
               <motion.div 
-                className="bg-white p-4 rounded-3 shadow-lg"
+                className="bg-white p-4 rounded-3 shadow-lg mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

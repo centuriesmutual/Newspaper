@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar'
 import Script from 'next/script'
 
 export const metadata = {
-  title: 'Centuries Mutual - Insurance & Financial Services',
-  description: 'Professional insurance and financial services with integrity',
+  title: 'Centuries Mutual',
+  description: 'Providing institutional-grade investment solutions and comprehensive wealth management services.',
   icons: {
     icon: '/favicon.ico',
   },
