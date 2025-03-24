@@ -156,7 +156,7 @@ export default function Hero() {
                     <p className="mb-0 text-muted">Years of Excellence</p>
                   </div>
                   <div className="border-start ps-4">
-                    <h3 className="h2" style={{ color: '#14432A' }}>500+</h3>
+                    <h3 className="h2" style={{ color: '#14432A' }}>50K+</h3>
                     <p className="mb-0 text-muted">Satisfied Clients</p>
                   </div>
                 </div>
