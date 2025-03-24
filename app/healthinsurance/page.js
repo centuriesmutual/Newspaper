@@ -14,17 +14,26 @@ export default function HealthInsurance() {
                 Health Insurance Solutions
               </h1>
               <p className="lead mb-4">
-                As an independent insurance broker, we provide expert guidance in selecting the perfect Medicare or ACA plan that fits your needs and budget.
+                Comprehensive health coverage tailored to your needs and budget.
               </p>
             </div>
             <div className="col-lg-6">
-              <div className="position-relative" style={{ height: '300px' }}>
+              <div className="position-relative" style={{ 
+                height: '500px',
+                width: '100%',
+                maxWidth: '800px',
+                margin: '0 auto'
+              }}>
                 <Image
                   src="/mountians.jpeg"
                   alt="Health Insurance"
                   fill
                   className="rounded-4"
-                  style={{ objectFit: 'cover' }}
+                  style={{ 
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
+                  }}
                 />
               </div>
             </div>
@@ -32,37 +41,45 @@ export default function HealthInsurance() {
         </div>
       </section>
 
-      {/* Medicare Section */}
+      {/* Coverage Options */}
       <section className="py-5">
         <div className="container">
-          <h2 className="text-center mb-5" style={{ color: '#14432A' }}>Medicare Insurance Solutions</h2>
           <div className="row g-4">
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
-                  <h3 className="h4 mb-3" style={{ color: '#14432A' }}>Medicare Advantage</h3>
-                  <p className="text-muted">
-                    We broker plans from multiple carriers, helping you find Medicare Advantage coverage that combines hospital, medical, and often prescription drug benefits.
+                  <div className="text-center mb-4">
+                    <i className="bi bi-heart-pulse display-4" style={{ color: '#14432A' }}></i>
+                  </div>
+                  <h3 className="h4 text-center mb-3">Individual Plans</h3>
+                  <p className="text-muted text-center">
+                    Personalized health coverage for individuals and families.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
-                  <h3 className="h4 mb-3" style={{ color: '#14432A' }}>Medicare Supplement</h3>
-                  <p className="text-muted">
-                    Compare Medicare Supplement plans from various carriers to find the best coverage for your out-of-pocket costs.
+                  <div className="text-center mb-4">
+                    <i className="bi bi-building display-4" style={{ color: '#14432A' }}></i>
+                  </div>
+                  <h3 className="h4 text-center mb-3">Group Plans</h3>
+                  <p className="text-muted text-center">
+                    Comprehensive coverage for businesses and organizations.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-4">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
-                  <h3 className="h4 mb-3" style={{ color: '#14432A' }}>Prescription Drug Plans</h3>
-                  <p className="text-muted">
-                    Access a wide range of Medicare Part D prescription drug plans to ensure your medications are covered.
+                  <div className="text-center mb-4">
+                    <i className="bi bi-plus-circle display-4" style={{ color: '#14432A' }}></i>
+                  </div>
+                  <h3 className="h4 text-center mb-3">Supplemental Plans</h3>
+                  <p className="text-muted text-center">
+                    Additional coverage to enhance your existing health plan.
                   </p>
                 </div>
               </div>
@@ -71,65 +88,53 @@ export default function HealthInsurance() {
         </div>
       </section>
 
-      {/* ACA Section */}
-      <section className="py-5 bg-light">
+      {/* Benefits Section */}
+      <section className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
-          <h2 className="text-center mb-5" style={{ color: '#14432A' }}>Affordable Care Act (ACA) Plans</h2>
           <div className="row g-4">
-            <div className="col-md-6">
-              <div className="card h-100 border-0 shadow-sm">
+            <div className="col-md-4">
+              <div className="card h-100 border-0 bg-white shadow-sm">
                 <div className="card-body p-4">
-                  <h3 className="h4 mb-3" style={{ color: '#14432A' }}>Individual & Family Coverage</h3>
-                  <p className="text-muted">
-                    We broker ACA marketplace plans from multiple carriers, helping you find coverage that qualifies for subsidies and meets your healthcare needs.
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="rounded-circle bg-light p-3 me-3">
+                      <i className="bi bi-shield-check fs-4" style={{ color: '#14432A' }}></i>
+                    </div>
+                    <h3 className="h5 mb-0">Comprehensive Coverage</h3>
+                  </div>
+                  <p className="text-muted mb-0">
+                    Access to a wide network of healthcare providers and specialists.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="card h-100 border-0 shadow-sm">
+            <div className="col-md-4">
+              <div className="card h-100 border-0 bg-white shadow-sm">
                 <div className="card-body p-4">
-                  <h3 className="h4 mb-3" style={{ color: '#14432A' }}>Small Business Coverage</h3>
-                  <p className="text-muted">
-                    Access group health insurance options for small businesses through the SHOP marketplace, with plans from various carriers.
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="rounded-circle bg-light p-3 me-3">
+                      <i className="bi bi-cash-stack fs-4" style={{ color: '#14432A' }}></i>
+                    </div>
+                    <h3 className="h5 mb-0">Affordable Options</h3>
+                  </div>
+                  <p className="text-muted mb-0">
+                    Competitive rates and flexible payment options to suit your budget.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Broker Benefits Section */}
-      <section className="py-5">
-        <div className="container">
-          <h2 className="text-center mb-5" style={{ color: '#14432A' }}>Why Choose Our Brokerage Services?</h2>
-          <div className="row g-4">
             <div className="col-md-4">
-              <div className="text-center">
-                <div className="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style={{ width: '80px', height: '80px' }}>
-                  <i className="bi bi-shield-check fs-4" style={{ color: '#14432A' }}></i>
+              <div className="card h-100 border-0 bg-white shadow-sm">
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="rounded-circle bg-light p-3 me-3">
+                      <i className="bi bi-headset fs-4" style={{ color: '#14432A' }}></i>
+                    </div>
+                    <h3 className="h5 mb-0">24/7 Support</h3>
+                  </div>
+                  <p className="text-muted mb-0">
+                    Dedicated customer service team available around the clock.
+                  </p>
                 </div>
-                <h4 className="h5 mb-3">Independent Brokerage</h4>
-                <p className="text-muted">We represent multiple carriers, ensuring you get unbiased recommendations.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="text-center">
-                <div className="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style={{ width: '80px', height: '80px' }}>
-                  <i className="bi bi-cash-stack fs-4" style={{ color: '#14432A' }}></i>
-                </div>
-                <h4 className="h5 mb-3">Cost Optimization</h4>
-                <p className="text-muted">Compare plans from multiple carriers to find the best value for your needs.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="text-center">
-                <div className="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style={{ width: '80px', height: '80px' }}>
-                  <i className="bi bi-headset fs-4" style={{ color: '#14432A' }}></i>
-                </div>
-                <h4 className="h5 mb-3">Expert Support</h4>
-                <p className="text-muted">Licensed agents providing guidance throughout your insurance journey.</p>
               </div>
             </div>
           </div>
@@ -137,15 +142,15 @@ export default function HealthInsurance() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-5 bg-light">
+      <section className="py-5" style={{ backgroundColor: '#14432A' }}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
-              <h2 className="mb-4" style={{ color: '#14432A' }}>Ready to Find Your Perfect Health Plan?</h2>
-              <p className="lead mb-4">
-                Let our experienced brokers help you navigate Medicare and ACA options to find the coverage that's right for you.
+              <h2 className="text-white mb-4">Ready to Get Covered?</h2>
+              <p className="lead text-white mb-4">
+                Schedule a consultation with our health insurance experts today.
               </p>
-              <button className="btn btn-primary btn-lg px-4">Schedule a Consultation</button>
+              <a href="/schedule" className="btn btn-light btn-lg px-4">Schedule Consultation</a>
             </div>
           </div>
         </div>
