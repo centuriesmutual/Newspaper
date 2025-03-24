@@ -151,7 +151,7 @@ export default function Hero() {
                   </div>
                   <div className="border-start ps-4">
                     <h3 className="h2" style={{ color: '#14432A' }}>500+</h3>
-                    <p className="mb-0 text-muted">Happy Clients</p>
+                    <p className="mb-0 text-muted">Satisfied Clients</p>
                   </div>
                 </div>
               </motion.div>
