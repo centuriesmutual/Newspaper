@@ -3,10 +3,11 @@ import Services from '../components/Services'
 import Legacy from '../components/Legacy'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <Hero />
       <Services />
       <Legacy />

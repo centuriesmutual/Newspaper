@@ -32,7 +32,7 @@ export default function Legacy() {
             <h2 className="display-5 mb-4" style={{ 
               fontFamily: "'Playfair Display', serif",
               color: '#14432A'
-            }}>A Legacy of Trust Since 2024</h2>
+            }}>A Legacy of Trust</h2>
             <p className="lead text-muted mb-5">
               At Centuries Mutual, we've built our reputation on a foundation of trust, 
               expertise, and unwavering commitment to our clients' financial success.

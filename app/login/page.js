@@ -15,9 +15,9 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-light py-5">
-      <div className="container">
-        <div className="row justify-content-center">
+    <div className="min-h-screen bg-light py-5 d-flex flex-column">
+      <div className="container flex-grow-1 d-flex align-items-center">
+        <div className="row justify-content-center w-100">
           <div className="col-md-6 col-lg-5">
             <div className="card border-0 shadow-sm">
               {/* Card Header with Logo */}
@@ -117,6 +117,13 @@ export default function Login() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="py-3 text-center">
+        <p className="text-muted small mb-0">
+          © 2025 Centuries Mutual. All rights reserved.
+        </p>
+      </footer>
     </div>
   )
 } 
