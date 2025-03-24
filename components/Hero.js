@@ -113,7 +113,7 @@ export default function Hero() {
                 />
               </div>
               <div className="mb-3 overflow-hidden d-lg-none" style={{ 
-                height: '350px',
+                height: '400px',
                 position: 'relative',
                 marginTop: '0',
                 marginBottom: '1.5rem'
