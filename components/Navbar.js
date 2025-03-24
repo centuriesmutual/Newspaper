@@ -39,16 +39,9 @@ export default function Navbar() {
             padding-left: 8px;
             padding-right: 8px;
           }
-          .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1030;
-            height: 60px;
-          }
-          body {
-            padding-top: 60px;
+          .navbar-brand {
+            max-width: calc(100vw - 120px);
+            overflow: hidden;
           }
         }
       `}</style>
@@ -81,8 +74,7 @@ export default function Navbar() {
                 fontSize: fontSize,
                 fontWeight: '500',
                 letterSpacing: windowWidth < 640 ? '0' : '0.5px',
-                whiteSpace: 'nowrap',
-                lineHeight: windowWidth < 640 ? '1.2' : 'normal'
+                whiteSpace: 'nowrap'
               }}>
                 Centuries Mutual
               </span>

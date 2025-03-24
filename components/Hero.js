@@ -7,14 +7,13 @@ import { motion } from 'framer-motion'
 export default function Hero() {
   return (
     <section className="hero-section position-relative" style={{ 
-      minHeight: 'calc(100dvh - 60px)',
+      minHeight: '100dvh',
       backgroundColor: '#14432A',
       paddingTop: '0',
-      paddingBottom: '1rem',
-      marginTop: '0'
+      paddingBottom: '1rem'
     }}>
       <div className="container position-relative">
-        <div className="row align-items-center" style={{ minHeight: 'calc(100dvh - 60px)', paddingTop: '1rem' }}>
+        <div className="row align-items-center" style={{ minHeight: '100dvh', paddingTop: '4rem' }}>
           <div className="col-lg-6 order-lg-2">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
