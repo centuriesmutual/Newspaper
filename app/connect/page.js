@@ -88,10 +88,10 @@ export default function Connect() {
                         <div className="form-floating">
                           <select className="form-select" id="service" aria-label="Service">
                             <option selected>Select a Service</option>
-                            <option value="1">Life Insurance</option>
+                            <option value="1">Mortgage Loans</option>
                             <option value="2">Health Insurance</option>
                             <option value="3">Tax Preparation</option>
-                            <option value="4">Wealth Management</option>
+                            <option value="4">Independent Insurance Brokerage</option>
                           </select>
                           <label htmlFor="service">Service of Interest</label>
                         </div>

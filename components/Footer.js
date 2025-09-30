@@ -90,7 +90,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mb-0">
-              Providing institutional-grade investment solutions and comprehensive wealth management services.
+              Providing comprehensive solutions and independent brokerage services for all your coverage needs.
             </p>
           </div>
           <div className="col-lg-2 mb-4 mb-lg-0 footer-content">
@@ -111,7 +111,7 @@ export default function Footer() {
             <h5 className="mb-3">Services</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/lifeinsurance" className="text-decoration-none text-white">Life Insurance</Link>
+                <Link href="/mortgageloans" className="text-decoration-none text-white">Mortgage Loans</Link>
               </li>
               <li className="mb-2">
                 <Link href="/healthinsurance" className="text-white text-decoration-none">Health Insurance</Link>

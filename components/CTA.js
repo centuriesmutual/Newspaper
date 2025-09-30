@@ -9,10 +9,10 @@ export default function CTA() {
         <div className="row justify-content-between align-items-center">
           <div className="col-lg-7">
             <h2 className="display-6 text-white mb-3">
-              Ready to elevate your investment strategy?
+              Ready for a Consultation?
             </h2>
             <p className="lead text-white-50 mb-0" style={{ maxWidth: '100%' }}>
-              Our team of experienced professionals is ready to help you achieve your financial&nbsp;goals.
+              Our team of experienced professionals is ready to help you find the perfect coverage for your needs.
             </p>
           </div>
           <div className="col-lg-4 text-center text-lg-center mt-4 mt-lg-0">

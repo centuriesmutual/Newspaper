@@ -17,8 +17,8 @@ const services = [
     accent: "#1a5436"
   },
   {
-    title: "Life Insurance",
-    description: "Protect your family's future with our comprehensive life insurance plans.",
+    title: "Mortgage Loans",
+    description: "Secure your dream home with our competitive mortgage loan solutions.",
     icon: ShieldCheckIcon,
     accent: "#206542"
   }
@@ -94,7 +94,7 @@ export default function Services() {
                   <Link 
                     href={service.title === "Tax Preparation" ? "/tax" : 
                           service.title === "Health Insurance" ? "/healthinsurance" : 
-                          service.title === "Life Insurance" ? "/lifeinsurance" : "#"}
+                          service.title === "Mortgage Loans" ? "/mortgageloans" : "#"}
                     className="text-decoration-none d-flex align-items-center fw-bold"
                     style={{ color: service.accent }}
                   >

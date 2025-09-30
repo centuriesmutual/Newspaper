@@ -3,15 +3,24 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Add your login logic here
-    console.log('Login attempt:', { email, password })
+    setIsLoading(true)
+    
+    // Simulate a brief loading state
+    await new Promise(resolve => setTimeout(resolve, 500))
+    
+    // Accept any login credentials and redirect to dashboard
+    console.log('Login successful:', { email, password })
+    router.push('/dashboard')
   }
 
   return (
@@ -84,8 +93,16 @@ export default function Login() {
                     type="submit" 
                     className="btn btn-primary w-100"
                     style={{ backgroundColor: '#14432A', borderColor: '#14432A' }}
+                    disabled={isLoading}
                   >
-                    Sign In
+                    {isLoading ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Signing In...
+                      </>
+                    ) : (
+                      'Sign In'
+                    )}
                   </button>
                 </form>
 

@@ -57,7 +57,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Wealth Management:<br />Secure Your Legacy
+                Community Brokerage:<br />Your Trusted Coverage Partner
               </motion.h1>
               <motion.p 
                 className="lead text-white mb-4 text-center text-lg-start" 
@@ -73,8 +73,8 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Providing institutional-grade investment solutions and comprehensive wealth 
-                management services to help you achieve your long-term financial objectives.
+                Providing comprehensive solutions and independent brokerage services 
+                to help you secure the coverage and protection your family deserves.
               </motion.p>
               <motion.div 
                 className="d-flex gap-2 justify-content-center justify-content-lg-start flex-column flex-sm-row px-3 px-sm-0"
@@ -83,7 +83,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 style={{ marginBottom: '2rem' }}
               >
-                <Link href="/schedule" className="btn btn-light btn-lg">Schedule Consultation</Link>
+                <a href="/download" className="btn btn-light btn-lg">Download App</a>
                 <Link href="/learnmore" className="btn btn-outline-light btn-lg">Learn More</Link>
               </motion.div>
             </motion.div>
@@ -140,27 +140,6 @@ export default function Hero() {
                 />
               </div>
               
-              <motion.div 
-                className="bg-white p-4 rounded-3 shadow-lg mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <div className="d-flex gap-4">
-                  <div>
-                    <h3 className="h2" style={{ color: '#14432A' }}>$14.2M</h3>
-                    <p className="mb-0 text-muted">Assets Under Management</p>
-                  </div>
-                  <div className="border-start ps-4">
-                    <h3 className="h2" style={{ color: '#14432A' }}>25+</h3>
-                    <p className="mb-0 text-muted">Years of Excellence</p>
-                  </div>
-                  <div className="border-start ps-4">
-                    <h3 className="h2" style={{ color: '#14432A' }}>50K+</h3>
-                    <p className="mb-0 text-muted">Satisfied Clients</p>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>

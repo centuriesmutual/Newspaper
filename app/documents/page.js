@@ -24,12 +24,12 @@ export default function Documents() {
       ]
     },
     {
-      title: 'Life Insurance',
-      description: 'Important life insurance documentation',
+      title: 'Mortgage Loans',
+      description: 'Important mortgage loan documentation',
       items: [
-        { name: 'Life Insurance Application', link: '/documents/life-application.pdf' },
-        { name: 'Policy Change Form', link: '/documents/life-policy-change.pdf' },
-        { name: 'Beneficiary Form', link: '/documents/beneficiary.pdf' }
+        { name: 'Mortgage Application', link: '/documents/mortgage-application.pdf' },
+        { name: 'Loan Modification Form', link: '/documents/loan-modification.pdf' },
+        { name: 'Refinance Application', link: '/documents/refinance-application.pdf' }
       ]
     }
   ]

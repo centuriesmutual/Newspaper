@@ -42,9 +42,9 @@ export default function LearnMore() {
                   <div className="text-center mb-4">
                     <i className="bi bi-shield-check display-4" style={{ color: '#14432A' }}></i>
                   </div>
-                  <h3 className="h4 text-center mb-3">Life Insurance</h3>
+                  <h3 className="h4 text-center mb-3">Mortgage Loans</h3>
                   <p className="text-muted text-center">
-                    Comprehensive life insurance solutions to protect your loved ones and secure your legacy.
+                    Competitive mortgage loan solutions to help you secure your dream home with expert guidance.
                   </p>
                 </div>
               </div>
@@ -91,10 +91,10 @@ export default function LearnMore() {
                     <div className="rounded-circle bg-light p-3 me-3">
                       <i className="bi bi-award-fill fs-4" style={{ color: '#14432A' }}></i>
                     </div>
-                    <h3 className="h5 mb-0">25+ Years Experience</h3>
+                    <h3 className="h5 mb-0">2024 Est.</h3>
                   </div>
                   <p className="text-muted mb-0">
-                    Decades of expertise in financial services, helping clients achieve their goals with proven strategies.
+                    Modern financial services with innovative solutions, helping clients achieve their goals with cutting-edge strategies.
                   </p>
                 </div>
               </div>

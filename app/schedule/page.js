@@ -70,7 +70,7 @@ export default function Schedule() {
                         <div className="form-floating">
                           <select className="form-select" id="service" aria-label="Service">
                             <option selected>Select a Service</option>
-                            <option value="1">Life Insurance</option>
+                            <option value="1">Mortgage Loans</option>
                             <option value="2">Health Insurance</option>
                             <option value="3">Tax Preparation</option>
                           </select>

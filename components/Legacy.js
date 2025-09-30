@@ -23,8 +23,8 @@ export default function Legacy() {
               />
             </div>
             <div className="position-absolute bottom-0 end-0 bg-primary text-white p-4 rounded-3 translate-middle-y">
-              <p className="h3 mb-1">25+</p>
-              <p className="mb-0">Years of Excellence</p>
+              <p className="h3 mb-1">2024</p>
+              <p className="mb-0">Est.</p>
             </div>
           </div>
           
@@ -33,28 +33,26 @@ export default function Legacy() {
               fontFamily: "'Playfair Display', serif",
               color: '#14432A'
             }}>A Legacy of Trust</h2>
-            <p className="lead text-muted mb-5">
+            <p className="lead text-muted mb-4">
               At Centuries Mutual, we've built our reputation on a foundation of trust, 
               expertise, and unwavering commitment to our clients' financial success.
             </p>
+            <p className="text-muted mb-5">
+              Our community-focused approach ensures that every family receives personalized attention 
+              and comprehensive solutions tailored to their unique needs and goals.
+            </p>
             
             <div className="row g-4">
-              <div className="col-md-4">
+              <div className="col-md-6">
                 <div className="stats-card">
-                  <p className="h2 mb-1" style={{ color: '#14432A' }}>98%</p>
-                  <p className="text-muted mb-0">Client Retention</p>
+                  <p className="h2 mb-1" style={{ color: '#14432A' }}>Integrity</p>
+                  <p className="text-muted mb-0">Our Promise</p>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-6">
                 <div className="stats-card">
-                  <p className="h2 mb-1" style={{ color: '#14432A' }}>48</p>
-                  <p className="text-muted mb-0">States Served</p>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="stats-card">
-                  <p className="h2 mb-1" style={{ color: '#14432A' }}>50K+</p>
-                  <p className="text-muted mb-0">Satisfied Clients</p>
+                  <p className="h2 mb-1" style={{ color: '#14432A' }}>Excellence</p>
+                  <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.2' }}>Dedication & Service</p>
                 </div>
               </div>
             </div>
