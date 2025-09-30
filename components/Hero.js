@@ -57,7 +57,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Community Brokerage:<br />Your Trusted Coverage Partner
+                Your Community Financial Brokerage:
               </motion.h1>
               <motion.p 
                 className="lead text-white mb-4 text-center text-lg-start" 
@@ -73,8 +73,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Providing comprehensive solutions and independent brokerage services 
-                to help you secure the coverage and protection your family deserves.
+                Providing a comprehensive network of trusted partners, innovative solutions, and personalized guidance to help families build wealth, protect their assets, and secure a brighter tomorrow.
               </motion.p>
               <motion.div 
                 className="d-flex gap-2 justify-content-center justify-content-lg-start flex-column flex-sm-row px-3 px-sm-0"
@@ -83,8 +82,8 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 style={{ marginBottom: '2rem' }}
               >
-                <a href="/download" className="btn btn-light btn-lg">Download App</a>
                 <Link href="/learnmore" className="btn btn-outline-light btn-lg">Learn More</Link>
+                <Link href="/rewards" className="btn btn-light btn-lg">Download App</Link>
               </motion.div>
             </motion.div>
           </div>

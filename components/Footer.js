@@ -90,7 +90,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mb-0">
-              Providing comprehensive solutions and independent brokerage services for all your coverage needs.
+              Providing a comprehensive brokerage network to further a secure a better future.
             </p>
           </div>
           <div className="col-lg-2 mb-4 mb-lg-0 footer-content">

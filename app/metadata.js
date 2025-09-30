@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Centuries Mutual',
-  description: 'Providing comprehensive insurance solutions and independent brokerage services for all your coverage needs.',
+  description: 'Providing a comprehensive brokerage network to further a secure a better future.',
   icons: {
     icon: '/favicon.ico',
   },

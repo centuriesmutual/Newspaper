@@ -33,26 +33,32 @@ export default function Legacy() {
               fontFamily: "'Playfair Display', serif",
               color: '#14432A'
             }}>A Legacy of Trust</h2>
-            <p className="lead text-muted mb-4">
+            <p className="text-muted mb-4">
               At Centuries Mutual, we've built our reputation on a foundation of trust, 
               expertise, and unwavering commitment to our clients' financial success.
             </p>
             <p className="text-muted mb-5">
               Our community-focused approach ensures that every family receives personalized attention 
-              and comprehensive solutions tailored to their unique needs and goals.
+              and comprehensive solutions tailored to their unique needs and goals. Through stewardship and a brief description of our values, we guide families toward financial security.
             </p>
             
             <div className="row g-4">
-              <div className="col-md-6">
-                <div className="stats-card">
+              <div className="col-lg-4 col-md-6">
+                <div className="stats-card text-center">
                   <p className="h2 mb-1" style={{ color: '#14432A' }}>Integrity</p>
                   <p className="text-muted mb-0">Our Promise</p>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="stats-card">
+              <div className="col-lg-4 col-md-6">
+                <div className="stats-card text-center">
                   <p className="h2 mb-1" style={{ color: '#14432A' }}>Excellence</p>
                   <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.2' }}>Dedication & Service</p>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-12">
+                <div className="stats-card text-center">
+                  <p className="h2 mb-1" style={{ color: '#14432A' }}>Stewardship</p>
+                  <p className="text-muted mb-0">Protecting Tomorrow</p>
                 </div>
               </div>
             </div>
