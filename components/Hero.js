@@ -57,7 +57,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Your Community Financial Brokerage:
+                Your Community Brokerage:
               </motion.h1>
               <motion.p 
                 className="lead text-white mb-4 text-center text-lg-start" 
