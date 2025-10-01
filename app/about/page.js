@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 export default function About() {
@@ -159,6 +160,78 @@ export default function About() {
                 <h3 className="h4 mb-3" style={{ color: '#14432A' }}>Client Focus</h3>
                 <p className="card-text">Our clients' success and satisfaction are at the heart of everything we do.</p>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="mt-5">
+        <motion.h2 
+          className="text-center mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.6 }}
+          style={{ color: '#14432A' }}
+        >
+          Contact Information
+        </motion.h2>
+        <div className="row g-4 justify-content-center">
+          <motion.div 
+            className="col-md-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.8 }}
+          >
+            <div className="bg-white p-4 rounded-3 shadow-sm h-100">
+              <div className="d-flex align-items-center mb-3">
+                <div className="me-3" style={{
+                  width: '50px',
+                  height: '50px',
+                  backgroundColor: '#14432A15',
+                  borderRadius: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <i className="bi bi-briefcase text-primary" style={{ fontSize: '1.5rem' }}></i>
+                </div>
+                <h3 className="h5 mb-0">Join Our Team</h3>
+              </div>
+              <p className="text-muted mb-3">
+                Explore career opportunities and join our growing team of financial professionals.
+              </p>
+              <Link href="/careers" className="btn btn-primary btn-sm">
+                <i className="bi bi-arrow-right me-2"></i>View Careers
+              </Link>
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            className="col-md-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 2.0 }}
+          >
+            <div className="bg-white p-4 rounded-3 shadow-sm h-100">
+              <div className="d-flex align-items-center mb-3">
+                <div className="me-3" style={{
+                  width: '50px',
+                  height: '50px',
+                  backgroundColor: '#14432A15',
+                  borderRadius: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <i className="bi bi-house text-primary" style={{ fontSize: '1.5rem' }}></i>
+                </div>
+                <h3 className="h5 mb-0">Contact Us</h3>
+              </div>
+              <p className="text-muted mb-0">
+                Main Office: 888-324-6642<br />
+                Dallas, Texas
+              </p>
             </div>
           </motion.div>
         </div>

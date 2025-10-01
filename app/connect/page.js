@@ -91,7 +91,6 @@ export default function Connect() {
                             <option value="1">Mortgage Loans</option>
                             <option value="2">Health Insurance</option>
                             <option value="3">Tax Preparation</option>
-                            <option value="4">Independent Insurance Brokerage</option>
                           </select>
                           <label htmlFor="service">Service of Interest</label>
                         </div>
@@ -132,10 +131,6 @@ export default function Connect() {
                   <div>
                     <i className="bi bi-telephone-fill fs-4 mb-2" style={{ color: '#14432A' }}></i>
                     <p className="mb-0">888-324-6642</p>
-                  </div>
-                  <div>
-                    <i className="bi bi-envelope-fill fs-4 mb-2" style={{ color: '#14432A' }}></i>
-                    <p className="mb-0">support@centuriesmutual.com</p>
                   </div>
                 </div>
               </motion.div>

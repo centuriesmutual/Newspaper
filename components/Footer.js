@@ -102,9 +102,6 @@ export default function Footer() {
               <li className="mb-2">
                 <Link href="/documents" className="text-white text-decoration-none">Documents</Link>
               </li>
-              <li className="mb-2">
-                <Link href="/contact" className="text-white text-decoration-none">Contact</Link>
-              </li>
             </ul>
           </div>
           <div className="col-lg-3 mb-4 mb-lg-0 footer-content">
@@ -126,15 +123,11 @@ export default function Footer() {
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
                 <i className="bi bi-geo-alt me-2" style={{ color: '#14432A' }}></i>
-                Dallas, Texas 75201
+                Dallas, TX
               </li>
               <li className="mb-2">
                 <i className="bi bi-telephone me-2" style={{ color: '#14432A' }}></i>
                 888-324-6642
-              </li>
-              <li className="mb-2">
-                <i className="bi bi-envelope me-2" style={{ color: '#14432A' }}></i>
-                support@centuriesmutual.com
               </li>
             </ul>
           </div>
