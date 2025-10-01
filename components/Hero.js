@@ -80,9 +80,9 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                style={{ marginBottom: '2rem' }}
+                style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
               >
-                <Link href="/learnmore" className="btn btn-outline-light btn-lg">Learn More</Link>
+                <Link href="/learnmore" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Learn More</Link>
                 <Link href="/rewards" className="btn btn-light btn-lg">Download App</Link>
               </motion.div>
             </motion.div>

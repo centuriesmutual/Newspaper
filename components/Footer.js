@@ -120,16 +120,13 @@ export default function Footer() {
           </div>
           <div className="col-lg-3 footer-content">
             <h5 className="mb-3">Contact Us</h5>
-            <ul className="list-unstyled footer-links">
-              <li className="mb-2">
-                <i className="bi bi-geo-alt me-2" style={{ color: '#14432A' }}></i>
+            <div className="d-flex align-items-start">
+              <i className="bi bi-geo-alt me-2 mt-1" style={{ color: '#14432A' }}></i>
+              <div>
+                8080 N Central Expressway<br />
                 Dallas, TX
-              </li>
-              <li className="mb-2">
-                <i className="bi bi-telephone me-2" style={{ color: '#14432A' }}></i>
-                888-324-6642
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div className="border-top border-secondary pt-4 mt-4">
