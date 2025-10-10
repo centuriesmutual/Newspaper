@@ -1,25 +1,25 @@
 'use client'
 
-import { CalculatorIcon, HeartIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
+import { CreditCardIcon, ShieldCheckIcon, HomeIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 const services = [
   {
-    title: "Tax Preparation",
-    description: "Expert tax preparation services ensuring maximum returns and full compliance.",
-    icon: CalculatorIcon,
+    title: "Rental Equity",
+    description: "Build credit and earn rewards from your rent payments. Transform rent into a pathway to homeownership.",
+    icon: CreditCardIcon,
     accent: "#14432A"
   },
   {
-    title: "Health Insurance",
-    description: "Comprehensive health insurance solutions tailored to your needs.",
-    icon: HeartIcon,
+    title: "Permanent Life",
+    description: "Protect your family today, secure your income tomorrow. Convert life insurance to guaranteed retirement income.",
+    icon: ShieldCheckIcon,
     accent: "#1a5436"
   },
   {
     title: "Mortgage Loans",
     description: "Secure your dream home with our competitive mortgage loan solutions.",
-    icon: ShieldCheckIcon,
+    icon: HomeIcon,
     accent: "#206542"
   }
 ]
@@ -92,8 +92,8 @@ export default function Services() {
                   <p className="card-text text-muted mb-4" style={{ fontSize: '1.1rem' }}>{service.description}</p>
                   
                   <Link 
-                    href={service.title === "Tax Preparation" ? "/tax" : 
-                          service.title === "Health Insurance" ? "/healthinsurance" : 
+                    href={service.title === "Rental Equity" ? "/rentalequity" : 
+                          service.title === "Permanent Life" ? "/permanentlife" : 
                           service.title === "Mortgage Loans" ? "/mortgageloans" : "#"}
                     className="text-decoration-none d-flex align-items-center fw-bold"
                     style={{ color: service.accent }}

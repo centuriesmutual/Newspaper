@@ -44,10 +44,10 @@ export default function Footer() {
         
         @media (max-width: 768px) {
           .footer-content {
-            text-align: center;
+            text-align: left;
           }
           .footer-logo {
-            justify-content: center;
+            justify-content: flex-start;
           }
           .footer-links {
             margin-top: 1.5rem;
@@ -130,7 +130,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-top border-secondary pt-4 mt-4">
-          <p className="text-center mb-0">
+          <p className="text-center text-md-center text-start mb-0">
             © {new Date().getFullYear()} Centuries Mutual. All rights reserved.
           </p>
         </div>

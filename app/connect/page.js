@@ -17,10 +17,10 @@ export default function Connect() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="display-4 fw-bold mb-4" style={{ color: '#14432A' }}>
-                  Connect with an Advisor
+                  Connect with Broker
                 </h1>
                 <p className="lead mb-4">
-                  Take the first step towards your financial goals with personalized guidance from our expert advisors.
+                  Take the first step towards your financial goals with personalized guidance from our expert brokers.
                 </p>
               </motion.div>
             </div>
@@ -34,7 +34,7 @@ export default function Connect() {
               >
                 <Image
                   src="/mountians.jpeg"
-                  alt="Connect with Advisor"
+                  alt="Connect with Broker"
                   fill
                   className="rounded-4"
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -88,9 +88,9 @@ export default function Connect() {
                         <div className="form-floating">
                           <select className="form-select" id="service" aria-label="Service">
                             <option selected>Select a Service</option>
-                            <option value="1">Mortgage Loans</option>
-                            <option value="2">Health Insurance</option>
-                            <option value="3">Tax Preparation</option>
+                            <option value="1">Rental Equity</option>
+                            <option value="2">Permanent Life</option>
+                            <option value="3">Mortgage Loans</option>
                           </select>
                           <label htmlFor="service">Service of Interest</label>
                         </div>
