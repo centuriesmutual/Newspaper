@@ -278,7 +278,7 @@ export default function LearnMore() {
                     Mortgage Loans
                   </h3>
                   <p className="mb-4" style={{ opacity: 0.95, fontSize: '1.1rem' }}>
-                    Secure your dream home with our competitive mortgage loan solutions.
+                    Secure your dream home with our competitive mortgage loan solutions. From first-time buyers to refinancing, we provide expert guidance every step of the way.
                   </p>
                   <Link href="/mortgageloans" className="btn btn-light px-4 py-2 align-self-start">
                     Learn More <ArrowRightIcon style={{ width: '16px', height: '16px', display: 'inline', marginLeft: '8px' }} />

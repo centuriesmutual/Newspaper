@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: "Mortgage Loans",
-    description: "Secure your dream home with our competitive mortgage loan solutions.",
+    description: "Secure your dream home with our competitive mortgage loan solutions and expert guidance throughout the entire process.",
     icon: HomeIcon,
     accent: "#206542"
   }
