@@ -100,7 +100,8 @@ export default function Hero() {
                 width: '180%',
                 marginLeft: '-40%',
                 position: 'relative',
-                marginTop: '20px'
+                marginTop: '20px',
+                borderRadius: '24px'
               }}>
                 <Image
                   src="/mountians.jpeg"
@@ -121,7 +122,8 @@ export default function Hero() {
                 height: '400px',
                 position: 'relative',
                 marginTop: '0',
-                marginBottom: '1.5rem'
+                marginBottom: '1.5rem',
+                borderRadius: '20px'
               }}>
                 <Image
                   src="/mountians.jpeg"

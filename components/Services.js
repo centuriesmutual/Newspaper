@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 const services = [
   {
-    title: "Rental Equity",
-    description: "Build credit and earn rewards from your rent payments. Transform rent into a pathway to homeownership.",
+    title: "Health Insurance",
+    description: "Comprehensive health insurance solutions tailored to your needs with expert guidance and coverage options.",
     icon: CreditCardIcon,
     accent: "#14432A"
   },
@@ -92,7 +92,7 @@ export default function Services() {
                   <p className="card-text text-muted mb-4" style={{ fontSize: '1.1rem' }}>{service.description}</p>
                   
                   <Link 
-                    href={service.title === "Rental Equity" ? "/rentalequity" : 
+                    href={service.title === "Health Insurance" ? "/healthinsurance" : 
                           service.title === "Permanent Life" ? "/permanentlife" : 
                           service.title === "Mortgage Loans" ? "/mortgageloans" : "#"}
                     className="text-decoration-none d-flex align-items-center fw-bold"

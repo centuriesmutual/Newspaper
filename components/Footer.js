@@ -108,7 +108,7 @@ export default function Footer() {
             <h5 className="mb-3">Services</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/rentalequity" className="text-decoration-none text-white">Rental Equity</Link>
+                <Link href="/healthinsurance" className="text-decoration-none text-white">Health Insurance</Link>
               </li>
               <li className="mb-2">
                 <Link href="/permanentlife" className="text-white text-decoration-none">Permanent Life</Link>

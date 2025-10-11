@@ -63,7 +63,7 @@ export default function LearnMore() {
               </div>
             </div>
 
-            {/* Service 1: Rental Equity */}
+            {/* Service 1: Health Insurance */}
             <div className="row mb-5 pb-5 border-bottom">
               <div className="col-lg-5 mb-4 mb-lg-0">
                 <div className="p-4" style={{
@@ -77,12 +77,12 @@ export default function LearnMore() {
                 }}>
                   <CreditCardIcon style={{ width: '56px', height: '56px', marginBottom: '24px' }} />
                   <h3 className="h2 fw-bold mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    Rental Equity™
+                    Health Insurance
                   </h3>
                   <p className="mb-4" style={{ opacity: 0.95, fontSize: '1.1rem' }}>
-                    Build credit and earn rewards from your rent payments. Transform rent into a pathway to homeownership.
+                    Comprehensive health insurance solutions tailored to your needs with expert guidance and coverage options.
                   </p>
-                  <Link href="/rentalequity" className="btn btn-light px-4 py-2 align-self-start">
+                  <Link href="/healthinsurance" className="btn btn-light px-4 py-2 align-self-start">
                     Learn More <ArrowRightIcon style={{ width: '16px', height: '16px', display: 'inline', marginLeft: '8px' }} />
                   </Link>
                 </div>
@@ -105,9 +105,9 @@ export default function LearnMore() {
                         </div>
                       </div>
                       <div>
-                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Build Credit History</h5>
+                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Comprehensive Coverage</h5>
                         <p className="text-muted mb-0">
-                          Every on-time rent payment is reported to all three major credit bureaus — Experian, Equifax, and TransUnion. Members see an average credit score increase of 60 points within 6 months.
+                          Access to Medicare, ACA marketplace plans, and supplemental insurance options. Expert guidance to find the right coverage for your health and budget needs.
                         </p>
                       </div>
                     </div>
@@ -128,9 +128,9 @@ export default function LearnMore() {
                         </div>
                       </div>
                       <div>
-                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Digital Payment Platform</h5>
+                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Affordable Plans</h5>
                         <p className="text-muted mb-0">
-                          Secure, instant, and transparent rent payments with bank-level encryption. Automatic payments ensure you never miss a due date.
+                          Compare plans and pricing to find affordable health insurance that fits your budget. Subsidies and tax credits may be available to reduce costs.
                         </p>
                       </div>
                     </div>
@@ -151,9 +151,9 @@ export default function LearnMore() {
                         </div>
                       </div>
                       <div>
-                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Rewards & Protection</h5>
+                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Personalized Support</h5>
                         <p className="text-muted mb-0">
-                          Earn cashback on every payment and optional rent protection insurance to safeguard against unexpected financial hardship.
+                          One-on-one consultations with licensed insurance agents who understand your unique healthcare needs and help you navigate enrollment.
                         </p>
                       </div>
                     </div>
