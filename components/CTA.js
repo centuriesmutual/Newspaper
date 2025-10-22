@@ -17,7 +17,7 @@ export default function CTA() {
           </div>
           <div className="col-lg-4 text-center text-lg-center mt-4 mt-lg-0">
             <Link href="/connect" className="btn btn-light btn-lg px-4">
-              Connect with Broker
+              Connect With A Broker
             </Link>
           </div>
         </div>
