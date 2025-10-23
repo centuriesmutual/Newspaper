@@ -93,9 +93,7 @@ export default function Navbar() {
         <div className="container">
           <div className="d-flex align-items-center">
             <i className="bi bi-newspaper me-2"></i>
-            <Link href="/newspaper" className="me-4">Newspaper</Link>
-            <i className="bi bi-book me-2"></i>
-            <Link href="/library">Library</Link>
+            <Link href="/newspaper">Newspaper</Link>
           </div>
         </div>
       </div>

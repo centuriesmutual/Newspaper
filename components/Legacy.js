@@ -52,29 +52,19 @@ export default function Legacy() {
                   borderRadius: '16px',
                   border: '2px solid rgba(20, 67, 42, 0.2)'
                 }}>
-                  <div className="d-flex align-items-center justify-content-center mb-3">
-                    <div 
-                      style={{
-                        height: '60px',
-                        width: '60px',
-                        background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        marginRight: '15px',
-                        color: 'white',
-                        fontWeight: 'bold',
-                        fontSize: '18px',
-                        boxShadow: '0 4px 15px rgba(30, 58, 138, 0.3)'
-                      }}
-                    >
-                      BBB
-                    </div>
-                    <div>
+                  <div className="text-center mb-3">
+                    <div className="mb-3">
                       <p className="h2 mb-1" style={{ color: '#14432A' }}>A Rating</p>
                       <p className="text-muted mb-0">Better Business Bureau</p>
                     </div>
+                    <img 
+                      src="/BBB-Logo-1.png" 
+                      alt="BBB Accredited Business Seal"
+                      style={{ 
+                        height: '80px', 
+                        width: 'auto'
+                      }}
+                    />
                   </div>
                   <p className="small text-muted mb-0">
                     Accredited Business • Trusted & Verified

@@ -36,15 +36,15 @@ export default function Community() {
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
               }}>
-                Our Community
+                Member Credit Rating System
               </h1>
               <p className="lead mb-5" style={{ 
                 fontSize: '1.3rem',
                 color: '#495057'
               }}>
-                Join a vibrant community of like-minded individuals who share your passion for 
-                smart living, financial wellness, and meaningful connections. Together, we build 
-                stronger neighborhoods and brighter futures.
+                Find the perfect room and roommate with our trusted member credit rating system. 
+                Verified profiles, secure payments, and reliable reviews help you make informed 
+                decisions for your next home.
               </p>
               
               <div className="row g-4 mb-5">
@@ -59,8 +59,24 @@ export default function Community() {
                       <UsersIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">10,000+ Members</h5>
-                      <small className="opacity-75">Growing community</small>
+                      <h5 className="mb-1 fw-bold">Verified Profiles</h5>
+                      <small className="opacity-75">ID & background checked</small>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '12px',
+                      padding: '12px',
+                      marginRight: '15px'
+                    }}>
+                      <StarIcon style={{ width: '24px', height: '24px' }} />
+                    </div>
+                    <div>
+                      <h5 className="mb-1 fw-bold">Credit Ratings</h5>
+                      <small className="opacity-75">Reliable scoring system</small>
                     </div>
                   </div>
                 </div>
@@ -75,8 +91,8 @@ export default function Community() {
                       <ChatBubbleLeftRightIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Active Forums</h5>
-                      <small className="opacity-75">Daily discussions</small>
+                      <h5 className="mb-1 fw-bold">Secure Messaging</h5>
+                      <small className="opacity-75">Safe communication</small>
                     </div>
                   </div>
                 </div>
@@ -91,24 +107,8 @@ export default function Community() {
                       <HeartIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Support Network</h5>
-                      <small className="opacity-75">Help when you need it</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '12px',
-                      padding: '12px',
-                      marginRight: '15px'
-                    }}>
-                      <TrophyIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h5 className="mb-1 fw-bold">Achievement System</h5>
-                      <small className="opacity-75">Earn recognition</small>
+                      <h5 className="mb-1 fw-bold">Roommate Matching</h5>
+                      <small className="opacity-75">Compatible preferences</small>
                     </div>
                   </div>
                 </div>
@@ -137,10 +137,10 @@ export default function Community() {
                     e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                   }}
                 >
-                  Join Community
+                  Find Roommates
                 </button>
                 <Link 
-                  href="/schedule" 
+                  href="/rooms" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -159,7 +159,7 @@ export default function Community() {
                     e.target.style.background = 'transparent';
                   }}
                 >
-                  View Events
+                  Browse Rooms
                 </Link>
               </div>
             </div>
@@ -175,28 +175,9 @@ export default function Community() {
                 border: '1px solid rgba(255,255,255,0.2)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
               }}>
-                <h3 className="text-dark mb-4 fw-bold" style={{ color: '#14432A' }}>Community Highlights</h3>
+                <h3 className="text-dark mb-4 fw-bold" style={{ color: '#14432A' }}>Credit Rating Features</h3>
                 
                 <div className="mb-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '50px',
-                      height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginRight: '15px'
-                    }}>
-                      <CalendarDaysIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Weekly Meetups</h6>
-                      <small className="text-muted">Every Saturday 2PM</small>
-                    </div>
-                  </div>
-                  
                   <div className="d-flex align-items-center mb-3">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -211,8 +192,27 @@ export default function Community() {
                       <StarIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Member Spotlight</h6>
-                      <small className="text-muted">Featured this month</small>
+                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Credit Score Display</h6>
+                      <small className="text-muted">Transparent ratings for all members</small>
+                    </div>
+                  </div>
+                  
+                  <div className="d-flex align-items-center mb-3">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '50%',
+                      width: '50px',
+                      height: '50px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginRight: '15px'
+                    }}>
+                      <UsersIcon style={{ width: '24px', height: '24px' }} />
+                    </div>
+                    <div>
+                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Verified Members</h6>
+                      <small className="text-muted">ID verification required</small>
                     </div>
                   </div>
                   
@@ -227,11 +227,11 @@ export default function Community() {
                       justifyContent: 'center',
                       marginRight: '15px'
                     }}>
-                      <TrophyIcon style={{ width: '24px', height: '24px' }} />
+                      <ChatBubbleLeftRightIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Community Challenges</h6>
-                      <small className="text-muted">Monthly competitions</small>
+                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Review System</h6>
+                      <small className="text-muted">Rate your roommates and landlords</small>
                     </div>
                   </div>
                 </div>
@@ -243,8 +243,8 @@ export default function Community() {
                       borderRadius: '12px',
                       padding: '15px'
                     }}>
-                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>2.5K</h4>
-                      <small className="text-muted">Active Members</small>
+                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>5K+</h4>
+                      <small className="text-muted">Verified Members</small>
                     </div>
                   </div>
                   <div className="col-4">
@@ -253,8 +253,8 @@ export default function Community() {
                       borderRadius: '12px',
                       padding: '15px'
                     }}>
-                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>150+</h4>
-                      <small className="text-muted">Events This Year</small>
+                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>2.1K+</h4>
+                      <small className="text-muted">Successful Matches</small>
                     </div>
                   </div>
                   <div className="col-4">
@@ -263,8 +263,8 @@ export default function Community() {
                       borderRadius: '12px',
                       padding: '15px'
                     }}>
-                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>98%</h4>
-                      <small className="text-muted">Satisfaction Rate</small>
+                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>4.8★</h4>
+                      <small className="text-muted">Average Rating</small>
                     </div>
                   </div>
                 </div>

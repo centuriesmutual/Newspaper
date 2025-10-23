@@ -35,7 +35,7 @@ export default function PaymentTech() {
                 boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
                 backdropFilter: 'blur(10px)'
               }}>
-                <h3 className="mb-4 fw-bold" style={{ color: '#14432A' }}>Smart Payment Dashboard</h3>
+                <h3 className="mb-4 fw-bold" style={{ color: '#14432A' }}>Document Audit Dashboard</h3>
                 <div className="row g-3 mb-4">
                   <div className="col-6">
                     <div className="text-center p-3" style={{ 
@@ -43,10 +43,10 @@ export default function PaymentTech() {
                       borderRadius: '12px',
                       border: '2px solid #e9ecef'
                     }}>
-                      <CurrencyDollarIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                      <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                       <div className="mt-2">
-                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>$2,450</h6>
-                        <small className="text-muted">Monthly Bills</small>
+                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>98%</h6>
+                        <small className="text-muted">Accuracy Rate</small>
                       </div>
                     </div>
                   </div>
@@ -58,27 +58,27 @@ export default function PaymentTech() {
                     }}>
                       <ClockIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                       <div className="mt-2">
-                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>12</h6>
-                        <small className="text-muted">Auto-Payments</small>
+                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>24hrs</h6>
+                        <small className="text-muted">Avg. Processing</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mb-4">
-                  <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>Recent Transactions</h6>
+                  <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>Recent Audits</h6>
                   <div className="space-y-2">
                     <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Rent Payment</span>
-                      <span className="text-success fw-bold">-$1,200</span>
+                      <span className="fw-medium">Tax Documents</span>
+                      <span className="text-success fw-bold">✓ Complete</span>
                     </div>
                     <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Utilities</span>
-                      <span className="text-success fw-bold">-$180</span>
+                      <span className="fw-medium">Insurance Forms</span>
+                      <span className="text-success fw-bold">✓ Verified</span>
                     </div>
                     <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Travel Booking</span>
-                      <span className="text-success fw-bold">-$450</span>
+                      <span className="fw-medium">Financial Statements</span>
+                      <span className="text-warning fw-bold">⚠ Review</span>
                     </div>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function PaymentTech() {
                   className="btn btn-warning btn-lg w-100 fw-bold"
                   style={{ borderRadius: '12px' }}
                 >
-                  View Full Dashboard
+                  View Audit Reports
                 </button>
               </div>
             </div>
@@ -99,14 +99,14 @@ export default function PaymentTech() {
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
               }}>
-                Payment Tech Platform
+                Document Auditing Process
               </h1>
               <p className="lead mb-5" style={{ 
                 fontSize: '1.3rem',
                 color: '#495057'
               }}>
-                Maximize your travel and living experience with our intelligent payment platform. 
-                Pay bills effortlessly, track expenses, and unlock exclusive travel benefits.
+                Streamline your financial documentation with our comprehensive auditing system. 
+                Ensure accuracy, compliance, and peace of mind with our expert review process.
               </p>
               
               <div className="row g-4 mb-5">
@@ -121,40 +121,8 @@ export default function PaymentTech() {
                       <CreditCardIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Smart Bill Pay</h5>
-                      <small className="opacity-75">Automated payments</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '12px',
-                      padding: '12px',
-                      marginRight: '15px'
-                    }}>
-                      <GlobeAltIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h5 className="mb-1 fw-bold">Travel Rewards</h5>
-                      <small className="opacity-75">Earn points & miles</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '12px',
-                      padding: '12px',
-                      marginRight: '15px'
-                    }}>
-                      <ChartBarIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h5 className="mb-1 fw-bold">Expense Tracking</h5>
-                      <small className="opacity-75">Detailed analytics</small>
+                      <h5 className="mb-1 fw-bold">Accuracy Verification</h5>
+                      <small className="opacity-75">Error detection & correction</small>
                     </div>
                   </div>
                 </div>
@@ -169,8 +137,40 @@ export default function PaymentTech() {
                       <ShieldCheckIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Secure Platform</h5>
-                      <small className="opacity-75">Bank-level security</small>
+                      <h5 className="mb-1 fw-bold">Compliance Review</h5>
+                      <small className="opacity-75">Regulatory adherence</small>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '12px',
+                      padding: '12px',
+                      marginRight: '15px'
+                    }}>
+                      <ChartBarIcon style={{ width: '24px', height: '24px' }} />
+                    </div>
+                    <div>
+                      <h5 className="mb-1 fw-bold">Detailed Reports</h5>
+                      <small className="opacity-75">Comprehensive analysis</small>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '12px',
+                      padding: '12px',
+                      marginRight: '15px'
+                    }}>
+                      <ClockIcon style={{ width: '24px', height: '24px' }} />
+                    </div>
+                    <div>
+                      <h5 className="mb-1 fw-bold">Fast Turnaround</h5>
+                      <small className="opacity-75">Quick processing</small>
                     </div>
                   </div>
                 </div>
@@ -199,10 +199,10 @@ export default function PaymentTech() {
                     e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                   }}
                 >
-                  View Dashboard
+                  Start Audit
                 </Link>
                 <Link 
-                  href="/payment-tech" 
+                  href="/audit-process" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
