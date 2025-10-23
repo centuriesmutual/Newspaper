@@ -15,7 +15,8 @@ export default function Community() {
       position: 'relative',
       overflow: 'hidden',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: '2rem 0'
     }}>
       {/* Background Pattern */}
       <div style={{
@@ -29,7 +30,7 @@ export default function Community() {
       }} />
       
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center" style={{ padding: '1rem 0' }}>
           <div className="col-lg-6">
             <div className="text-dark">
               <h1 className="display-2 fw-bold mb-4" style={{ 
@@ -47,7 +48,7 @@ export default function Community() {
                 decisions for your next home.
               </p>
               
-              <div className="row g-4 mb-5">
+              <div className="row g-3 mb-4" style={{ marginBottom: '2rem' }}>
                 <div className="col-md-6">
                   <div className="d-flex align-items-center">
                     <div style={{
@@ -114,7 +115,7 @@ export default function Community() {
                 </div>
               </div>
               
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
                 <button 
                   onClick={() => setIsModalOpen(true)}
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
