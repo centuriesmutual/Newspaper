@@ -9,7 +9,7 @@ export default function Hero() {
     <section 
       className="hero-section position-relative overflow-hidden" 
       style={{ 
-        minHeight: '60vh',
+        minHeight: '95vh',
         backgroundColor: '#14432A',
         paddingTop: '0',
         paddingBottom: '1rem'
@@ -34,8 +34,8 @@ export default function Hero() {
         <div 
           className="row align-items-center hero-row" 
           style={{ 
-            minHeight: '60vh',
-            paddingTop: '4rem'
+            minHeight: '95vh',
+            paddingTop: '1rem'
           }}
         >
           <div className="col-lg-6 order-lg-2 order-2 order-md-2 order-sm-1">
@@ -57,7 +57,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Your Trusted Community Brokerage:
+                Your Community Brokerage:
               </motion.h1>
               <motion.p 
                 className="lead text-white mb-4 text-center text-lg-start" 
