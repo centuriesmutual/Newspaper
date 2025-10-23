@@ -41,7 +41,7 @@ export default function Legacy() {
               secure, reliable systems and proven credibility.
             </p>
             <p className="text-muted mb-5">
-              Our advanced security infrastructure and BBB A+ rating ensure that every family 
+              Our advanced security infrastructure and BBB A rating ensure that every family 
               receives the highest level of protection and personalized attention. Through 
               state-of-the-art encryption, secure data handling, and transparent practices, 
               we guide families toward financial security with complete confidence.
