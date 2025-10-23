@@ -8,7 +8,7 @@ export default function Legacy() {
       <div className="container">
         <div className="row align-items-center g-5">
           <div className="col-lg-6 position-relative">
-            <div className="position-relative" style={{ height: '600px' }}>
+            <div className="position-relative" style={{ height: '600px', overflow: 'hidden' }}>
               <Image
                 src="/deer.jpeg"
                 alt="Legacy Painting of Deer Family"
@@ -18,8 +18,9 @@ export default function Legacy() {
                 className="rounded-3"
                 style={{ 
                   objectFit: 'cover',
-                  objectPosition: 'center',
-                  transform: 'scale(0.8)'
+                  objectPosition: 'center top',
+                  transform: 'scale(0.8)',
+                  transformOrigin: 'center center'
                 }}
               />
             </div>
