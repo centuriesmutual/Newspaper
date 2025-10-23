@@ -35,30 +35,50 @@ export default function Legacy() {
             }}>A Legacy of Trust</h2>
             <p className="text-muted mb-4">
               At Centuries Mutual, we've built our reputation on a foundation of trust, 
-              expertise, and unwavering commitment to our clients' financial success.
+              expertise, and unwavering commitment to our clients' financial success through 
+              secure, reliable systems and proven credibility.
             </p>
             <p className="text-muted mb-5">
-              Our community-focused approach ensures that every family receives personalized attention 
-              and comprehensive solutions tailored to their unique needs and goals. Through stewardship and a brief description of our values, we guide families toward financial security.
+              Our advanced security infrastructure and BBB A+ rating ensure that every family 
+              receives the highest level of protection and personalized attention. Through 
+              state-of-the-art encryption, secure data handling, and transparent practices, 
+              we guide families toward financial security with complete confidence.
             </p>
             
             <div className="row g-4">
-              <div className="col-lg-4 col-md-6">
-                <div className="stats-card text-center">
-                  <p className="h2 mb-1" style={{ color: '#14432A' }}>Integrity</p>
-                  <p className="text-muted mb-0">Our Promise</p>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="stats-card text-center">
-                  <p className="h2 mb-1" style={{ color: '#14432A' }}>Excellence</p>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.2' }}>Dedication & Service</p>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-12">
-                <div className="stats-card text-center">
-                  <p className="h2 mb-1" style={{ color: '#14432A' }}>Stewardship</p>
-                  <p className="text-muted mb-0">Protecting Tomorrow</p>
+              <div className="col-lg-6 col-md-8 mx-auto">
+                <div className="stats-card text-center p-4" style={{ 
+                  background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.05) 0%, rgba(20, 67, 42, 0.1) 100%)',
+                  borderRadius: '16px',
+                  border: '2px solid rgba(20, 67, 42, 0.2)'
+                }}>
+                  <div className="d-flex align-items-center justify-content-center mb-3">
+                    <div 
+                      style={{
+                        height: '60px',
+                        width: '60px',
+                        background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginRight: '15px',
+                        color: 'white',
+                        fontWeight: 'bold',
+                        fontSize: '18px',
+                        boxShadow: '0 4px 15px rgba(30, 58, 138, 0.3)'
+                      }}
+                    >
+                      BBB
+                    </div>
+                    <div>
+                      <p className="h2 mb-1" style={{ color: '#14432A' }}>A Rating</p>
+                      <p className="text-muted mb-0">Better Business Bureau</p>
+                    </div>
+                  </div>
+                  <p className="small text-muted mb-0">
+                    Accredited Business • Trusted & Verified
+                  </p>
                 </div>
               </div>
             </div>

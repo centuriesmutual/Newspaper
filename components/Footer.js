@@ -94,13 +94,13 @@ export default function Footer() {
             </p>
           </div>
           <div className="col-lg-2 mb-4 mb-lg-0 footer-content">
-            <h5 className="mb-3">Company</h5>
+            <h5 className="mb-3">Resources</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/about" className="text-decoration-none text-white">About Us</Link>
+                <Link href="/library" className="text-decoration-none text-white">Library</Link>
               </li>
               <li className="mb-2">
-                <Link href="/documents" className="text-white text-decoration-none">Documents</Link>
+                <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
               </li>
             </ul>
           </div>
@@ -108,18 +108,18 @@ export default function Footer() {
             <h5 className="mb-3">Services</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/healthinsurance" className="text-decoration-none text-white">Health Insurance</Link>
+                <Link href="/real-estate" className="text-decoration-none text-white">Real Estate</Link>
               </li>
               <li className="mb-2">
-                <Link href="/permanentlife" className="text-white text-decoration-none">Permanent Life</Link>
+                <Link href="/privacy-policy" className="text-white text-decoration-none">Privacy Policy</Link>
               </li>
               <li className="mb-2">
-                <Link href="/mortgageloans" className="text-white text-decoration-none">Mortgage Loans</Link>
+                <Link href="/terms-and-conditions" className="text-white text-decoration-none">Terms and Conditions</Link>
               </li>
             </ul>
           </div>
           <div className="col-lg-3 footer-content">
-            <h5 className="mb-3">Contact Us</h5>
+            <h5 className="mb-3">Company</h5>
             <div className="d-flex align-items-start">
               <i className="bi bi-geo-alt me-2 mt-1" style={{ color: '#14432A' }}></i>
               <div>

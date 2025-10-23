@@ -39,6 +39,24 @@ export default function Navbar() {
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
         
+        .top-bar {
+          background: linear-gradient(135deg, #14432A 0%, #1a5436 100%);
+          color: white;
+          padding: 8px 0;
+          font-size: 0.9rem;
+        }
+        
+        .top-bar a {
+          color: white;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+        
+        .top-bar a:hover {
+          color: #e9ecef;
+          text-decoration: underline;
+        }
+        
         @media (max-width: 640px) {
           .navbar {
             min-height: 65px;
@@ -63,8 +81,24 @@ export default function Navbar() {
             display: flex !important;
             align-items: center !important;
           }
+          .top-bar {
+            font-size: 0.8rem;
+            padding: 6px 0;
+          }
         }
       `}</style>
+      
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="container">
+          <div className="d-flex align-items-center">
+            <i className="bi bi-newspaper me-2"></i>
+            <Link href="/newspaper" className="me-4">Newspaper</Link>
+            <i className="bi bi-book me-2"></i>
+            <Link href="/library">Library</Link>
+          </div>
+        </div>
+      </div>
       
       <nav className="navbar navbar-light bg-white py-1">
         <div className="container d-flex justify-content-between align-items-center">

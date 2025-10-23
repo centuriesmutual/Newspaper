@@ -1,5 +1,7 @@
 import Hero from '../components/Hero'
-import Services from '../components/Services'
+import RealEstate from '../components/RealEstate'
+import PaymentTech from '../components/PaymentTech'
+import Community from '../components/Community'
 import Legacy from '../components/Legacy'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
@@ -9,7 +11,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Services />
+      <RealEstate />
+      <PaymentTech />
+      <Community />
       <Legacy />
       <CTA />
       <Footer />
