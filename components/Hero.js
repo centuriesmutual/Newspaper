@@ -82,7 +82,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
               >
-                <Link href="/community" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Our Network</Link>
+                <Link href="/community" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Learn More</Link>
                 <Link href="/rewards" className="btn btn-light btn-lg">Download App</Link>
               </motion.div>
             </motion.div>
