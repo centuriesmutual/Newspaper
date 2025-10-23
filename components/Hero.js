@@ -35,7 +35,7 @@ export default function Hero() {
           className="row align-items-center hero-row" 
           style={{ 
             minHeight: '95vh',
-            paddingTop: '1rem'
+            paddingTop: '0.5rem'
           }}
         >
           <div className="col-lg-6 order-lg-2 order-2 order-md-2 order-sm-1">
@@ -73,7 +73,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Providing a comprehensive network of partners, innovative solutions, and personalized guidance to help families build wealth, protect their assets, and secure a brighter tomorrow.
+                Connecting individuals with secure real estate solutions, digital document management, and community-driven roommate matching to simplify property transactions and enhance living experiences.
               </motion.p>
               <motion.div 
                 className="d-flex gap-2 justify-content-center justify-content-lg-start flex-column flex-sm-row px-3 px-sm-0"
