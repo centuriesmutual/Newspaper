@@ -18,7 +18,8 @@ export default function Legacy() {
                 className="rounded-3"
                 style={{ 
                   objectFit: 'cover',
-                  objectPosition: 'center'
+                  objectPosition: 'center',
+                  transform: 'scale(0.8)'
                 }}
               />
             </div>
@@ -47,7 +48,7 @@ export default function Legacy() {
             
             <div className="row g-4">
               <div className="col-lg-6 col-md-8 mx-auto">
-                <div className="stats-card text-center p-4" style={{ 
+                <div className="stats-card text-center p-5" style={{ 
                   background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.05) 0%, rgba(20, 67, 42, 0.1) 100%)',
                   borderRadius: '16px',
                   border: '2px solid rgba(20, 67, 42, 0.2)'
