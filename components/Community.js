@@ -139,8 +139,8 @@ export default function Community() {
                 >
                   Find Roommates
                 </button>
-                <Link 
-                  href="/rooms" 
+                <button 
+                  onClick={() => setIsModalOpen(true)}
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -160,7 +160,7 @@ export default function Community() {
                   }}
                 >
                   Browse Rooms
-                </Link>
+                </button>
               </div>
             </div>
           </div>

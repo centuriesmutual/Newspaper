@@ -35,7 +35,7 @@ export default function PaymentTech() {
                 boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
                 backdropFilter: 'blur(10px)'
               }}>
-                <h3 className="mb-4 fw-bold" style={{ color: '#14432A' }}>Document Audit Dashboard</h3>
+                <h3 className="mb-4 fw-bold" style={{ color: '#14432A' }}>eDocument Dashboard</h3>
                 <div className="row g-3 mb-4">
                   <div className="col-6">
                     <div className="text-center p-3" style={{ 
@@ -45,8 +45,8 @@ export default function PaymentTech() {
                     }}>
                       <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                       <div className="mt-2">
-                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>98%</h6>
-                        <small className="text-muted">Accuracy Rate</small>
+                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>15</h6>
+                        <small className="text-muted">Active Leases</small>
                       </div>
                     </div>
                   </div>
@@ -58,27 +58,27 @@ export default function PaymentTech() {
                     }}>
                       <ClockIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                       <div className="mt-2">
-                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>24hrs</h6>
-                        <small className="text-muted">Avg. Processing</small>
+                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>3</h6>
+                        <small className="text-muted">Pending Docs</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mb-4">
-                  <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>Recent Audits</h6>
+                  <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>Recent Documents</h6>
                   <div className="space-y-2">
                     <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Tax Documents</span>
+                      <span className="fw-medium">Lease Agreement</span>
+                      <span className="text-success fw-bold">✓ Signed</span>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
+                      <span className="fw-medium">Roommate Contract</span>
                       <span className="text-success fw-bold">✓ Complete</span>
                     </div>
                     <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Insurance Forms</span>
-                      <span className="text-success fw-bold">✓ Verified</span>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Financial Statements</span>
-                      <span className="text-warning fw-bold">⚠ Review</span>
+                      <span className="fw-medium">Property Inspection</span>
+                      <span className="text-warning fw-bold">⚠ Pending</span>
                     </div>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function PaymentTech() {
                   className="btn btn-warning btn-lg w-100 fw-bold"
                   style={{ borderRadius: '12px' }}
                 >
-                  View Audit Reports
+                  View All Documents
                 </button>
               </div>
             </div>
@@ -99,14 +99,14 @@ export default function PaymentTech() {
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
               }}>
-                Document Auditing Process
+                eDocument System
               </h1>
               <p className="lead mb-5" style={{ 
                 fontSize: '1.3rem',
                 color: '#495057'
               }}>
-                Streamline your financial documentation with our comprehensive auditing system. 
-                Ensure accuracy, compliance, and peace of mind with our expert review process.
+                Find and rent real estate with roommates using our comprehensive eDocument system. 
+                Streamline lease agreements, roommate contracts, and property documentation all in one place.
               </p>
               
               <div className="row g-4 mb-5">
@@ -121,8 +121,8 @@ export default function PaymentTech() {
                       <CreditCardIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Accuracy Verification</h5>
-                      <small className="opacity-75">Error detection & correction</small>
+                      <h5 className="mb-1 fw-bold">Digital Leases</h5>
+                      <small className="opacity-75">Electronic lease agreements</small>
                     </div>
                   </div>
                 </div>
@@ -137,8 +137,8 @@ export default function PaymentTech() {
                       <ShieldCheckIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Compliance Review</h5>
-                      <small className="opacity-75">Regulatory adherence</small>
+                      <h5 className="mb-1 fw-bold">Roommate Contracts</h5>
+                      <small className="opacity-75">Secure roommate agreements</small>
                     </div>
                   </div>
                 </div>
@@ -153,8 +153,8 @@ export default function PaymentTech() {
                       <ChartBarIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Detailed Reports</h5>
-                      <small className="opacity-75">Comprehensive analysis</small>
+                      <h5 className="mb-1 fw-bold">Property Documents</h5>
+                      <small className="opacity-75">Complete property files</small>
                     </div>
                   </div>
                 </div>
@@ -169,8 +169,8 @@ export default function PaymentTech() {
                       <ClockIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Fast Turnaround</h5>
-                      <small className="opacity-75">Quick processing</small>
+                      <h5 className="mb-1 fw-bold">Instant Access</h5>
+                      <small className="opacity-75">24/7 document access</small>
                     </div>
                   </div>
                 </div>
@@ -199,10 +199,10 @@ export default function PaymentTech() {
                     e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                   }}
                 >
-                  Start Audit
+                  Access Documents
                 </Link>
                 <Link 
-                  href="/audit-process" 
+                  href="/edocument-system" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',

@@ -97,7 +97,7 @@ export default function Footer() {
             <h5 className="mb-3">Resources</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/library" className="text-decoration-none text-white">Library</Link>
+                <Link href="/community" className="text-decoration-none text-white">Community</Link>
               </li>
               <li className="mb-2">
                 <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>

@@ -9,10 +9,10 @@ export default function Community() {
           <div className="row mb-5">
             <div className="col-12 text-center">
               <h1 className="display-3 fw-bold mb-4" style={{ color: '#14432A', fontFamily: "'Playfair Display', serif" }}>
-                Community Platform
+                Community Standards
               </h1>
               <p className="lead mb-5" style={{ color: '#495057', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>
-                A comprehensive community platform designed to connect individuals, foster collaboration, and build meaningful relationships through shared experiences, knowledge exchange, and collective growth.
+                Our comprehensive community standards ensure a safe, respectful, and secure environment for all platform users. These guidelines protect our community members and maintain the highest standards of conduct and safety.
               </p>
             </div>
           </div>
@@ -22,11 +22,11 @@ export default function Community() {
             <div className="col-12">
               <div className="card border-0 shadow-lg" style={{ borderRadius: '20px', background: 'white' }}>
                 <div className="card-body p-5">
-                  <h2 className="fw-bold mb-4" style={{ color: '#14432A', fontSize: '2rem' }}>Community Features & Services</h2>
+                  <h2 className="fw-bold mb-4" style={{ color: '#14432A', fontSize: '2rem' }}>User Protection & Safety Standards</h2>
                   
-                  {/* Community Dashboard System */}
+                  {/* Safety Standards */}
                   <div className="mb-5">
-                    <h3 className="h4 fw-bold mb-4" style={{ color: '#14432A', fontSize: '1.5rem' }}>1. Community Dashboard</h3>
+                    <h3 className="h4 fw-bold mb-4" style={{ color: '#14432A', fontSize: '1.5rem' }}>1. Safety & Security Standards</h3>
                     <div className="row g-4">
                       <div className="col-md-6">
                         <div className="d-flex align-items-start p-3" style={{ background: 'rgba(20, 67, 42, 0.05)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.1)' }}>
@@ -46,8 +46,8 @@ export default function Community() {
                             </svg>
                           </div>
                           <div>
-                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Event Management System</h6>
-                            <p className="text-muted mb-0 small">Organize and manage community events, meetups, and gatherings</p>
+                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Identity Verification</h6>
+                            <p className="text-muted mb-0 small">Mandatory ID verification and background checks for all members</p>
                           </div>
                         </div>
                       </div>
@@ -65,12 +65,35 @@ export default function Community() {
                             flexShrink: 0
                           }}>
                             <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
-                              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                             </svg>
                           </div>
                           <div>
-                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Community Analytics</h6>
-                            <p className="text-muted mb-0 small">Track engagement, growth, and community health metrics</p>
+                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Safety Monitoring</h6>
+                            <p className="text-muted mb-0 small">24/7 automated monitoring and human review of all interactions</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="d-flex align-items-start p-3" style={{ background: 'rgba(20, 67, 42, 0.05)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.1)' }}>
+                          <div style={{
+                            background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
+                            borderRadius: '8px',
+                            width: '48px',
+                            height: '48px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginRight: '15px',
+                            flexShrink: 0
+                          }}>
+                            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                          </div>
+                          <div>
+                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Report System</h6>
+                            <p className="text-muted mb-0 small">Easy reporting mechanism for inappropriate behavior or safety concerns</p>
                           </div>
                         </div>
                       </div>
@@ -92,68 +115,45 @@ export default function Community() {
                             </svg>
                           </div>
                           <div>
-                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Learning Hub</h6>
-                            <p className="text-muted mb-0 small">Shared knowledge base and educational resources for community members</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="d-flex align-items-start p-3" style={{ background: 'rgba(20, 67, 42, 0.05)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.1)' }}>
-                          <div style={{
-                            background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                            borderRadius: '8px',
-                            width: '48px',
-                            height: '48px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            marginRight: '15px',
-                            flexShrink: 0
-                          }}>
-                            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                          </div>
-                          <div>
-                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Community Messaging</h6>
-                            <p className="text-muted mb-0 small">Direct messaging and group communication tools for community members</p>
+                            <h6 className="fw-bold mb-1" style={{ color: '#14432A' }}>Code of Conduct</h6>
+                            <p className="text-muted mb-0 small">Clear guidelines for respectful and appropriate community behavior</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Community Topics */}
+                    {/* Safety Standards */}
                     <div className="mt-4">
-                      <h6 className="fw-bold mb-3" style={{ color: '#14432A', fontSize: '1.1rem' }}>Community Focus Areas:</h6>
+                      <h6 className="fw-bold mb-3" style={{ color: '#14432A', fontSize: '1.1rem' }}>Protection Standards:</h6>
                       <div className="row g-3">
                         <div className="col-md-4">
                           <div className="p-3" style={{ background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.08) 0%, rgba(20, 67, 42, 0.05) 100%)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.15)' }}>
-                            <small className="fw-bold" style={{ color: '#14432A' }}>Professional Networking</small>
+                            <small className="fw-bold" style={{ color: '#14432A' }}>Zero Tolerance Policy</small>
                           </div>
                         </div>
                         <div className="col-md-4">
                           <div className="p-3" style={{ background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.08) 0%, rgba(20, 67, 42, 0.05) 100%)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.15)' }}>
-                            <small className="fw-bold" style={{ color: '#14432A' }}>Skill Development</small>
+                            <small className="fw-bold" style={{ color: '#14432A' }}>Privacy Protection</small>
                           </div>
                         </div>
                         <div className="col-md-4">
                           <div className="p-3" style={{ background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.08) 0%, rgba(20, 67, 42, 0.05) 100%)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.15)' }}>
-                            <small className="fw-bold" style={{ color: '#14432A' }}>Mentorship Programs</small>
+                            <small className="fw-bold" style={{ color: '#14432A' }}>Data Security</small>
                           </div>
                         </div>
                         <div className="col-md-4">
                           <div className="p-3" style={{ background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.08) 0%, rgba(20, 67, 42, 0.05) 100%)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.15)' }}>
-                            <small className="fw-bold" style={{ color: '#14432A' }}>Collaborative Projects</small>
+                            <small className="fw-bold" style={{ color: '#14432A' }}>Anti-Harassment</small>
                           </div>
                         </div>
                         <div className="col-md-4">
                           <div className="p-3" style={{ background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.08) 0%, rgba(20, 67, 42, 0.05) 100%)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.15)' }}>
-                            <small className="fw-bold" style={{ color: '#14432A' }}>Knowledge Sharing</small>
+                            <small className="fw-bold" style={{ color: '#14432A' }}>Safe Environment</small>
                           </div>
                         </div>
                         <div className="col-md-4">
                           <div className="p-3" style={{ background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.08) 0%, rgba(20, 67, 42, 0.05) 100%)', borderRadius: '12px', border: '1px solid rgba(20, 67, 42, 0.15)' }}>
-                            <small className="fw-bold" style={{ color: '#14432A' }}>Community Events</small>
+                            <small className="fw-bold" style={{ color: '#14432A' }}>User Rights</small>
                           </div>
                         </div>
                       </div>
@@ -164,13 +164,13 @@ export default function Community() {
                   <div className="text-center">
                     <div className="card border-0 shadow-sm" style={{ borderRadius: '20px', background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)' }}>
                       <div className="card-body p-5">
-                        <h3 className="text-white fw-bold mb-3" style={{ fontSize: '1.8rem' }}>Ready to Join Our Community?</h3>
+                        <h3 className="text-white fw-bold mb-3" style={{ fontSize: '1.8rem' }}>Your Safety is Our Priority</h3>
                         <p className="text-white-50 mb-4 lead">
-                          Connect with like-minded individuals and unlock the power of collaborative growth.
+                          Join a community where your safety, privacy, and well-being are protected by comprehensive standards and monitoring.
                         </p>
                         <div className="d-flex gap-3 justify-content-center">
                           <a href="/contact" className="btn btn-light btn-lg px-4 py-3 fw-bold" style={{ borderRadius: '12px', minWidth: '180px' }}>
-                            Join Community
+                            Report Issue
                           </a>
                           <a href="/learnmore" className="btn btn-outline-light btn-lg px-4 py-3 fw-bold" style={{ borderRadius: '12px', minWidth: '180px' }}>
                             Learn More
