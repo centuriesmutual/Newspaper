@@ -34,6 +34,28 @@ export default function Community() {
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
           <div className="col-lg-6">
+            <div className="position-relative" style={{ marginTop: '2rem' }}>
+              <style jsx>{`
+                @media (max-width: 991px) {
+                  .crypto-visualization-container {
+                    margin-top: 3rem !important;
+                  }
+                }
+              `}</style>
+              <div className="crypto-visualization-container" style={{
+                background: 'rgba(255,255,255,0.1)',
+                borderRadius: '20px',
+                padding: '20px',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+              }}>
+                <CreditRatingDisplay />
+              </div>
+            </div>
+          </div>
+          
+          <div className="col-lg-6">
             <div className="text-dark">
               <h1 className="display-2 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
@@ -170,28 +192,6 @@ export default function Community() {
                 >
                   More Information
                 </button>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-lg-6">
-            <div className="position-relative" style={{ marginTop: '2rem' }}>
-              <style jsx>{`
-                @media (max-width: 991px) {
-                  .crypto-visualization-container {
-                    margin-top: 3rem !important;
-                  }
-                }
-              `}</style>
-              <div className="crypto-visualization-container" style={{
-                background: 'rgba(255,255,255,0.1)',
-                borderRadius: '20px',
-                padding: '20px',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
-              }}>
-                <CreditRatingDisplay />
               </div>
             </div>
           </div>
