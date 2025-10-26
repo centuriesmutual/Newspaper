@@ -13,6 +13,18 @@ export default function About() {
 
   return (
     <div className="container py-5">
+      {/* Back to Home Button */}
+      <motion.div 
+        className="mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Link href="/" className="btn btn-outline-secondary">
+          <i className="bi bi-arrow-left me-2"></i>Back to Home
+        </Link>
+      </motion.div>
+
       <section className="mb-5">
         <motion.h1 
           className="text-center mb-4"

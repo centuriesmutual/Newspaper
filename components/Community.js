@@ -56,7 +56,7 @@ export default function Community() {
           </div>
           
           <div className="col-lg-6">
-            <div className="text-dark">
+            <div className="text-dark" style={{ marginTop: '4rem' }}>
               <h1 className="display-2 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'

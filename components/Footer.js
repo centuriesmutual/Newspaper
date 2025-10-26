@@ -94,33 +94,46 @@ export default function Footer() {
             </p>
           </div>
           <div className="col-lg-2 mb-4 mb-lg-0 footer-content">
-            <h5 className="mb-3">Resources</h5>
+            <h5 className="mb-3">Community</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/community" className="text-decoration-none text-white">Community</Link>
+                <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
               </li>
               <li className="mb-2">
-                <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
+                <Link href="/contact" className="text-white text-decoration-none">Contact Us</Link>
               </li>
             </ul>
           </div>
           <div className="col-lg-3 mb-4 mb-lg-0 footer-content">
-            <h5 className="mb-3">Services</h5>
+            <h5 className="mb-3">Company</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/privacy-policy" className="text-white text-decoration-none">Privacy Policy</Link>
+                <Link href="/partners" className="text-white text-decoration-none">Subsidiaries</Link>
               </li>
               <li className="mb-2">
-                <Link href="/terms-and-conditions" className="text-white text-decoration-none">Terms and Conditions</Link>
+                <Link href="/investor-relations" className="text-white text-decoration-none">Investor Relations</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/careers" className="text-white text-decoration-none">Careers</Link>
               </li>
             </ul>
           </div>
           <div className="col-lg-3 footer-content">
-            <h5 className="mb-3">Company</h5>
-            <div className="d-flex align-items-start">
+            <h5 className="mb-3">Documents</h5>
+            <ul className="list-unstyled footer-links">
+              <li className="mb-2">
+                <Link href="/terms-and-conditions" className="text-white text-decoration-none">Terms and Conditions</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/privacy-policy" className="text-white text-decoration-none">Privacy Policy</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/legal" className="text-white text-decoration-none">Legal</Link>
+              </li>
+            </ul>
+            <div className="d-flex align-items-start mt-3">
               <i className="bi bi-geo-alt me-2 mt-1" style={{ color: '#14432A' }}></i>
               <div>
-                8080 N Central Expressway<br />
                 Dallas, TX
               </div>
             </div>
