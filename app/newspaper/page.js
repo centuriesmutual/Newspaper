@@ -17,14 +17,9 @@ export default function Newspaper() {
           {/* Top Navigation */}
           <div className="row py-2" style={{ background: '#000000', color: '#ffffff' }}>
             <div className="col-12">
-              <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-end align-items-center">
                 <div className="d-flex align-items-center">
-                  <button className="btn btn-link text-white p-0 me-3" style={{ fontSize: '1.2rem' }}>☰</button>
-                  <span style={{ fontSize: '0.9rem' }}>SECTIONS</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <span style={{ fontSize: '0.9rem' }}>SEARCH</span>
-                  <button className="btn btn-link text-white p-0 ms-3" style={{ fontSize: '1.2rem' }}>🔍</button>
+                  <button className="btn btn-link text-white p-0" style={{ fontSize: '1.1rem', opacity: '0.8' }}>🔍</button>
                 </div>
               </div>
             </div>
@@ -101,9 +96,6 @@ export default function Newspaper() {
               <div className="d-flex flex-wrap">
                 <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>U.S.</a>
                 <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>INTERNATIONAL</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>CANADA</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>ESPAÑOL</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>中文</a>
                 <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>REAL ESTATE</a>
                 <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>BUSINESS</a>
                 <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>TECHNOLOGY</a>
