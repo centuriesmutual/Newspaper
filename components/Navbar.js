@@ -150,9 +150,10 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: mounted && windowWidth < 640 ? '1.1rem' : '1rem',
+                fontSize: mounted && windowWidth < 640 ? '0.9rem' : '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: mounted && windowWidth < 640 ? '95px' : '120px'
+                minWidth: mounted && windowWidth < 640 ? '80px' : '120px',
+                padding: mounted && windowWidth < 640 ? '0.4rem 0.8rem' : '0.5rem 1rem'
               }}
             >
               Client Login
