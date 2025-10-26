@@ -57,11 +57,7 @@ export default function BoxNewsArticles() {
   }
 
   if (error) {
-    return (
-      <div className="text-center py-4">
-        <p className="text-muted">Box.com integration coming soon.</p>
-      </div>
-    )
+    return null
   }
 
   if (articles.length === 0) {

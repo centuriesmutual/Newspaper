@@ -32,7 +32,7 @@ export default function Newspaper() {
     <main style={{ background: '#ffffff' }}>
       <style jsx global>{`
         .main-content {
-          padding-top: 150px !important;
+          padding-top: 170px !important;
           margin-top: 0 !important;
         }
         body {
@@ -76,9 +76,9 @@ export default function Newspaper() {
           
           {/* Main Header */}
           <div className="container py-3">
-            <div className="row align-items-center">
-              <div className="col-md-8">
-                <div className="d-flex align-items-center mb-2">
+            <div className="row align-items-center justify-content-center">
+              <div className="col-md-10">
+                <div className="d-flex align-items-center justify-content-center mb-2" style={{ gap: '8px' }}>
                   <Image 
                     src="/cmlogotreesmall-removebg-preview.png"
                     alt="Centuries Mutual"
@@ -86,7 +86,6 @@ export default function Newspaper() {
                     height={40}
                     style={{ 
                       objectFit: 'contain',
-                      marginRight: '15px',
                       minWidth: '60px',
                       minHeight: '30px'
                     }}
@@ -99,7 +98,6 @@ export default function Newspaper() {
                     height={50}
                     style={{ 
                       objectFit: 'contain',
-                      marginRight: '15px',
                       minWidth: '80px',
                       minHeight: '40px'
                     }}
@@ -110,13 +108,14 @@ export default function Newspaper() {
                     fontSize: '2.8rem',
                     color: '#000000',
                     fontWeight: 'bold',
-                    letterSpacing: '-1px'
+                    letterSpacing: '-1px',
+                    marginLeft: '0'
                   }}>
                     <span className="d-none d-md-inline">Centuries Mutual Times</span>
                     <span className="d-md-none" style={{ fontSize: '1.8rem' }}>Centuries Mutual Times</span>
                   </h1>
                 </div>
-                <p className="mb-0 mt-1" style={{ 
+                <p className="mb-0 mt-1 text-center" style={{ 
                   fontSize: '0.85rem',
                   color: '#666666',
                   fontFamily: "'Helvetica Neue', Arial, sans-serif"
@@ -129,9 +128,6 @@ export default function Newspaper() {
                   })} • Financial News & Real Estate Updates
                 </p>
               </div>
-              <div className="col-md-4 text-end">
-                {/* Buttons moved to top navigation bar */}
-              </div>
             </div>
           </div>
           
@@ -139,7 +135,7 @@ export default function Newspaper() {
       </header>
 
       {/* Main Content */}
-      <div className="container py-4 main-content" style={{ paddingTop: '150px !important' }}>
+      <div className="container py-4 main-content" style={{ paddingTop: '170px !important' }}>
 
         {/* Main Layout */}
         <div className="row">
@@ -519,7 +515,7 @@ export default function Newspaper() {
           {/* Box.com Articles Section */}
           <div className="col-lg-8 mb-5">
             <div className="border-top pt-4">
-              <h3 className="fw-bold mb-4" style={{ 
+              <h3 className="fw-bold mb-2" style={{ 
                 fontFamily: "'Times New Roman', serif",
                 fontSize: '1.8rem',
                 color: '#000000'
@@ -637,7 +633,7 @@ export default function Newspaper() {
               <div className="mb-4">
                 <h3 className="fw-bold mb-3" style={{ 
                   fontFamily: "'Times New Roman', serif",
-                  fontSize: '1.2rem',
+                  fontSize: '1.6rem',
                   color: '#000000'
                 }}>
                   Opinion
@@ -717,7 +713,7 @@ export default function Newspaper() {
               <div className="mb-4">
                 <h3 className="fw-bold mb-3" style={{ 
                   fontFamily: "'Times New Roman', serif",
-                  fontSize: '1.2rem',
+                  fontSize: '1.6rem',
                   color: '#000000'
                 }}>
                   Business Briefs
@@ -784,42 +780,6 @@ export default function Newspaper() {
                       Enhanced security protocols have been implemented across all platform services, ensuring maximum protection for user data and transactions.
                     </p>
                   </Link>
-                </div>
-              </div>
-
-              {/* Market Data */}
-              <div className="mb-4">
-                <h3 className="fw-bold mb-3" style={{ 
-                  fontFamily: "'Times New Roman', serif",
-                  fontSize: '1.2rem',
-                  color: '#000000'
-                }}>
-                  Market Data
-                </h3>
-                
-                <div className="p-3" style={{ 
-                  background: '#f8f9fa',
-                  border: '1px solid #dee2e6',
-                  borderRadius: '8px'
-                }}>
-                  <div className="row text-center">
-                    <div className="col-6 mb-2">
-                      <div className="fw-bold" style={{ fontSize: '1.5rem', color: '#14432A' }}>8.5%</div>
-                      <div style={{ fontSize: '0.8rem', color: '#666' }}>Market Growth</div>
-                    </div>
-                    <div className="col-6 mb-2">
-                      <div className="fw-bold" style={{ fontSize: '1.5rem', color: '#14432A' }}>5,000+</div>
-                      <div style={{ fontSize: '0.8rem', color: '#666' }}>Active Members</div>
-                    </div>
-                    <div className="col-6 mb-2">
-                      <div className="fw-bold" style={{ fontSize: '1.5rem', color: '#14432A' }}>95%</div>
-                      <div style={{ fontSize: '0.8rem', color: '#666' }}>Success Rate</div>
-                    </div>
-                    <div className="col-6 mb-2">
-                      <div className="fw-bold" style={{ fontSize: '1.5rem', color: '#14432A' }}>A</div>
-                      <div style={{ fontSize: '0.8rem', color: '#666' }}>BBB Rating</div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
