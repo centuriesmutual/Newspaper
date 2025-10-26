@@ -1,300 +1,16 @@
 'use client'
 
 import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import { HomeIcon, CreditCardIcon, ShieldCheckIcon, ChartBarIcon, CheckCircleIcon, BanknotesIcon, ClockIcon, StarIcon } from '@heroicons/react/24/outline'
 
 export default function RentalEquity() {
   return (
     <>
+      <Navbar />
       <main>
-        {/* Hero Section */}
-        <section className="py-5" style={{ 
-          background: 'linear-gradient(135deg, #14432A 0%, #206542 100%)',
-          color: 'white'
-        }}>
-          <div className="container py-5">
-            <div className="row align-items-center">
-              <div className="col-lg-8 mx-auto text-center">
-                <h1 className="display-3 fw-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Centuries Mutual Rental Equity™
-                </h1>
-                <p className="lead mb-4" style={{ fontSize: '1.4rem' }}>
-                  Your Rent Should Work For You
-                </p>
-                <p className="fs-5 mb-5">
-                  Build credit, earn rewards, and create a pathway to homeownership — all while paying rent. Transform your monthly rent payment into an investment in your financial future.
-                </p>
-                <div className="d-flex gap-3 justify-content-center flex-wrap">
-                  <Link href="/apply" className="btn btn-light btn-lg px-5 py-3">
-                    Get Started Today
-                  </Link>
-                  <Link href="/learnmore" className="btn btn-outline-light btn-lg px-5 py-3">
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Overview Section */}
-        <section className="py-5 bg-light">
-          <div className="container py-4">
-            <div className="row mb-5">
-              <div className="col-lg-8 mx-auto text-center">
-                <h2 className="display-5 fw-bold mb-4" style={{ color: '#14432A', fontFamily: "'Playfair Display', serif" }}>
-                  Why Rental Equity?
-                </h2>
-                <p className="lead text-muted">
-                  Most renters miss out on building financial equity. We're changing that.
-                </p>
-              </div>
-            </div>
-
-            <div className="row g-4 mb-5">
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
-                  <div className="mb-3 mx-auto" style={{
-                    background: '#14432A15',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <ChartBarIcon style={{ width: '40px', height: '40px', color: '#14432A' }} />
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Build Credit</h4>
-                  <p className="text-muted mb-0">
-                    Every on-time rent payment reported to major credit bureaus
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
-                  <div className="mb-3 mx-auto" style={{
-                    background: '#1a543615',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <CreditCardIcon style={{ width: '40px', height: '40px', color: '#1a5436' }} />
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Digital Payments</h4>
-                  <p className="text-muted mb-0">
-                    Secure, instant, and transparent rent payments with no hidden fees
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
-                  <div className="mb-3 mx-auto" style={{
-                    background: '#20654215',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <StarIcon style={{ width: '40px', height: '40px', color: '#206542' }} />
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Earn Rewards</h4>
-                  <p className="text-muted mb-0">
-                    Get cashback and rewards for consistent, on-time rent payments
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
-                  <div className="mb-3 mx-auto" style={{
-                    background: '#14432A15',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <ShieldCheckIcon style={{ width: '40px', height: '40px', color: '#14432A' }} />
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Protected Payments</h4>
-                  <p className="text-muted mb-0">
-                    Rent protection insurance to safeguard your payments
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <section className="py-5">
-          <div className="container py-4">
-            <div className="row mb-5">
-              <div className="col-lg-8 mx-auto text-center">
-                <h2 className="display-5 fw-bold mb-4" style={{ color: '#14432A', fontFamily: "'Playfair Display', serif" }}>
-                  How Rental Equity Works
-                </h2>
-                <p className="lead text-muted">
-                  Simple, secure, and designed to help you succeed
-                </p>
-              </div>
-            </div>
-
-            <div className="row g-5 mb-5">
-              <div className="col-md-6 col-lg-4">
-                <div className="text-center">
-                  <div className="mb-4 mx-auto" style={{
-                    background: '#14432A',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '2rem',
-                    fontWeight: 'bold'
-                  }}>
-                    1
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                    Enroll & Set Up Your Wallet
-                  </h4>
-                  <p className="text-muted">
-                    Sign up in minutes and create your secure digital wallet. Link your bank account or debit card for easy funding.
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-4">
-                <div className="text-center">
-                  <div className="mb-4 mx-auto" style={{
-                    background: '#1a5436',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '2rem',
-                    fontWeight: 'bold'
-                  }}>
-                    2
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                    Pay Rent Digitally
-                  </h4>
-                  <p className="text-muted">
-                    Make payments through our platform with instant settlement and complete transparency. Set up automatic payments for hassle-free rent.
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-4">
-                <div className="text-center">
-                  <div className="mb-4 mx-auto" style={{
-                    background: '#206542',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '2rem',
-                    fontWeight: 'bold'
-                  }}>
-                    3
-                  </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                    Build Credit & Earn
-                  </h4>
-                  <p className="text-muted">
-                    Your on-time payments are automatically reported to credit bureaus. Plus, earn rewards and build savings toward homeownership.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Process Details */}
-            <div className="row">
-              <div className="col-lg-10 mx-auto">
-                <div className="card border-0 shadow-lg" style={{ borderRadius: '16px', overflow: 'hidden' }}>
-                  <div className="card-body p-5">
-                    <h3 className="h3 fw-bold mb-4" style={{ color: '#14432A' }}>
-                      What Happens Each Month
-                    </h3>
-                    <div className="row g-4">
-                      <div className="col-md-6">
-                        <div className="d-flex">
-                          <div className="me-3" style={{ color: '#14432A' }}>
-                            <CheckCircleIcon style={{ width: '24px', height: '24px' }} />
-                          </div>
-                          <div>
-                            <h5 className="fw-bold mb-2">Payment Processing</h5>
-                            <p className="text-muted mb-0">
-                              Your rent is securely transferred from your wallet to your landlord's wallet with instant settlement.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="d-flex">
-                          <div className="me-3" style={{ color: '#14432A' }}>
-                            <CheckCircleIcon style={{ width: '24px', height: '24px' }} />
-                          </div>
-                          <div>
-                            <h5 className="fw-bold mb-2">Credit Reporting</h5>
-                            <p className="text-muted mb-0">
-                              On-time payments are automatically reported to Experian, Equifax, and TransUnion to boost your credit score.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="d-flex">
-                          <div className="me-3" style={{ color: '#14432A' }}>
-                            <CheckCircleIcon style={{ width: '24px', height: '24px' }} />
-                          </div>
-                          <div>
-                            <h5 className="fw-bold mb-2">Rewards Distribution</h5>
-                            <p className="text-muted mb-0">
-                              Earn cashback rewards or credits deposited directly into your wallet for each successful payment.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="d-flex">
-                          <div className="me-3" style={{ color: '#14432A' }}>
-                            <CheckCircleIcon style={{ width: '24px', height: '24px' }} />
-                          </div>
-                          <div>
-                            <h5 className="fw-bold mb-2">Protection Coverage</h5>
-                            <p className="text-muted mb-0">
-                              Optional rent protection insurance ensures your payments are covered in case of unexpected financial hardship.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Benefits Detail Section */}
         <section className="py-5 bg-light">
@@ -402,27 +118,27 @@ export default function RentalEquity() {
                     <CreditCardIcon style={{ width: '40px', height: '40px', color: '#206542' }} />
                   </div>
                   <h3 className="h2 fw-bold mb-4" style={{ color: '#14432A' }}>
-                    Modern Digital Payments
+                    Comprehensive eDocument System
                   </h3>
                   <p className="text-muted mb-4">
-                    Say goodbye to checks, money orders, and payment delays. Our secure digital wallet system powered by enterprise-grade financial infrastructure provides instant, transparent transactions.
+                    Track and manage all legal documents pertaining to your housing search in one secure platform. Our eDocument system protects your housing experience with proof of residency and legally binding documents.
                   </p>
                   <ul className="list-unstyled">
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
-                      <span className="ms-3">Instant settlement — no waiting days for payments to clear</span>
+                      <span className="ms-3">Receive proof of residency documentation instantly</span>
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
-                      <span className="ms-3">Complete payment transparency and history</span>
+                      <span className="ms-3">Legally binding documents for lease agreements and applications</span>
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
-                      <span className="ms-3">Automatic payments to never miss due dates</span>
+                      <span className="ms-3">Protect your housing experience with verified documents</span>
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
-                      <span className="ms-3">Bank-level security and encryption</span>
+                      <span className="ms-3">Secure document storage with legal validation and timestamps</span>
                     </li>
                   </ul>
                 </div>
@@ -430,31 +146,31 @@ export default function RentalEquity() {
               <div className="col-lg-6 order-lg-1">
                 <div className="card border-0 shadow-lg" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-5">
-                    <h4 className="fw-bold mb-4" style={{ color: '#14432A' }}>Payment Methods Accepted</h4>
+                    <h4 className="fw-bold mb-4" style={{ color: '#14432A' }}>Document Types Managed</h4>
                     <div className="mb-4 p-4" style={{ backgroundColor: '#f8f9fa', borderRadius: '12px' }}>
                       <div className="d-flex align-items-center mb-3">
-                        <BanknotesIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                        <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                         <div className="ms-3">
-                          <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Bank Transfer (ACH)</h5>
-                          <p className="text-muted mb-0 small">Free, secure transfers from your checking account</p>
+                          <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Lease Agreements</h5>
+                          <p className="text-muted mb-0 small">Legally binding documents with digital signatures</p>
                         </div>
                       </div>
                     </div>
                     <div className="mb-4 p-4" style={{ backgroundColor: '#f8f9fa', borderRadius: '12px' }}>
                       <div className="d-flex align-items-center mb-3">
-                        <CreditCardIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                        <CheckCircleIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                         <div className="ms-3">
-                          <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Debit Card</h5>
-                          <p className="text-muted mb-0 small">Instant funding with your debit card</p>
+                          <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Proof of Residency</h5>
+                          <p className="text-muted mb-0 small">Instant verification and documentation</p>
                         </div>
                       </div>
                     </div>
                     <div className="p-4" style={{ backgroundColor: '#f8f9fa', borderRadius: '12px' }}>
                       <div className="d-flex align-items-center mb-3">
-                        <HomeIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                        <ClockIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                         <div className="ms-3">
-                          <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Direct Deposit</h5>
-                          <p className="text-muted mb-0 small">Automatically fund your wallet from your paycheck</p>
+                          <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Application Materials</h5>
+                          <p className="text-muted mb-0 small">Comprehensive verification and record-keeping</p>
                         </div>
                       </div>
                     </div>
@@ -471,56 +187,16 @@ export default function RentalEquity() {
             <div className="row mb-5">
               <div className="col-lg-8 mx-auto text-center">
                 <h2 className="display-5 fw-bold mb-4" style={{ color: '#14432A', fontFamily: "'Playfair Display', serif" }}>
-                  Bank-Level Security & Compliance
+                  Blockchain-Powered Payment Processing
                 </h2>
                 <p className="lead text-muted">
-                  Your financial data and payments are protected by enterprise-grade security
+                  Secure, fast payments powered by Circle and Coinbase blockchain technology
                 </p>
               </div>
             </div>
 
             <div className="row g-4">
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
-                  <div className="mb-3 mx-auto" style={{
-                    background: '#14432A15',
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
-                  </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Encryption</h5>
-                  <p className="text-muted small mb-0">
-                    End-to-end encryption protects all transactions and personal data
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
-                  <div className="mb-3 mx-auto" style={{
-                    background: '#14432A15',
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <CheckCircleIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
-                  </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Compliance</h5>
-                  <p className="text-muted small mb-0">
-                    PCI DSS and SOC 2 compliant infrastructure
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
+              <div className="col-md-6 col-lg-4">
                 <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
                   <div className="mb-3 mx-auto" style={{
                     background: '#14432A15',
@@ -533,14 +209,14 @@ export default function RentalEquity() {
                   }}>
                     <BanknotesIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                   </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Regulated</h5>
+                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Coinbase Wallet</h5>
                   <p className="text-muted small mb-0">
-                    Fully regulated under U.S. money transmission laws
+                    Seamless P2P payments via Coinbase Wallet Connect for instant transactions
                   </p>
                 </div>
               </div>
 
-              <div className="col-md-6 col-lg-3">
+              <div className="col-md-6 col-lg-4">
                 <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
                   <div className="mb-3 mx-auto" style={{
                     background: '#14432A15',
@@ -553,9 +229,29 @@ export default function RentalEquity() {
                   }}>
                     <ClockIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                   </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>24/7 Monitoring</h5>
+                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Fast Claims</h5>
                   <p className="text-muted small mb-0">
-                    Continuous fraud detection and transaction monitoring
+                    Process claims and disputes faster with blockchain verification and immutable records
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-md-6 col-lg-4">
+                <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ borderRadius: '16px' }}>
+                  <div className="mb-3 mx-auto" style={{
+                    background: '#14432A15',
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <CheckCircleIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                  </div>
+                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Transparency</h5>
+                  <p className="text-muted small mb-0">
+                    Immutable blockchain records provide complete transaction transparency and audit trails
                   </p>
                 </div>
               </div>
@@ -572,10 +268,10 @@ export default function RentalEquity() {
                     <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A', flexShrink: 0 }} />
                     <div className="ms-3">
                       <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>
-                        Your Data Is Protected
+                        Powered by Leading Blockchain Infrastructure
                       </h5>
                       <p className="mb-0 text-muted">
-                        We partner with leading financial technology providers to ensure your payments are secure and your personal information remains private. All transactions are backed by enterprise-grade security infrastructure used by major financial institutions worldwide.
+                        Our blockchain integration with Circle and Coinbase ensures that all payments are processed safely and securely on the blockchain. This technology enables faster claim processing, transparent transaction records, and enhanced security for renters and landlords. Every transaction is verified and recorded on the blockchain, providing an immutable audit trail for complete peace of mind.
                       </p>
                     </div>
                   </div>
@@ -585,106 +281,91 @@ export default function RentalEquity() {
           </div>
         </section>
 
-        {/* Landlord Benefits Section */}
+        {/* Landlord/Renter Platform Section */}
         <section className="py-5 bg-light">
           <div className="container py-4">
-            <div className="row mb-5">
-              <div className="col-lg-8 mx-auto text-center">
-                <h2 className="display-5 fw-bold mb-4" style={{ color: '#14432A', fontFamily: "'Playfair Display', serif" }}>
-                  Benefits for Landlords Too
-                </h2>
-                <p className="lead text-muted">
-                  Rental Equity creates value for both renters and property owners
-                </p>
-              </div>
-            </div>
-
-            <div className="row g-4">
-              <div className="col-md-4">
-                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                  <div className="card-body p-4">
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                      Instant Payments
-                    </h5>
-                    <p className="text-muted mb-0">
-                      Receive rent instantly with guaranteed settlement, no more waiting for checks to clear or chasing late payments.
-                    </p>
+            <div className="row g-5 align-items-center mb-5">
+              <div className="col-lg-6">
+                <div className="pe-lg-5">
+                  <div className="mb-4" style={{
+                    background: '#20654215',
+                    width: '80px',
+                    height: '80px',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <HomeIcon style={{ width: '40px', height: '40px', color: '#206542' }} />
                   </div>
+                  <h3 className="h2 fw-bold mb-4" style={{ color: '#14432A' }}>
+                    Unified Platform for Landlords & Renters
+                  </h3>
+                  <p className="text-muted mb-4">
+                    Our comprehensive platform connects landlords and renters with streamlined communication, secure messaging, and legally binding documentation for a protected housing experience.
+                  </p>
+                  <ul className="list-unstyled">
+                    <li className="mb-3 d-flex">
+                      <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
+                      <span className="ms-3">Secure, legally binding messaging between parties</span>
+                    </li>
+                    <li className="mb-3 d-flex">
+                      <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
+                      <span className="ms-3">Instant payments with Coinbase Wallet Connect integration</span>
+                    </li>
+                    <li className="mb-3 d-flex">
+                      <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
+                      <span className="ms-3">Automated record-keeping and document management</span>
+                    </li>
+                    <li className="mb-3 d-flex">
+                      <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
+                      <span className="ms-3">In-house social credit system for verified tenants</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              <div className="col-md-4">
-                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                  <div className="card-body p-4">
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                      Automated Tracking
-                    </h5>
-                    <p className="text-muted mb-0">
-                      Complete payment history and automated record-keeping for all your properties in one convenient dashboard.
+              <div className="col-lg-6">
+                <div className="card border-0 shadow-lg" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-5" style={{ background: 'linear-gradient(135deg, #14432A 0%, #206542 100%)', color: 'white' }}>
+                    <h4 className="fw-bold mb-4">Platform Features</h4>
+                    <div className="mb-4">
+                      <div className="d-flex justify-content-between mb-2">
+                        <span>Instant Payments</span>
+                        <span className="fw-bold">✓ Enabled</span>
+                      </div>
+                      <div className="progress" style={{ height: '8px', backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                        <div className="progress-bar" style={{ width: '100%', backgroundColor: 'white' }}></div>
+                      </div>
+                    </div>
+                    <div className="mb-4">
+                      <div className="d-flex justify-content-between mb-2">
+                        <span>Secure Messaging</span>
+                        <span className="fw-bold">✓ Encrypted</span>
+                      </div>
+                      <div className="progress" style={{ height: '8px', backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                        <div className="progress-bar" style={{ width: '100%', backgroundColor: 'white' }}></div>
+                      </div>
+                    </div>
+                    <div className="mb-4">
+                      <div className="d-flex justify-content-between mb-2">
+                        <span>eDocument System</span>
+                        <span className="fw-bold">✓ Active</span>
+                      </div>
+                      <div className="progress" style={{ height: '8px', backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                        <div className="progress-bar" style={{ width: '100%', backgroundColor: 'white' }}></div>
+                      </div>
+                    </div>
+                    <p className="mb-0 mt-4" style={{ fontSize: '0.9rem', opacity: 0.9 }}>
+                      * All features are live and available for both landlords and renters.
                     </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                  <div className="card-body p-4">
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                      Better Tenants
-                    </h5>
-                    <p className="text-muted mb-0">
-                      Attract responsible tenants who value credit building and are motivated to make on-time payments.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-5" style={{ backgroundColor: '#14432A', color: 'white' }}>
-          <div className="container py-5">
-            <div className="row">
-              <div className="col-lg-8 mx-auto text-center">
-                <h2 className="display-5 fw-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Start Building Your Financial Future Today
-                </h2>
-                <p className="lead mb-5">
-                  Join thousands of renters who are transforming their rent payments into credit, rewards, and a pathway to homeownership.
-                </p>
-                <div className="d-flex gap-3 justify-content-center flex-wrap">
-                  <Link href="/apply" className="btn btn-light btn-lg px-5 py-3">
-                    Get Started Now
-                  </Link>
-                  <Link href="/dashboard" className="btn btn-outline-light btn-lg px-5 py-3">
-                    View Dashboard Demo
-                  </Link>
-                  <Link href="/contact" className="btn btn-outline-light btn-lg px-5 py-3">
-                    Contact Us
-                  </Link>
-                </div>
-                
-                <div className="mt-5 pt-5 border-top" style={{ borderColor: 'rgba(255,255,255,0.2)' }}>
-                  <div className="row text-center">
-                    <div className="col-md-4 mb-4 mb-md-0">
-                      <div className="h2 fw-bold mb-2">$0</div>
-                      <p className="mb-0" style={{ opacity: 0.9 }}>Setup Fees</p>
-                    </div>
-                    <div className="col-md-4 mb-4 mb-md-0">
-                      <div className="h2 fw-bold mb-2">+60</div>
-                      <p className="mb-0" style={{ opacity: 0.9 }}>Avg. Credit Score Increase</p>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="h2 fw-bold mb-2">100%</div>
-                      <p className="mb-0" style={{ opacity: 0.9 }}>Secure & Encrypted</p>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+
       </main>
       <Footer />
     </>

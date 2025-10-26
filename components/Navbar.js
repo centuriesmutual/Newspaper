@@ -12,6 +12,7 @@ export default function Navbar() {
   const isLoginPage = pathname === '/login'
   const isSignupPage = pathname === '/signup'
   const isHomePage = pathname === '/'
+  const isRentalEquityPage = pathname === '/rentalequity'
 
   useEffect(() => {
     setMounted(true)
@@ -149,7 +150,7 @@ export default function Navbar() {
               </div>
             </Link>
           )}
-          {!isLoginPage && !isSignupPage && (
+          {!isLoginPage && !isSignupPage && !isRentalEquityPage && (
             <Link 
               href="/login" 
               className="btn btn-primary px-2 px-lg-4 py-1 py-lg-2 mobile-login"
