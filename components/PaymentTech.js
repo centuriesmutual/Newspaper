@@ -27,6 +27,26 @@ export default function PaymentTech() {
       
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
+          <div className="col-lg-12">
+            <div className="text-dark text-center mb-5">
+              <h1 className="display-3 fw-bold mb-4" style={{ 
+                fontFamily: "'Playfair Display', serif",
+                color: '#14432A'
+              }}>
+                eDocument System
+              </h1>
+              <p className="lead mb-4" style={{ 
+                fontSize: '1.3rem',
+                color: '#495057',
+                maxWidth: '800px',
+                margin: '0 auto'
+              }}>
+                Find and rent real estate with roommates using our comprehensive eDocument system. 
+                Streamline lease agreements, roommate contracts, and property documentation all in one place.
+              </p>
+            </div>
+          </div>
+          
           <div className="col-lg-6">
             <div className="position-relative">
               <div style={{
@@ -104,19 +124,6 @@ export default function PaymentTech() {
                 }
               `}</style>
               <div className="edocument-text-container">
-                <h1 className="display-2 fw-bold mb-4" style={{ 
-                  fontFamily: "'Playfair Display', serif",
-                  color: '#14432A'
-                }}>
-                  eDocument System
-                </h1>
-              <p className="lead mb-5" style={{ 
-                fontSize: '1.3rem',
-                color: '#495057'
-              }}>
-                Find and rent real estate with roommates using our comprehensive eDocument system. 
-                Streamline lease agreements, roommate contracts, and property documentation all in one place.
-              </p>
               
               <div className="row g-3 mb-4" style={{ marginBottom: '2rem' }}>
                 <div className="col-md-6">
