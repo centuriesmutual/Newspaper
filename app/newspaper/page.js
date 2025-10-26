@@ -84,7 +84,7 @@ export default function Newspaper() {
                 <div className="d-flex justify-content-end align-items-center">
                   <Link href="/" className="btn btn-outline-dark btn-sm me-2" style={{ fontSize: '0.8rem' }}>HOME</Link>
                   <button className="btn btn-outline-dark btn-sm me-2" style={{ fontSize: '0.8rem' }}>SUBSCRIBE</button>
-                  <button className="btn btn-dark btn-sm" style={{ fontSize: '0.8rem' }}>LOG IN</button>
+                  <button className="btn btn-dark btn-sm" style={{ fontSize: '0.7rem', padding: '0.25rem 0.5rem' }}>LOG IN</button>
                 </div>
               </div>
             </div>

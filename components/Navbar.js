@@ -79,13 +79,14 @@ export default function Navbar() {
             overflow: visible;
           }
           .btn-primary.mobile-login {
-            padding: 7px 16px !important;
-            font-size: 1.1rem !important;
+            padding: 6px 12px !important;
+            font-size: 0.75rem !important;
             min-width: auto !important;
             margin-left: auto;
-            height: 40px !important;
+            height: 32px !important;
             display: flex !important;
             align-items: center !important;
+            line-height: 1 !important;
           }
           .top-bar {
             font-size: 0.8rem;
@@ -149,10 +150,10 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: mounted && windowWidth < 640 ? '0.8rem' : '1rem',
+                fontSize: mounted && windowWidth < 640 ? '0.7rem' : '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: mounted && windowWidth < 640 ? '70px' : '120px',
-                padding: mounted && windowWidth < 640 ? '0.3rem 0.6rem' : '0.5rem 1rem'
+                minWidth: mounted && windowWidth < 640 ? '60px' : '120px',
+                padding: mounted && windowWidth < 640 ? '0.25rem 0.5rem' : '0.5rem 1rem'
               }}
             >
               Client Login
