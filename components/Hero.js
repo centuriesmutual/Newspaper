@@ -9,24 +9,28 @@ export default function Hero() {
     <section 
       className="hero-section position-relative overflow-hidden" 
       style={{ 
-        minHeight: '95vh',
+        minHeight: '85vh',
         backgroundColor: '#14432A',
         paddingTop: '0',
-        paddingBottom: '1rem'
+        paddingBottom: '0.5rem'
       }}
     >
       <style jsx>{`
         @media (max-width: 640px) {
           .hero-section {
-            min-height: 100dvh !important;
+            min-height: 80vh !important;
             overflow-x: hidden !important;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
           }
           .hero-row {
-            min-height: 100dvh !important;
+            min-height: 80vh !important;
             overflow-x: hidden !important;
+            padding-top: 0.25rem !important;
           }
           .hero-content {
             overflow-x: hidden !important;
+            margin-top: 0.5rem !important;
           }
         }
       `}</style>
@@ -34,8 +38,8 @@ export default function Hero() {
         <div 
           className="row align-items-center hero-row" 
           style={{ 
-            minHeight: '95vh',
-            paddingTop: '0.5rem'
+            minHeight: '85vh',
+            paddingTop: '0.25rem'
           }}
         >
           <div className="col-lg-6 order-lg-2 order-2 order-md-2 order-sm-1">

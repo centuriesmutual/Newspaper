@@ -95,21 +95,6 @@ export default function Newspaper() {
 
       {/* Main Content */}
       <div className="container py-4">
-        {/* Breaking News Banner */}
-        <div className="row mb-3">
-          <div className="col-12">
-            <div className="d-flex align-items-center py-2 px-3" style={{ 
-              background: '#000000', 
-              color: '#ffffff',
-              borderRadius: '4px'
-            }}>
-              <span className="fw-bold me-3" style={{ fontSize: '0.9rem' }}>BREAKING NEWS</span>
-              <span style={{ fontSize: '0.9rem' }}>
-                Centuries Mutual announces major expansion of eDocument system with enhanced security features
-              </span>
-            </div>
-          </div>
-        </div>
 
         {/* Main Layout */}
         <div className="row">
