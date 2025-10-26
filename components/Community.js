@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { UsersIcon, ChatBubbleLeftRightIcon, HeartIcon, StarIcon, CalendarDaysIcon, TrophyIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import CommunityModal from './CommunityModal'
+import CreditRatingDisplay from './CryptoWalletVisualization'
 
 export default function Community() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -170,112 +171,20 @@ export default function Community() {
             <div className="position-relative" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
-                  .credit-rating-container {
+                  .crypto-visualization-container {
                     margin-top: 3rem !important;
                   }
                 }
               `}</style>
-              <div className="credit-rating-container" style={{
+              <div className="crypto-visualization-container" style={{
                 background: 'rgba(255,255,255,0.1)',
                 borderRadius: '20px',
-                padding: '40px',
+                padding: '20px',
                 backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(255,255,255,0.2)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
               }}>
-                <h3 className="text-dark mb-4 fw-bold" style={{ color: '#14432A' }}>Credit Rating Features</h3>
-                
-                <div className="mb-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '50px',
-                      height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginRight: '15px'
-                    }}>
-                      <StarIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Credit Score Display</h6>
-                      <small className="text-muted">Transparent ratings for all members</small>
-                    </div>
-                  </div>
-                  
-                  <div className="d-flex align-items-center mb-3">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '50px',
-                      height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginRight: '15px'
-                    }}>
-                      <UsersIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Verified Members</h6>
-                      <small className="text-muted">ID verification required</small>
-                    </div>
-                  </div>
-                  
-                  <div className="d-flex align-items-center">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '50px',
-                      height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginRight: '15px'
-                    }}>
-                      <ChatBubbleLeftRightIcon style={{ width: '24px', height: '24px' }} />
-                    </div>
-                    <div>
-                      <h6 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>Review System</h6>
-                      <small className="text-muted">Rate your roommates and landlords</small>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="row g-3 text-center">
-                  <div className="col-4">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '12px',
-                      padding: '15px'
-                    }}>
-                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>5K+</h4>
-                      <small className="text-muted">Verified Members</small>
-                    </div>
-                  </div>
-                  <div className="col-4">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '12px',
-                      padding: '15px'
-                    }}>
-                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>2.1K+</h4>
-                      <small className="text-muted">Successful Matches</small>
-                    </div>
-                  </div>
-                  <div className="col-4">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '12px',
-                      padding: '15px'
-                    }}>
-                      <h4 className="text-dark mb-1 fw-bold" style={{ color: '#14432A' }}>4.8★</h4>
-                      <small className="text-muted">Average Rating</small>
-                    </div>
-                  </div>
-                </div>
+                <CreditRatingDisplay />
               </div>
             </div>
           </div>

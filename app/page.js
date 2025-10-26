@@ -15,8 +15,8 @@ export default function Home() {
       <main>
         <Hero />
         <RealEstate />
-        <PaymentTech />
         <Community />
+        <PaymentTech />
         <Legacy />
         <CTA />
         <Footer />
