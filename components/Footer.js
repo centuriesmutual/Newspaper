@@ -100,7 +100,7 @@ export default function Footer() {
                 <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
               </li>
               <li className="mb-2">
-                <Link href="/contact" className="text-white text-decoration-none">Contact Us</Link>
+                <Link href="/contact" className="text-white text-decoration-none">Help Desk</Link>
               </li>
             </ul>
           </div>
