@@ -62,7 +62,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <span className="d-none d-md-inline">Your Community Brokerage:</span>
-                <span className="d-md-none" style={{ fontSize: 'calc(1.2rem + 1vw)' }}>Your Community Brokerage:</span>
+                <span className="d-md-none" style={{ fontSize: 'calc(1.4rem + 1.2vw)' }}>Your Community Brokerage:</span>
               </motion.h1>
               <motion.p 
                 className="lead text-white mb-4 text-center text-lg-start" 
