@@ -5,18 +5,22 @@ import Community from '../components/Community'
 import Legacy from '../components/Legacy'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <RealEstate />
-      <PaymentTech />
-      <Community />
-      <Legacy />
-      <CTA />
-      <Footer />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <RealEstate />
+        <PaymentTech />
+        <Community />
+        <Legacy />
+        <CTA />
+        <Footer />
+      </main>
+    </>
   )
 } 

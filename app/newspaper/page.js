@@ -1,23 +1,67 @@
+'use client'
+
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import BoxNewsArticles from '../../components/BoxNewsArticles'
+import { useState, useEffect } from 'react'
 
 export default function Newspaper() {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsHeaderVisible(false)
+      } else {
+        // Scrolling up
+        setIsHeaderVisible(true)
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
   return (
     <main style={{ background: '#ffffff' }}>
+      <style jsx global>{`
+        .main-content {
+          padding-top: 150px !important;
+          margin-top: 0 !important;
+        }
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      `}</style>
+      
       {/* NYT Header */}
       <header style={{ 
         background: '#ffffff', 
         borderBottom: '1px solid #e2e2e2',
-        position: 'sticky',
+        position: 'fixed',
         top: 0,
-        zIndex: 1000
+        left: 0,
+        right: 0,
+        zIndex: 1000,
+        transform: isHeaderVisible ? 'translateY(0)' : 'translateY(-100%)',
+        transition: 'transform 0.3s ease-in-out'
       }}>
         <div className="container-fluid">
           {/* Top Navigation */}
           <div className="row py-2" style={{ background: '#000000', color: '#ffffff' }}>
             <div className="col-12">
-              <div className="d-flex justify-content-end align-items-center">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center gap-3">
+                  <Link href="/" className="btn btn-link text-white p-0" style={{ fontSize: '0.8rem', textDecoration: 'none' }}>HOME</Link>
+                  <button className="btn btn-link text-white p-0" style={{ fontSize: '0.8rem', textDecoration: 'none' }}>LOG IN</button>
+                </div>
                 <div className="d-flex align-items-center">
                   <button className="btn btn-link text-white p-0" style={{ fontSize: '1rem', opacity: '1', color: '#ffffff' }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -86,11 +130,7 @@ export default function Newspaper() {
                 </p>
               </div>
               <div className="col-md-4 text-end">
-                <div className="d-flex justify-content-end align-items-center">
-                  <Link href="/" className="btn btn-outline-dark btn-sm me-2" style={{ fontSize: '0.8rem' }}>HOME</Link>
-                  <button className="btn btn-outline-dark btn-sm me-2" style={{ fontSize: '0.8rem' }}>SUBSCRIBE</button>
-                  <button className="btn btn-dark btn-sm" style={{ fontSize: '0.7rem', padding: '0.25rem 0.5rem' }}>LOG IN</button>
-                </div>
+                {/* Buttons moved to top navigation bar */}
               </div>
             </div>
           </div>
@@ -99,7 +139,7 @@ export default function Newspaper() {
       </header>
 
       {/* Main Content */}
-      <div className="container py-4">
+      <div className="container py-4 main-content" style={{ paddingTop: '150px !important' }}>
 
         {/* Main Layout */}
         <div className="row">
@@ -113,28 +153,23 @@ export default function Newspaper() {
                   height: '300px',
                   borderRadius: '8px',
                   display: 'flex',
-                  alignItems: 'center',
+                  alignItems: 'flex-end',
                   justifyContent: 'center',
-                  border: '1px solid #dee2e6'
+                  border: '1px solid #dee2e6',
+                  paddingBottom: '2rem',
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
                 }}>
                   <div className="text-center">
                     <div style={{ 
                       fontSize: '3rem',
-                      color: '#14432A',
-                      marginBottom: '1rem'
+                      color: '#ffffff',
+                      marginBottom: '1rem',
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
                     }}>📰</div>
-                    <p className="text-muted mb-0">Featured Article Image</p>
                   </div>
-                </div>
-                <div className="position-absolute" style={{ top: '20px', left: '20px' }}>
-                  <span className="badge" style={{ 
-                    background: '#000000', 
-                    color: '#ffffff',
-                    fontSize: '0.8rem',
-                    padding: '6px 12px'
-                  }}>
-                    REAL ESTATE
-                  </span>
                 </div>
               </div>
               
@@ -168,9 +203,8 @@ export default function Newspaper() {
                     </div>
                   </div>
                   <div className="d-flex align-items-center">
-                    <button className="btn btn-outline-dark btn-sm me-2" style={{ fontSize: '0.8rem' }}>📤</button>
-                    <button className="btn btn-outline-dark btn-sm me-2" style={{ fontSize: '0.8rem' }}>💬</button>
-                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>🔖</button>
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
                   </div>
                 </div>
                 
@@ -181,26 +215,29 @@ export default function Newspaper() {
                   color: '#000000',
                   fontWeight: '400'
                 }}>
-                  Centuries Mutual has unveiled its groundbreaking eDocument system, revolutionizing how individuals find and rent real estate with roommates. The new platform streamlines lease agreements, roommate contracts, and property documentation through a comprehensive digital ecosystem.
+                  Centuries Mutual has unveiled its groundbreaking eDocument system, revolutionizing how individuals find and rent real estate with roommates.
                 </p>
-                
-                <p style={{ 
-                  fontFamily: "'Times New Roman', serif",
-                  fontSize: '1.1rem',
-                  lineHeight: '1.6',
-                  color: '#000000'
+              </div>
+            </div>
+
+            {/* Title Card */}
+            <div className="row mb-4">
+              <div className="col-12">
+                <div className="text-center py-4" style={{ 
+                  backgroundColor: '#f8f9fa',
+                  border: '2px solid #14432A',
+                  borderRadius: '8px',
+                  borderStyle: 'dashed'
                 }}>
-                  The system addresses the growing need for secure, efficient property management in today's fast-paced real estate market. With features including digital lease agreements, secure roommate contracts, and 24/7 document access, the platform promises to transform the rental experience for both tenants and property owners.
-                </p>
-                
-                <p style={{ 
-                  fontFamily: "'Times New Roman', serif",
-                  fontSize: '1.1rem',
-                  lineHeight: '1.6',
-                  color: '#000000'
-                }}>
-                  "This represents a fundamental shift in how we approach real estate transactions," said the company's CEO. "Our eDocument system ensures that every interaction is secure, transparent, and efficient."
-                </p>
+                  <h2 className="mb-0" style={{ 
+                    fontFamily: "'Times New Roman', serif",
+                    fontSize: '2rem',
+                    color: '#14432A',
+                    fontWeight: 'bold'
+                  }}>
+                    Featured Articles
+                  </h2>
+                </div>
               </div>
             </div>
 
@@ -211,17 +248,15 @@ export default function Newspaper() {
                   <div className="d-flex align-items-start mb-3">
                     <div className="me-3">
                       <div style={{ 
-                        width: '60px', 
+                        width: '80px', 
                         height: '60px', 
-                        borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#ffffff',
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold'
-                      }}>🏠</div>
+                        borderRadius: '4px', 
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        border: '1px solid #dee2e6'
+                      }}></div>
                     </div>
                     <div className="flex-grow-1">
                       <h3 className="fw-bold mb-2" style={{ 
@@ -243,8 +278,12 @@ export default function Newspaper() {
                     lineHeight: '1.5',
                     color: '#000000'
                   }}>
-                    The real estate market continues to show robust growth with rental prices increasing by 8.5% year-over-year. Analysts predict continued strength in the coming quarters.
+                    The real estate market continues to show robust growth with rental prices increasing by 8.5% year-over-year.
                   </p>
+                  <div className="d-flex align-items-center mt-3">
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
+                  </div>
                 </div>
               </div>
               
@@ -253,17 +292,15 @@ export default function Newspaper() {
                   <div className="d-flex align-items-start mb-3">
                     <div className="me-3">
                       <div style={{ 
-                        width: '60px', 
+                        width: '80px', 
                         height: '60px', 
-                        borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#ffffff',
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold'
-                      }}>📊</div>
+                        borderRadius: '4px', 
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        border: '1px solid #dee2e6'
+                      }}></div>
                     </div>
                     <div className="flex-grow-1">
                       <h3 className="fw-bold mb-2" style={{ 
@@ -285,8 +322,12 @@ export default function Newspaper() {
                     lineHeight: '1.5',
                     color: '#000000'
                   }}>
-                    The new member credit rating system has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches in the first quarter.
+                    The new member credit rating system has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches.
                   </p>
+                  <div className="d-flex align-items-center mt-3">
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -298,17 +339,15 @@ export default function Newspaper() {
                   <div className="d-flex align-items-start mb-3">
                     <div className="me-3">
                       <div style={{ 
-                        width: '60px', 
+                        width: '80px', 
                         height: '60px', 
-                        borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#ffffff',
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold'
-                      }}>📄</div>
+                        borderRadius: '4px', 
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        border: '1px solid #dee2e6'
+                      }}></div>
                     </div>
                     <div className="flex-grow-1">
                       <h3 className="fw-bold mb-2" style={{ 
@@ -330,8 +369,12 @@ export default function Newspaper() {
                     lineHeight: '1.5',
                     color: '#000000'
                   }}>
-                    Centuries Mutual's document processing system has successfully handled over 1 million documents with a 99.8% accuracy rate, setting new industry standards for digital document management.
+                    Centuries Mutual's document processing system has successfully handled over 1 million documents with a 99.8% accuracy rate.
                   </p>
+                  <div className="d-flex align-items-center mt-3">
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
+                  </div>
                 </div>
               </div>
               
@@ -340,17 +383,15 @@ export default function Newspaper() {
                   <div className="d-flex align-items-start mb-3">
                     <div className="me-3">
                       <div style={{ 
-                        width: '60px', 
+                        width: '80px', 
                         height: '60px', 
-                        borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#ffffff',
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold'
-                      }}>🤖</div>
+                        borderRadius: '4px', 
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        border: '1px solid #dee2e6'
+                      }}></div>
                     </div>
                     <div className="flex-grow-1">
                       <h3 className="fw-bold mb-2" style={{ 
@@ -374,6 +415,10 @@ export default function Newspaper() {
                   }}>
                     New artificial intelligence features have been integrated into the platform, improving matching algorithms and providing more accurate roommate compatibility assessments.
                   </p>
+                  <div className="d-flex align-items-center mt-3">
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -385,17 +430,15 @@ export default function Newspaper() {
                   <div className="d-flex align-items-start mb-3">
                     <div className="me-3">
                       <div style={{ 
-                        width: '60px', 
+                        width: '80px', 
                         height: '60px', 
-                        borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#ffffff',
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold'
-                      }}>📝</div>
+                        borderRadius: '4px', 
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        border: '1px solid #dee2e6'
+                      }}></div>
                     </div>
                     <div className="flex-grow-1">
                       <h3 className="fw-bold mb-2" style={{ 
@@ -417,8 +460,12 @@ export default function Newspaper() {
                     lineHeight: '1.5',
                     color: '#000000'
                   }}>
-                    The adoption of digital lease agreements has increased by 300% in the past quarter, with tenants and landlords embracing the streamlined process for property documentation.
+                    The adoption of digital lease agreements has increased by 300% in the past quarter, with tenants and landlords embracing the streamlined process.
                   </p>
+                  <div className="d-flex align-items-center mt-3">
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
+                  </div>
                 </div>
               </div>
               
@@ -427,17 +474,15 @@ export default function Newspaper() {
                   <div className="d-flex align-items-start mb-3">
                     <div className="me-3">
                       <div style={{ 
-                        width: '60px', 
+                        width: '80px', 
                         height: '60px', 
-                        borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#ffffff',
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold'
-                      }}>👥</div>
+                        borderRadius: '4px', 
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        border: '1px solid #dee2e6'
+                      }}></div>
                     </div>
                     <div className="flex-grow-1">
                       <h3 className="fw-bold mb-2" style={{ 
@@ -459,12 +504,30 @@ export default function Newspaper() {
                     lineHeight: '1.5',
                     color: '#000000'
                   }}>
-                    The platform's roommate matching system has achieved a 95% success rate, with over 2,100 successful matches recorded in the first quarter of operations.
+                    The platform's roommate matching system has achieved a 95% success rate, with over 2,100 successful matches recorded in the first quarter.
                   </p>
+                  <div className="d-flex align-items-center mt-3">
+                    <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
+                    <button className="btn btn-outline-dark btn-sm" style={{ fontSize: '0.8rem' }}>Share</button>
+                  </div>
                 </div>
               </div>
             </div>
 
+          </div>
+
+          {/* Box.com Articles Section */}
+          <div className="col-lg-8 mb-5">
+            <div className="border-top pt-4">
+              <h3 className="fw-bold mb-4" style={{ 
+                fontFamily: "'Times New Roman', serif",
+                fontSize: '1.8rem',
+                color: '#000000'
+              }}>
+                Columns
+              </h3>
+              <BoxNewsArticles />
+            </div>
           </div>
 
           {/* Right Sidebar */}
@@ -472,97 +535,101 @@ export default function Newspaper() {
             <div className="ps-4">
               {/* Featured Articles */}
               <div className="mb-4">
-                <h3 className="fw-bold mb-3" style={{ 
-                  fontFamily: "'Times New Roman', serif",
-                  fontSize: '1.2rem',
-                  color: '#000000'
-                }}>
-                  Featured
-                </h3>
                 
                 <div className="mb-3 border-bottom pb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Centuries Mutual Maintains BBB A Rating
-                  </h5>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-                    2 hours ago
-                  </p>
+                  <Link href="/article/centuries-mutual-bbb-rating" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Centuries Mutual Maintains BBB A Rating
+                    </h5>
+                    <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+                      2 hours ago
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="mb-3 border-bottom pb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Document Auditing Services Expand Nationwide
-                  </h5>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-                    4 hours ago
-                  </p>
+                  <Link href="/article/document-auditing-expansion" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Document Auditing Services Expand Nationwide
+                    </h5>
+                    <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+                      4 hours ago
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="mb-3 border-bottom pb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Community Standards Update Enhances Safety
-                  </h5>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-                    6 hours ago
-                  </p>
+                  <Link href="/article/community-standards-update" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Community Standards Update Enhances Safety
+                    </h5>
+                    <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+                      6 hours ago
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="mb-3 border-bottom pb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Real Estate Market Shows 8.5% Growth in Q4
-                  </h5>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-                    8 hours ago
-                  </p>
+                  <Link href="/article/real-estate-market-growth" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Real Estate Market Shows 8.5% Growth in Q4
+                    </h5>
+                    <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+                      8 hours ago
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="mb-3 border-bottom pb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Credit Rating System Reaches 5,000 Members
-                  </h5>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-                    10 hours ago
-                  </p>
+                  <Link href="/article/credit-rating-5000-members" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Credit Rating System Reaches 5,000 Members
+                    </h5>
+                    <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+                      10 hours ago
+                    </p>
+                  </Link>
                 </div>
-
 
                 <div className="mb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Platform Reaches 1 Million Document Milestone
-                  </h5>
-                  <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-                    3 days ago
-                  </p>
+                  <Link href="/article/platform-million-documents" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Platform Reaches 1 Million Document Milestone
+                    </h5>
+                    <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+                      3 days ago
+                    </p>
+                  </Link>
                 </div>
               </div>
 
@@ -577,66 +644,72 @@ export default function Newspaper() {
                 </h3>
                 
                 <div className="border-start ps-3 mb-3" style={{ borderLeft: '4px solid #000000' }}>
-                  <h4 className="fw-bold mb-2" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1.1rem',
-                    color: '#000000'
-                  }}>
-                    The Future of Digital Real Estate
-                  </h4>
-                  <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
-                    By Editorial Board
-                  </p>
-                  <p style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.95rem',
-                    lineHeight: '1.5',
-                    color: '#000000'
-                  }}>
-                    As technology continues to reshape the real estate landscape, platforms like Centuries Mutual are leading the charge in digital transformation and user protection.
-                  </p>
+                  <Link href="#" className="text-decoration-none">
+                    <h4 className="fw-bold mb-2" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1.1rem',
+                      color: '#000000'
+                    }}>
+                      The Future of Digital Real Estate
+                    </h4>
+                    <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
+                      By Editorial Board
+                    </p>
+                    <p style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.95rem',
+                      lineHeight: '1.5',
+                      color: '#000000'
+                    }}>
+                      As technology continues to reshape the real estate landscape, platforms like Centuries Mutual are leading the charge in digital transformation and user protection.
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="border-start ps-3 mb-3" style={{ borderLeft: '4px solid #000000' }}>
-                  <h4 className="fw-bold mb-2" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1.1rem',
-                    color: '#000000'
-                  }}>
-                    Community Standards Matter
-                  </h4>
-                  <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
-                    By Guest Columnist
-                  </p>
-                  <p style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.95rem',
-                    lineHeight: '1.5',
-                    color: '#000000'
-                  }}>
-                    The implementation of comprehensive community standards demonstrates the company's commitment to creating safe, secure environments for all users.
-                  </p>
+                  <Link href="#" className="text-decoration-none">
+                    <h4 className="fw-bold mb-2" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1.1rem',
+                      color: '#000000'
+                    }}>
+                      Community Standards Matter
+                    </h4>
+                    <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
+                      By Guest Columnist
+                    </p>
+                    <p style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.95rem',
+                      lineHeight: '1.5',
+                      color: '#000000'
+                    }}>
+                      The implementation of comprehensive community standards demonstrates the company's commitment to creating safe, secure environments for all users.
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="border-start ps-3" style={{ borderLeft: '4px solid #000000' }}>
-                  <h4 className="fw-bold mb-2" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '1.1rem',
-                    color: '#000000'
-                  }}>
-                    Market Outlook 2024
-                  </h4>
-                  <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
-                    By Financial Analyst
-                  </p>
-                  <p style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.95rem',
-                    lineHeight: '1.5',
-                    color: '#000000'
-                  }}>
-                    Industry experts predict continued growth in digital real estate services, with user safety and document security remaining top priorities.
-                  </p>
+                  <Link href="#" className="text-decoration-none">
+                    <h4 className="fw-bold mb-2" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '1.1rem',
+                      color: '#000000'
+                    }}>
+                      Market Outlook 2024
+                    </h4>
+                    <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
+                      By Financial Analyst
+                    </p>
+                    <p style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.95rem',
+                      lineHeight: '1.5',
+                      color: '#000000'
+                    }}>
+                      Industry experts predict continued growth in digital real estate services, with user safety and document security remaining top priorities.
+                    </p>
+                  </Link>
                 </div>
               </div>
 
@@ -651,60 +724,66 @@ export default function Newspaper() {
                 </h3>
                 
                 <div className="mb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.95rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Document Processing Milestone
-                  </h5>
-                  <p style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.9rem',
-                    lineHeight: '1.4',
-                    color: '#000000'
-                  }}>
-                    Centuries Mutual has processed over 1 million documents with a 99.8% accuracy rate, setting new industry standards for digital document management.
-                  </p>
+                  <Link href="#" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.95rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Document Processing Milestone
+                    </h5>
+                    <p style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.9rem',
+                      lineHeight: '1.4',
+                      color: '#000000'
+                    }}>
+                      Centuries Mutual has processed over 1 million documents with a 99.8% accuracy rate, setting new industry standards for digital document management.
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="mb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.95rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Credit Rating Expansion
-                  </h5>
-                  <p style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.9rem',
-                    lineHeight: '1.4',
-                    color: '#000000'
-                  }}>
-                    The member credit rating system now serves over 5,000 verified users with a 95% successful matching rate for roommate compatibility.
-                  </p>
+                  <Link href="#" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.95rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Credit Rating Expansion
+                    </h5>
+                    <p style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.9rem',
+                      lineHeight: '1.4',
+                      color: '#000000'
+                    }}>
+                      The member credit rating system now serves over 5,000 verified users with a 95% successful matching rate for roommate compatibility.
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="mb-3">
-                  <h5 className="fw-bold mb-1" style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.95rem',
-                    color: '#000000',
-                    lineHeight: '1.3'
-                  }}>
-                    Security Enhancement
-                  </h5>
-                  <p style={{ 
-                    fontFamily: "'Times New Roman', serif",
-                    fontSize: '0.9rem',
-                    lineHeight: '1.4',
-                    color: '#000000'
-                  }}>
-                    Enhanced security protocols have been implemented across all platform services, ensuring maximum protection for user data and transactions.
-                  </p>
+                  <Link href="#" className="text-decoration-none">
+                    <h5 className="fw-bold mb-1" style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.95rem',
+                      color: '#000000',
+                      lineHeight: '1.3'
+                    }}>
+                      Security Enhancement
+                    </h5>
+                    <p style={{ 
+                      fontFamily: "'Times New Roman', serif",
+                      fontSize: '0.9rem',
+                      lineHeight: '1.4',
+                      color: '#000000'
+                    }}>
+                      Enhanced security protocols have been implemented across all platform services, ensuring maximum protection for user data and transactions.
+                    </p>
+                  </Link>
                 </div>
               </div>
 
@@ -748,51 +827,6 @@ export default function Newspaper() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="row mt-5 pt-4 border-top">
-          <div className="col-12">
-            <div className="p-4 text-center" style={{ 
-              background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-              border: '1px solid #dee2e6',
-              borderRadius: '12px'
-            }}>
-              <h3 className="fw-bold mb-3" style={{ 
-                fontFamily: "'Times New Roman', serif",
-                fontSize: '1.8rem',
-                color: '#000000'
-              }}>
-                Get the Newsletter
-              </h3>
-              <p className="mb-4" style={{ 
-                fontSize: '1.1rem', 
-                color: '#666',
-                fontFamily: "'Times New Roman', serif"
-              }}>
-                Stay informed with our daily financial and real estate updates.
-              </p>
-              <div className="row justify-content-center">
-                <div className="col-md-6">
-                  <div className="d-flex">
-                    <input 
-                      type="email" 
-                      className="form-control me-2" 
-                      placeholder="Enter your email address"
-                      style={{ fontSize: '1rem', padding: '12px 16px' }}
-                    />
-                    <button className="btn btn-dark px-4" style={{ 
-                      fontSize: '1rem',
-                      padding: '12px 24px',
-                      backgroundColor: '#000000',
-                      borderColor: '#000000'
-                    }}>
-                      Subscribe
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Minimal Footer */}
         <div className="row mt-5 pt-4 border-top">

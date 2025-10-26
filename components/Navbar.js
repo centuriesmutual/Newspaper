@@ -132,7 +132,7 @@ export default function Navbar() {
                   quality={100}
                   style={{ 
                     objectFit: 'contain',
-                    marginRight: mounted && windowWidth < 640 ? '5px' : '2px'
+                    marginRight: '2px'
                   }}
                 />
                 <span style={{ 
@@ -140,7 +140,7 @@ export default function Navbar() {
                   fontFamily: "'Playfair Display', serif",
                   fontSize: fontSize,
                   fontWeight: '500',
-                  letterSpacing: mounted && windowWidth < 640 ? '0' : '0.5px',
+                  letterSpacing: '0.5px',
                   whiteSpace: 'nowrap',
                   display: 'inline-block'
                 }}>
@@ -156,10 +156,10 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: mounted && windowWidth < 640 ? '0.65rem' : '1rem',
+                fontSize: '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: mounted && windowWidth < 640 ? '55px' : '120px',
-                padding: mounted && windowWidth < 640 ? '0.2rem 0.4rem' : '0.5rem 1rem',
+                minWidth: '120px',
+                padding: '0.5rem 1rem',
                 flexShrink: 0
               }}
             >
