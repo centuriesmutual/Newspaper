@@ -167,8 +167,15 @@ export default function Community() {
           </div>
           
           <div className="col-lg-6">
-            <div className="position-relative">
-              <div style={{
+            <div className="position-relative" style={{ marginTop: '2rem' }}>
+              <style jsx>{`
+                @media (max-width: 991px) {
+                  .credit-rating-container {
+                    margin-top: 3rem !important;
+                  }
+                }
+              `}</style>
+              <div className="credit-rating-container" style={{
                 background: 'rgba(255,255,255,0.1)',
                 borderRadius: '20px',
                 padding: '40px',

@@ -162,8 +162,15 @@ export default function RealEstate() {
           </div>
           
           <div className="col-lg-6">
-            <div className="position-relative">
-              <div style={{
+            <div className="position-relative" style={{ marginTop: '2rem' }}>
+              <style jsx>{`
+                @media (max-width: 991px) {
+                  .search-form-container {
+                    margin-top: 3rem !important;
+                  }
+                }
+              `}</style>
+              <div className="search-form-container" style={{
                 background: 'rgba(255,255,255,0.1)',
                 borderRadius: '20px',
                 padding: '40px',
@@ -182,13 +189,13 @@ export default function RealEstate() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label fw-bold" style={{ color: '#14432A' }}>Budget Range</label>
-                  <select className="form-select form-select-lg" style={{ borderRadius: '10px' }}>
-                    <option>Under $800/month</option>
-                    <option>$800 - $1200/month</option>
-                    <option>$1200 - $1800/month</option>
-                    <option>$1800+/month</option>
-                  </select>
+                  <label className="form-label fw-bold" style={{ color: '#14432A' }}>Max Price</label>
+                  <input 
+                    type="text" 
+                    className="form-control form-control-lg" 
+                    placeholder="Enter max monthly rent (e.g., $1200)"
+                    style={{ borderRadius: '10px' }}
+                  />
                 </div>
                 <div className="mb-4">
                   <label className="form-label fw-bold" style={{ color: '#14432A' }}>Room Type</label>

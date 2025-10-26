@@ -10,6 +10,7 @@ export default function Navbar() {
   const [windowWidth, setWindowWidth] = useState(0)
   const pathname = usePathname()
   const isLoginPage = pathname === '/login'
+  const isHomePage = pathname === '/'
 
   useEffect(() => {
     setMounted(true)
@@ -25,8 +26,8 @@ export default function Navbar() {
 
   // Calculate responsive sizes
   const getLogoSize = () => {
-    if (!mounted) return { width: 55, height: 27, fontSize: '1.25rem' }
-    if (windowWidth < 400) return { width: 55, height: 27, fontSize: '1.25rem' }
+    if (!mounted) return { width: 70, height: 35, fontSize: '1.5rem' }
+    if (windowWidth < 400) return { width: 70, height: 35, fontSize: '1.5rem' }
     if (windowWidth < 640) return { width: 60, height: 30, fontSize: '1.3rem' }
     if (windowWidth < 768) return { width: 40, height: 20, fontSize: '1.2rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
@@ -40,21 +41,26 @@ export default function Navbar() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
         
         .top-bar {
-          background: linear-gradient(135deg, #14432A 0%, #1a5436 100%);
-          color: white;
+          background: white;
+          color: #333;
           padding: 8px 0;
           font-size: 0.9rem;
+          border-bottom: 1px solid #e9ecef;
         }
         
         .top-bar a {
-          color: white;
+          color: #14432A;
           text-decoration: none;
           transition: all 0.3s ease;
         }
         
         .top-bar a:hover {
-          color: #e9ecef;
+          color: #1a5436;
           text-decoration: underline;
+        }
+        
+        .top-bar i {
+          color: #14432A;
         }
         
         @media (max-width: 640px) {
@@ -88,15 +94,17 @@ export default function Navbar() {
         }
       `}</style>
       
-      {/* Top Bar */}
-      <div className="top-bar">
-        <div className="container">
-          <div className="d-flex align-items-center">
-            <i className="bi bi-newspaper me-2"></i>
-            <Link href="/newspaper">Newspaper</Link>
+      {/* Top Bar - Only show on homepage */}
+      {isHomePage && (
+        <div className="top-bar">
+          <div className="container">
+            <div className="d-flex align-items-center">
+              <i className="bi bi-newspaper me-2"></i>
+              <Link href="/newspaper">Newspaper</Link>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       
       <nav className="navbar navbar-light bg-white py-1">
         <div className="container d-flex justify-content-between align-items-center">

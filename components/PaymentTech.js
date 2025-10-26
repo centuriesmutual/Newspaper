@@ -95,13 +95,21 @@ export default function PaymentTech() {
           </div>
           
           <div className="col-lg-6">
-            <div className="text-dark">
-              <h1 className="display-2 fw-bold mb-4" style={{ 
-                fontFamily: "'Playfair Display', serif",
-                color: '#14432A'
-              }}>
-                eDocument System
-              </h1>
+            <div className="text-dark" style={{ marginTop: '2rem' }}>
+              <style jsx>{`
+                @media (max-width: 991px) {
+                  .edocument-text-container {
+                    margin-top: 4rem !important;
+                  }
+                }
+              `}</style>
+              <div className="edocument-text-container">
+                <h1 className="display-2 fw-bold mb-4" style={{ 
+                  fontFamily: "'Playfair Display', serif",
+                  color: '#14432A'
+                }}>
+                  eDocument System
+                </h1>
               <p className="lead mb-5" style={{ 
                 fontSize: '1.3rem',
                 color: '#495057'
@@ -224,6 +232,7 @@ export default function PaymentTech() {
                 >
                   Learn More
                 </Link>
+              </div>
               </div>
             </div>
           </div>

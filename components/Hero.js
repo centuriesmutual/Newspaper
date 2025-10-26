@@ -134,7 +134,7 @@ export default function Hero() {
                   className="rounded-3"
                   style={{
                     objectFit: 'cover',
-                    objectPosition: 'center',
+                    objectPosition: 'center bottom',
                     transform: 'scale(1)',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.15), 0 1px 8px rgba(0,0,0,0.1)'
                   }}

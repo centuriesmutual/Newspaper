@@ -1,6 +1,5 @@
 'use client'
 
-import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { HomeIcon, CreditCardIcon, ShieldCheckIcon, ChartBarIcon, CheckCircleIcon, BanknotesIcon, ClockIcon, StarIcon } from '@heroicons/react/24/outline'
@@ -8,7 +7,6 @@ import { HomeIcon, CreditCardIcon, ShieldCheckIcon, ChartBarIcon, CheckCircleIco
 export default function RentalEquity() {
   return (
     <>
-      <Navbar />
       <main>
         {/* Hero Section */}
         <section className="py-5" style={{ 

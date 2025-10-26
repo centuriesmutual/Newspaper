@@ -28,7 +28,10 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-light">
       {/* Hero Section */}
-      <section className="py-5 bg-dark text-white">
+      <section className="py-5" style={{ 
+        background: 'linear-gradient(135deg, #14432A 0%, #206542 100%)',
+        color: 'white'
+      }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -36,14 +39,8 @@ export default function Contact() {
                 fontFamily: "'Playfair Display', serif",
                 textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
               }}>
-                Contact Us
+                Contact Our Support Team
               </h1>
-              <p className="lead mb-0" style={{
-                textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
-                fontSize: '1.3rem'
-              }}>
-                Get in touch with our team of financial experts
-              </p>
             </div>
             <div className="col-lg-6">
               <div className="position-relative" style={{ height: '400px' }}>
@@ -55,7 +52,7 @@ export default function Contact() {
                   quality={100}
                   className="rounded-3"
                   style={{ 
-                    objectFit: 'cover',
+                    objectFit: 'contain',
                     objectPosition: 'center'
                   }}
                 />
@@ -86,8 +83,8 @@ export default function Contact() {
                   <h3 className="h5 mb-0">Visit Us</h3>
                 </div>
                 <p className="text-muted mb-0">
-                  123 Financial District, Suite 100<br />
-                  Dallas, TX 75201<br />
+                  8080 N Central Expressway<br />
+                  Dallas, TX<br />
                   Monday - Friday: 9:00 AM - 5:00 PM
                 </p>
               </div>
@@ -109,9 +106,8 @@ export default function Contact() {
                   <h3 className="h5 mb-0">Call Us</h3>
                 </div>
                 <p className="text-muted mb-0">
-                  Main Office: 888-324-6642<br />
-                  Toll Free: 888-324-6642<br />
-                  Fax: 888-324-6642
+                  <strong>Main Office:</strong> 888-324-6642<br />
+                  <strong>Hours:</strong> Mon-Fri 8AM-6PM CST
                 </p>
               </div>
             </div>
@@ -132,7 +128,9 @@ export default function Contact() {
                   <h3 className="h5 mb-0">Email Us</h3>
                 </div>
                 <p className="text-muted mb-0">
-                  support@centuriesmutual.com
+                  <strong>Support:</strong> support@centuriesmutual.com<br />
+                  <strong>Response Time:</strong> Within 24 hours<br />
+                  <strong>Priority Support:</strong> Available for members
                 </p>
               </div>
             </div>
