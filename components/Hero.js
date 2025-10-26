@@ -50,7 +50,7 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               style={{ marginTop: '0' }}
             >
-              <motion.h1 
+                            <motion.h1 
                 className="display-3 text-white fw-bold mb-3 text-center text-lg-start" 
                 style={{ 
                   fontFamily: "'Playfair Display', serif",
@@ -68,18 +68,18 @@ export default function Hero() {
                 className="lead text-white mb-4 text-center text-lg-start" 
                 style={{
                   textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
-                  fontSize: 'calc(0.95rem + 0.5vw)',
+                  fontSize: 'calc(1rem + 0.3vw)',
                   maxWidth: '100%',
-                  margin: '0 auto',
-                  marginLeft: '0',
-                  padding: '0 0.5rem'
+                  opacity: 0.95,
+                  lineHeight: 1.6
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Connecting individuals with secure real estate solutions, digital document management, and community-driven roommate matching to simplify property transactions and enhance living experiences.
+                Providing a secure network for digital payments and travel services powered by blockchain technology
               </motion.p>
+ 
               <motion.div 
                 className="d-flex gap-2 justify-content-center justify-content-lg-start flex-column flex-sm-row px-3 px-sm-0"
                 initial={{ opacity: 0, y: 20 }}

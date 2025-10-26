@@ -55,8 +55,8 @@ export default function RealEstate() {
                       <HomeIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Verified Listings</h5>
-                      <small className="opacity-75">Quality guaranteed</small>
+                      <h5 className="mb-1 fw-bold">Credit Based Community</h5>
+                      <small className="opacity-75">Verified trustworthy renters</small>
                     </div>
                   </div>
                 </div>
@@ -71,8 +71,8 @@ export default function RealEstate() {
                       <MapPinIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Prime Locations</h5>
-                      <small className="opacity-75">Best neighborhoods</small>
+                      <h5 className="mb-1 fw-bold">Verified Locations</h5>
+                      <small className="opacity-75">Carefully vetted properties</small>
                     </div>
                   </div>
                 </div>
@@ -87,8 +87,8 @@ export default function RealEstate() {
                       <KeyIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Easy Access</h5>
-                      <small className="opacity-75">Quick move-in process</small>
+                      <h5 className="mb-1 fw-bold">Secure Access</h5>
+                      <small className="opacity-75">Coinbase wallet integration</small>
                     </div>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function RealEstate() {
                     </div>
                     <div>
                       <h5 className="mb-1 fw-bold">Community Focus</h5>
-                      <small className="opacity-75">Connect with neighbors</small>
+                      <small className="opacity-75">Local number verification</small>
                     </div>
                   </div>
                 </div>
