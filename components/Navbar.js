@@ -27,8 +27,7 @@ export default function Navbar() {
 
   // Calculate responsive sizes
   const getLogoSize = () => {
-    if (!mounted) return { width: 70, height: 35, fontSize: '1.5rem' }
-    if (windowWidth < 400) return { width: 70, height: 35, fontSize: '1.5rem' }
+    if (!mounted) return { width: 60, height: 30, fontSize: '1.3rem' }
     if (windowWidth < 640) return { width: 60, height: 30, fontSize: '1.3rem' }
     if (windowWidth < 768) return { width: 40, height: 20, fontSize: '1.2rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
@@ -150,10 +149,10 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: mounted && windowWidth < 640 ? '0.9rem' : '1rem',
+                fontSize: mounted && windowWidth < 640 ? '0.8rem' : '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: mounted && windowWidth < 640 ? '80px' : '120px',
-                padding: mounted && windowWidth < 640 ? '0.4rem 0.8rem' : '0.5rem 1rem'
+                minWidth: mounted && windowWidth < 640 ? '70px' : '120px',
+                padding: mounted && windowWidth < 640 ? '0.3rem 0.6rem' : '0.5rem 1rem'
               }}
             >
               Client Login

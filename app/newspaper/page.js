@@ -1,5 +1,6 @@
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Newspaper() {
   return (
@@ -33,15 +34,44 @@ export default function Newspaper() {
           <div className="container py-3">
             <div className="row align-items-center">
               <div className="col-md-8">
-                <h1 className="mb-0" style={{ 
-                  fontFamily: "'Times New Roman', serif",
-                  fontSize: '2.8rem',
-                  color: '#000000',
-                  fontWeight: 'bold',
-                  letterSpacing: '-1px'
-                }}>
-                  Centuries Mutual Times
-                </h1>
+                <div className="d-flex align-items-center mb-2">
+                  <Image 
+                    src="/cmlogotreesmall-removebg-preview.png"
+                    alt="Centuries Mutual"
+                    width={80}
+                    height={40}
+                    style={{ 
+                      objectFit: 'contain',
+                      marginRight: '15px',
+                      minWidth: '60px',
+                      minHeight: '30px'
+                    }}
+                    className="d-none d-md-block"
+                  />
+                  <Image 
+                    src="/cmlogotreesmall-removebg-preview.png"
+                    alt="Centuries Mutual"
+                    width={100}
+                    height={50}
+                    style={{ 
+                      objectFit: 'contain',
+                      marginRight: '15px',
+                      minWidth: '80px',
+                      minHeight: '40px'
+                    }}
+                    className="d-md-none"
+                  />
+                  <h1 className="mb-0" style={{ 
+                    fontFamily: "'Times New Roman', serif",
+                    fontSize: '2.8rem',
+                    color: '#000000',
+                    fontWeight: 'bold',
+                    letterSpacing: '-1px'
+                  }}>
+                    <span className="d-none d-md-inline">Centuries Mutual Times</span>
+                    <span className="d-md-none" style={{ fontSize: '1.8rem' }}>Centuries Mutual Times</span>
+                  </h1>
+                </div>
                 <p className="mb-0 mt-1" style={{ 
                   fontSize: '0.85rem',
                   color: '#666666',

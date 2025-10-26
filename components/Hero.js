@@ -57,7 +57,8 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Your Community Brokerage:
+                <span className="d-none d-md-inline">Your Community Brokerage:</span>
+                <span className="d-md-none" style={{ fontSize: 'calc(1.2rem + 1vw)' }}>Your Community Brokerage:</span>
               </motion.h1>
               <motion.p 
                 className="lead text-white mb-4 text-center text-lg-start" 
