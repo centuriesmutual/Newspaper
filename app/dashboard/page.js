@@ -1,8 +1,55 @@
 'use client'
 
+import { useState } from 'react'
 import Footer from '../../components/Footer'
 
 export default function Dashboard() {
+  const [showMessages, setShowMessages] = useState(false)
+  const [activeConversation, setActiveConversation] = useState(null)
+  const [messageText, setMessageText] = useState('')
+  
+  const conversations = [
+    {
+      id: 1,
+      name: 'Sarah Johnson',
+      lastMessage: 'Thanks for the update!',
+      timestamp: '2 min ago',
+      unread: 2,
+      avatar: 'SJ'
+    },
+    {
+      id: 2,
+      name: 'Michael Chen',
+      lastMessage: 'Can we schedule a call?',
+      timestamp: '1 hour ago',
+      unread: 1,
+      avatar: 'MC'
+    },
+    {
+      id: 3,
+      name: 'Emily Davis',
+      lastMessage: 'The documents are ready.',
+      timestamp: '3 hours ago',
+      unread: 0,
+      avatar: 'ED'
+    }
+  ]
+
+  const messages = activeConversation ? [
+    { id: 1, sender: activeConversation.name, text: 'Hey, how can I help you?', timestamp: '2:30 PM' },
+    { id: 2, sender: 'You', text: 'I need to update my payment method.', timestamp: '2:32 PM' },
+    { id: 3, sender: activeConversation.name, text: 'Sure, I can help with that. Send me the details.', timestamp: '2:33 PM' },
+    { id: 4, sender: 'You', text: 'Perfect, I\'ll send them over now.', timestamp: '2:35 PM' },
+    { id: 5, sender: activeConversation.name, text: activeConversation.lastMessage, timestamp: '2:36 PM' },
+  ] : []
+
+  const handleSendMessage = () => {
+    if (messageText.trim()) {
+      // Add message logic here
+      setMessageText('')
+    }
+  }
+
   return (
     <main>
       <div className="container-fluid" style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
@@ -10,14 +57,147 @@ export default function Dashboard() {
           <div className="row">
             <div className="col-12">
               <h1 className="display-4 fw-bold mb-4" style={{ color: '#14432A', fontFamily: "'Playfair Display', serif" }}>
-                Payment Tech Dashboard
+                Dashboard
               </h1>
               <p className="lead mb-5" style={{ color: '#495057' }}>
-                Manage your bills, track expenses, and maximize your travel rewards all in one place.
+                Manage your account, payments, and communication all in one place.
               </p>
             </div>
           </div>
 
+          {/* Messaging Section */}
+          <div className="row mb-5">
+            <div className="col-12">
+              <div className="card border-0 shadow-sm" style={{ borderRadius: '16px' }}>
+                <div className="card-header bg-white border-0 p-4">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h4 className="fw-bold mb-0" style={{ color: '#14432A' }}>
+                      Messages
+                      {conversations.reduce((sum, c) => sum + c.unread, 0) > 0 && (
+                        <span className="badge bg-danger ms-2">
+                          {conversations.reduce((sum, c) => sum + c.unread, 0)} new
+                        </span>
+                      )}
+                    </h4>
+                    <button 
+                      className="btn btn-primary"
+                      onClick={() => setShowMessages(!showMessages)}
+                    >
+                      {showMessages ? 'Hide Messages' : 'View Messages'}
+                    </button>
+                  </div>
+                </div>
+                {showMessages && (
+                  <div className="card-body p-0">
+                    <div className="row g-0" style={{ minHeight: '600px' }}>
+                      {/* Conversations List */}
+                      <div className="col-md-4 border-end">
+                        <div className="p-3 border-bottom">
+                          <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Search conversations..."
+                          />
+                        </div>
+                        <div style={{ maxHeight: '550px', overflowY: 'auto' }}>
+                          {conversations.map((conv) => (
+                            <div 
+                              key={conv.id}
+                              className={`p-3 border-bottom ${activeConversation?.id === conv.id ? 'bg-light' : ''}`}
+                              style={{ cursor: 'pointer' }}
+                              onClick={() => setActiveConversation(conv)}
+                            >
+                              <div className="d-flex align-items-center">
+                                <div 
+                                  className="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                  style={{
+                                    width: '50px',
+                                    height: '50px',
+                                    background: '#14432A',
+                                    color: 'white',
+                                    fontSize: '1.2rem',
+                                    fontWeight: 'bold'
+                                  }}
+                                >
+                                  {conv.avatar}
+                                </div>
+                                <div className="flex-grow-1">
+                                  <div className="d-flex justify-content-between align-items-start">
+                                    <h6 className="mb-1 fw-bold">{conv.name}</h6>
+                                    {conv.unread > 0 && (
+                                      <span className="badge bg-danger">{conv.unread}</span>
+                                    )}
+                                  </div>
+                                  <p className="text-muted small mb-0">{conv.lastMessage}</p>
+                                  <small className="text-muted">{conv.timestamp}</small>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Message Thread */}
+                      <div className="col-md-8 d-flex flex-column">
+                        {activeConversation ? (
+                          <>
+                            <div className="p-3 border-bottom">
+                              <h5 className="mb-0 fw-bold">{activeConversation.name}</h5>
+                              <small className="text-muted">Online</small>
+                            </div>
+                            <div style={{ flex: 1, overflowY: 'auto', padding: '20px', background: '#f8f9fa' }}>
+                              {messages.map((msg) => (
+                                <div key={msg.id} className={`mb-3 d-flex ${msg.sender === 'You' ? 'justify-content-end' : 'justify-content-start'}`}>
+                                  <div style={{ maxWidth: '70%' }}>
+                                    {msg.sender !== 'You' && <small className="text-muted">{msg.sender}</small>}
+                                    <div 
+                                      className={`p-3 rounded ${msg.sender === 'You' ? 'bg-primary text-white' : 'bg-white'}`}
+                                    >
+                                      {msg.text}
+                                    </div>
+                                    <small className="text-muted">{msg.timestamp}</small>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                            <div className="p-3 border-top">
+                              <div className="input-group">
+                                <input 
+                                  type="text" 
+                                  className="form-control" 
+                                  placeholder="Type a message..."
+                                  value={messageText}
+                                  onChange={(e) => setMessageText(e.target.value)}
+                                  onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                                />
+                                <button 
+                                  className="btn btn-primary"
+                                  onClick={handleSendMessage}
+                                >
+                                  Send
+                                </button>
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <div className="d-flex align-items-center justify-content-center h-100">
+                            <div className="text-center">
+                              <svg width="64" height="64" fill="#dee2e6" viewBox="0 0 24 24">
+                                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                              </svg>
+                              <p className="text-muted mt-3">Select a conversation to start messaging</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Other Dashboard Content */}
           <div className="row g-4 mb-5">
             <div className="col-md-6 col-lg-3">
               <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
@@ -115,119 +295,6 @@ export default function Dashboard() {
                   </div>
                   <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Security Score</h5>
                   <p className="text-muted mb-0">98% secure</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="card border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                <div className="card-header bg-transparent border-0 p-4">
-                  <h4 className="fw-bold mb-0" style={{ color: '#14432A' }}>Recent Transactions</h4>
-                </div>
-                <div className="card-body p-4">
-                  <div className="list-group list-group-flush">
-                    <div className="list-group-item border-0 px-0 py-3">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="d-flex align-items-center">
-                          <div style={{
-                            background: 'rgba(20, 67, 42, 0.1)',
-                            borderRadius: '8px',
-                            width: '40px',
-                            height: '40px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            marginRight: '15px'
-                          }}>
-                            <svg width="20" height="20" fill="#14432A" viewBox="0 0 24 24">
-                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                          </div>
-                          <div>
-                            <h6 className="mb-1 fw-bold">Rent Payment</h6>
-                            <small className="text-muted">Auto-pay • Today</small>
-                          </div>
-                        </div>
-                        <span className="text-success fw-bold">-$1,200</span>
-                      </div>
-                    </div>
-                    <div className="list-group-item border-0 px-0 py-3">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="d-flex align-items-center">
-                          <div style={{
-                            background: 'rgba(20, 67, 42, 0.1)',
-                            borderRadius: '8px',
-                            width: '40px',
-                            height: '40px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            marginRight: '15px'
-                          }}>
-                            <svg width="20" height="20" fill="#14432A" viewBox="0 0 24 24">
-                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                          </div>
-                          <div>
-                            <h6 className="mb-1 fw-bold">Utilities</h6>
-                            <small className="text-muted">Auto-pay • Yesterday</small>
-                          </div>
-                        </div>
-                        <span className="text-success fw-bold">-$180</span>
-                      </div>
-                    </div>
-                    <div className="list-group-item border-0 px-0 py-3">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="d-flex align-items-center">
-                          <div style={{
-                            background: 'rgba(20, 67, 42, 0.1)',
-                            borderRadius: '8px',
-                            width: '40px',
-                            height: '40px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            marginRight: '15px'
-                          }}>
-                            <svg width="20" height="20" fill="#14432A" viewBox="0 0 24 24">
-                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                          </div>
-                          <div>
-                            <h6 className="mb-1 fw-bold">Travel Booking</h6>
-                            <small className="text-muted">Manual • 2 days ago</small>
-                          </div>
-                        </div>
-                        <span className="text-success fw-bold">-$450</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="card border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                <div className="card-header bg-transparent border-0 p-4">
-                  <h4 className="fw-bold mb-0" style={{ color: '#14432A' }}>Quick Actions</h4>
-                </div>
-                <div className="card-body p-4">
-                  <div className="d-grid gap-3">
-                    <button className="btn btn-primary btn-lg" style={{ borderRadius: '12px' }}>
-                      Add New Bill
-                    </button>
-                    <button className="btn btn-outline-primary btn-lg" style={{ borderRadius: '12px' }}>
-                      Set Up Auto-Pay
-                    </button>
-                    <button className="btn btn-outline-primary btn-lg" style={{ borderRadius: '12px' }}>
-                      View Travel Rewards
-                    </button>
-                    <button className="btn btn-outline-primary btn-lg" style={{ borderRadius: '12px' }}>
-                      Download Report
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
