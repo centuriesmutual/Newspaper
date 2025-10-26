@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Centuries Mutual',
-  description: 'Centuries Mutual® | Your Community Brokerage - Connecting individuals with secure real estate solutions, digital document management, and community-driven roommate matching to simplify property transactions and enhance living experiences.',
+  description: 'Your Community Brokerage: Providing a secure network for digital payments and travel services powered by blockchain technology.',
   icons: {
     icon: '/favicon.ico',
   },
@@ -11,7 +11,7 @@ export const metadata = {
       "name": "Centuries Mutual",
       "url": "https://centuriesmutual.com",
       "logo": "https://centuriesmutual.com/cmlogotreesmall-removebg-preview.png",
-      "description": "Connecting individuals with secure real estate solutions, digital document management, and community-driven roommate matching to simplify property transactions and enhance living experiences.",
+      "description": "Your Community Brokerage: Providing a secure network for digital payments and travel services powered by blockchain technology.",
       "sameAs": [
         "https://centuriesmutual.com/newspaper",
         "https://centuriesmutual.com/learnmore",

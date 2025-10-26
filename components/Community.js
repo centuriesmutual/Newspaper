@@ -8,6 +8,7 @@ import CreditRatingDisplay from './CryptoWalletVisualization'
 
 export default function Community() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState('signup') // 'signup' or 'credit-info'
 
   return (
     <section className="community-section" style={{
@@ -118,7 +119,10 @@ export default function Community() {
               
               <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
                 <button 
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => {
+                    setModalType('signup')
+                    setIsModalOpen(true)
+                  }}
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -142,7 +146,10 @@ export default function Community() {
                   Find Roommates
                 </button>
                 <button 
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => {
+                    setModalType('credit-info')
+                    setIsModalOpen(true)
+                  }}
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -161,7 +168,7 @@ export default function Community() {
                     e.target.style.background = 'transparent';
                   }}
                 >
-                  Browse Rooms
+                  More Information
                 </button>
               </div>
             </div>
@@ -193,7 +200,8 @@ export default function Community() {
       
       <CommunityModal 
         isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+        onClose={() => setIsModalOpen(false)}
+        modalType={modalType}
       />
     </section>
   )
