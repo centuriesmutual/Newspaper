@@ -27,8 +27,8 @@ export default function Navbar() {
 
   // Calculate responsive sizes
   const getLogoSize = () => {
-    if (!mounted) return { width: 60, height: 30, fontSize: '1.3rem' }
-    if (windowWidth < 640) return { width: 60, height: 30, fontSize: '1.3rem' }
+    if (!mounted) return { width: 50, height: 25, fontSize: '1.1rem' }
+    if (windowWidth < 640) return { width: 50, height: 25, fontSize: '1.1rem' }
     if (windowWidth < 768) return { width: 40, height: 20, fontSize: '1.2rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
   }
@@ -65,28 +65,34 @@ export default function Navbar() {
         
         @media (max-width: 640px) {
           .navbar {
-            min-height: 65px;
-            padding-top: 6px;
-            padding-bottom: 6px;
+            min-height: 60px;
+            padding-top: 8px;
+            padding-bottom: 8px;
           }
           .navbar .container {
-            padding-left: 12px;
-            padding-right: 12px;
-            gap: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-wrap: nowrap !important;
           }
           .navbar-brand {
-            max-width: calc(100vw - 140px);
+            max-width: calc(100vw - 120px);
             overflow: visible;
+            flex-shrink: 0;
           }
           .btn-primary.mobile-login {
-            padding: 6px 12px !important;
-            font-size: 0.75rem !important;
+            padding: 6px 10px !important;
+            font-size: 0.7rem !important;
             min-width: auto !important;
-            margin-left: auto;
+            margin-left: 0 !important;
             height: 32px !important;
             display: flex !important;
             align-items: center !important;
             line-height: 1 !important;
+            flex-shrink: 0;
+            white-space: nowrap !important;
           }
           .top-bar {
             font-size: 0.8rem;
@@ -150,10 +156,11 @@ export default function Navbar() {
               style={{ 
                 backgroundColor: '#14432A', 
                 borderColor: '#14432A',
-                fontSize: mounted && windowWidth < 640 ? '0.7rem' : '1rem',
+                fontSize: mounted && windowWidth < 640 ? '0.65rem' : '1rem',
                 whiteSpace: 'nowrap',
-                minWidth: mounted && windowWidth < 640 ? '60px' : '120px',
-                padding: mounted && windowWidth < 640 ? '0.25rem 0.5rem' : '0.5rem 1rem'
+                minWidth: mounted && windowWidth < 640 ? '55px' : '120px',
+                padding: mounted && windowWidth < 640 ? '0.2rem 0.4rem' : '0.5rem 1rem',
+                flexShrink: 0
               }}
             >
               Client Login

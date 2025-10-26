@@ -19,7 +19,7 @@ export default function Newspaper() {
             <div className="col-12">
               <div className="d-flex justify-content-end align-items-center">
                 <div className="d-flex align-items-center">
-                  <button className="btn btn-link text-white p-0" style={{ fontSize: '1.1rem', opacity: '0.8' }}>🔍</button>
+                  <button className="btn btn-link text-white p-0" style={{ fontSize: '1rem', opacity: '1', color: '#ffffff' }}>🔍</button>
                 </div>
               </div>
             </div>
@@ -90,19 +90,6 @@ export default function Newspaper() {
             </div>
           </div>
           
-          {/* Navigation Menu */}
-          <div className="container border-top">
-            <nav className="py-2">
-              <div className="d-flex flex-wrap">
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>U.S.</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>INTERNATIONAL</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>REAL ESTATE</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>BUSINESS</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>TECHNOLOGY</a>
-                <a href="#" className="text-decoration-none text-dark me-4 fw-bold" style={{ fontSize: '0.9rem' }}>OPINION</a>
-              </div>
-            </nav>
-          </div>
         </div>
       </header>
 
