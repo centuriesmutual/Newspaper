@@ -1,6 +1,6 @@
 'use client'
 
-import { HomeIcon, MapPinIcon, KeyIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { HomeIcon, MapPinIcon, KeyIcon, UsersIcon, DocumentTextIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 export default function RealEstate() {
@@ -52,7 +52,7 @@ export default function RealEstate() {
                       padding: '12px',
                       marginRight: '15px'
                     }}>
-                      <HomeIcon style={{ width: '24px', height: '24px' }} />
+                      <UsersIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
                       <h5 className="mb-1 fw-bold">Credit Based Community</h5>
@@ -68,11 +68,11 @@ export default function RealEstate() {
                       padding: '12px',
                       marginRight: '15px'
                     }}>
-                      <MapPinIcon style={{ width: '24px', height: '24px' }} />
+                      <HomeIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Verified Locations</h5>
-                      <small className="opacity-75">Carefully vetted properties</small>
+                      <h5 className="mb-1 fw-bold">Beautiful Spaces</h5>
+                      <small className="opacity-75">Great options available</small>
                     </div>
                   </div>
                 </div>
@@ -100,11 +100,11 @@ export default function RealEstate() {
                       padding: '12px',
                       marginRight: '15px'
                     }}>
-                      <UsersIcon style={{ width: '24px', height: '24px' }} />
+                      <DocumentTextIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Community Focus</h5>
-                      <small className="opacity-75">Local number verification</small>
+                      <h5 className="mb-1 fw-bold">Document Services</h5>
+                      <small className="opacity-75">Secure digital document management</small>
                     </div>
                   </div>
                 </div>
