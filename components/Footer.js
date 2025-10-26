@@ -26,9 +26,9 @@ export default function Footer() {
     return null
   }
 
-  // Calculate responsive sizes
+  // Calculate responsive sizes - use default values until mounted
   const getLogoSize = () => {
-    if (!mounted) return { width: 40, height: 40, fontSize: '1.25rem' }
+    if (!mounted) return { width: 60, height: 60, fontSize: '1.5rem' }
     if (windowWidth < 400) return { width: 40, height: 40, fontSize: '1.25rem' }
     if (windowWidth < 640) return { width: 45, height: 45, fontSize: '1.3rem' }
     if (windowWidth < 768) return { width: 50, height: 50, fontSize: '1.2rem' }
@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
         <div className="border-top border-secondary pt-4 mt-4">
           <p className="text-center text-md-center text-start mb-0">
-            © {new Date().getFullYear()} Centuries Mutual. All rights reserved.
+            © {mounted ? new Date().getFullYear() : '2025'} Centuries Mutual. All rights reserved.
           </p>
         </div>
       </div>

@@ -19,7 +19,12 @@ export default function Newspaper() {
             <div className="col-12">
               <div className="d-flex justify-content-end align-items-center">
                 <div className="d-flex align-items-center">
-                  <button className="btn btn-link text-white p-0" style={{ fontSize: '1rem', opacity: '1', color: '#ffffff' }}>🔍</button>
+                  <button className="btn btn-link text-white p-0" style={{ fontSize: '1rem', opacity: '1', color: '#ffffff' }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

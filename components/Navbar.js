@@ -25,9 +25,9 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  // Calculate responsive sizes
+  // Calculate responsive sizes - use default values until mounted
   const getLogoSize = () => {
-    if (!mounted) return { width: 50, height: 25, fontSize: '1.1rem' }
+    if (!mounted) return { width: 200, height: 100, fontSize: '3.2rem' }
     if (windowWidth < 640) return { width: 50, height: 25, fontSize: '1.1rem' }
     if (windowWidth < 768) return { width: 40, height: 20, fontSize: '1.2rem' }
     return { width: 200, height: 100, fontSize: '3.2rem' }
