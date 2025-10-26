@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
         />
       </head>
-      <body className="overflow-x-hidden">
+      <body className={`overflow-x-hidden ${inter.className}`}>
         <Navbar />
         {children}
         <Analytics />

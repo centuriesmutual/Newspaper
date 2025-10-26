@@ -109,12 +109,12 @@ export default function Hero() {
                   fill
                   priority
                   quality={100}
-                  className="rounded-5"
                   style={{
                     objectFit: 'contain',
                     objectPosition: 'center',
                     transform: 'scale(1)',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.15), 0 1px 8px rgba(0,0,0,0.1)'
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.15), 0 1px 8px rgba(0,0,0,0.1)',
+                    borderRadius: '24px'
                   }}
                 />
               </div>
