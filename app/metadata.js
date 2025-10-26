@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Centuries Mutual',
-  description: 'Centuries Mutual® | Your Community Brokerage - We make real estate easy. From finding roommates to managing documents, we've got everything you need for a smoother living experience.',
+  description: 'Centuries Mutual® | Your Community Brokerage - Connecting individuals with secure real estate solutions, digital document management, and community-driven roommate matching to simplify property transactions and enhance living experiences.',
   icons: {
     icon: '/favicon.ico',
   },
@@ -11,7 +11,7 @@ export const metadata = {
       "name": "Centuries Mutual",
       "url": "https://centuriesmutual.com",
       "logo": "https://centuriesmutual.com/cmlogotreesmall-removebg-preview.png",
-      "description": "We make real estate easy. From finding roommates to managing documents, we've got everything you need for a smoother living experience.",
+      "description": "Connecting individuals with secure real estate solutions, digital document management, and community-driven roommate matching to simplify property transactions and enhance living experiences.",
       "sameAs": [
         "https://centuriesmutual.com/newspaper",
         "https://centuriesmutual.com/learnmore",
