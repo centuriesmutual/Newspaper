@@ -106,6 +106,118 @@ export default function ArticlePage({ params }) {
         <p>The system handles various document types including lease agreements, roommate contracts, property documentation, and verification materials.</p>
       `,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'edocument-system-launch': {
+      title: 'Centuries Mutual Launches Revolutionary eDocument System for Real Estate',
+      author: 'Financial News Desk',
+      publishDate: '3 minutes ago',
+      category: 'Technology',
+      content: `
+        <p>Centuries Mutual has unveiled its groundbreaking eDocument system, revolutionizing how individuals find and rent real estate with roommates. This new platform integrates seamlessly with the company's existing services to provide a comprehensive digital solution for property transactions.</p>
+        
+        <p>The eDocument system automates the entire documentation process, from initial lease agreements to roommate contracts and verification documents. Users can now complete all necessary paperwork in minutes rather than days.</p>
+        
+        <p>"This system represents a significant leap forward in digital real estate transactions," said the company's CEO. "We're making the rental process faster, more secure, and more accessible for everyone."</p>
+        
+        <p>The platform features advanced security measures including encryption, digital signatures, and automated verification to ensure document authenticity and user protection. Early adopters have praised the system's ease of use and efficiency.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'real-estate-strong-growth-q4': {
+      title: 'Real Estate Market Shows Strong Growth in Q4',
+      author: 'Market Analysis Team',
+      publishDate: '1 hour ago',
+      category: 'Real Estate',
+      content: `
+        <p>The real estate market continues to show robust growth with rental prices increasing by 8.5% year-over-year. This marks the third consecutive quarter of significant growth, reflecting strong demand in both urban and suburban markets.</p>
+        
+        <p>Analysts point to several factors driving this growth, including increased remote work flexibility, changing housing preferences, and improved digital platforms that make rental processes more accessible. The shift towards flexible living arrangements has particularly benefited roommate-based rental models.</p>
+        
+        <p>"The market is demonstrating remarkable resilience," commented the lead market analyst. "We're seeing sustained strength across multiple property types and price points."</p>
+        
+        <p>Digital platforms like Centuries Mutual have contributed significantly to this growth by streamlining the rental process and reducing barriers to entry for both tenants and landlords. The integration of technology has made property transactions more efficient and transparent.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'credit-rating-widespread-adoption': {
+      title: 'Credit Rating System Gains Widespread Adoption',
+      author: 'Technology Reporter',
+      publishDate: '2 hours ago',
+      category: 'Technology',
+      content: `
+        <p>The new member credit rating system has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches. This milestone demonstrates the platform's effectiveness in connecting compatible roommates and property seekers.</p>
+        
+        <p>The system uses advanced algorithms to assess user compatibility, verify credentials, and match individuals based on lifestyle preferences, financial profiles, and living requirements. This data-driven approach has significantly improved matching success rates.</p>
+        
+        <p>"The adoption rate has exceeded our expectations," said the platform's technology director. "Users appreciate the transparency and reliability that our verification system provides."</p>
+        
+        <p>The credit rating system includes automated background checks, financial verification, and compatibility scoring. This comprehensive approach helps users make informed decisions and reduces risks associated with roommate matching and property rentals.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'document-processing-million-milestone': {
+      title: 'Document Processing Reaches 1 Million Milestone',
+      author: 'Business Reporter',
+      publishDate: '3 hours ago',
+      category: 'Business',
+      content: `
+        <p>Centuries Mutual's document processing system has successfully handled over 1 million documents with a 99.8% accuracy rate. This achievement sets new industry standards for digital document management and automated processing.</p>
+        
+        <p>The system can process various document types including lease agreements, roommate contracts, property documentation, verification materials, and legal forms. Automated verification ensures accuracy and compliance with regulatory requirements.</p>
+        
+        <p>"This milestone reflects our commitment to excellence and innovation," commented the company's operations manager. "Our automated processing capabilities have transformed how documents are handled in real estate transactions."</p>
+        
+        <p>The high accuracy rate is attributed to advanced OCR technology, machine learning algorithms, and rigorous quality control measures. The system continues to improve through continuous learning and user feedback.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'ai-powered-features-enhance': {
+      title: 'AI-Powered Features Enhance User Experience',
+      author: 'Technology Editor',
+      publishDate: '4 hours ago',
+      category: 'Technology',
+      content: `
+        <p>New artificial intelligence features have been integrated into the platform, improving matching algorithms and providing more accurate roommate compatibility assessments. These AI-powered enhancements personalize the user experience and increase match success rates.</p>
+        
+        <p>The system now uses machine learning to analyze user preferences, behavior patterns, and successful matches to continuously improve its recommendations. Natural language processing capabilities help users create detailed profiles and search for compatible roommates more effectively.</p>
+        
+        <p>"AI technology is revolutionizing how we approach roommate matching," explained the chief technology officer. "These features make our platform more intuitive and help users find better matches faster."</p>
+        
+        <p>Key AI features include intelligent property recommendations, automated compatibility scoring, predictive search, and personalized content delivery. Users report significantly improved experiences and higher satisfaction rates with these new capabilities.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'digital-lease-agreements-adoption': {
+      title: 'Digital Lease Agreements See 300% Adoption',
+      author: 'Real Estate Correspondent',
+      publishDate: '5 hours ago',
+      category: 'Real Estate',
+      content: `
+        <p>The adoption of digital lease agreements has increased by 300% in the past quarter, with tenants and landlords embracing the streamlined process. This dramatic growth reflects the real estate industry's shift towards digital transformation.</p>
+        
+        <p>Digital lease agreements offer numerous advantages including instant accessibility, automated reminders, easy updates, and secure storage. Both parties can review, sign, and store documents electronically without traditional paperwork.</p>
+        
+        <p>"The shift to digital agreements has been transformative," noted the real estate correspondent. "Landlords and tenants appreciate the efficiency and convenience of electronic document management."</p>
+        
+        <p>The platform's digital lease system includes automated compliance checking, electronic signature verification, and cloud-based storage. These features ensure document security while making the leasing process faster and more convenient for all parties involved.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    },
+    'roommate-matching-95-success': {
+      title: 'Roommate Matching Success Rate Hits 95%',
+      author: 'Community Affairs Reporter',
+      publishDate: '6 hours ago',
+      category: 'Community',
+      content: `
+        <p>The platform's roommate matching system has achieved a 95% success rate, with over 2,100 successful matches recorded in the first quarter. This high success rate demonstrates the effectiveness of the platform's algorithmic approach to roommate compatibility assessment.</p>
+        
+        <p>The matching system considers multiple factors including lifestyle preferences, living habits, financial situations, and personal interests. Advanced algorithms analyze these factors to create highly compatible roommate pairings.</p>
+        
+        <p>"This success rate is unprecedented in the industry," said the community affairs reporter. "Users are finding compatible roommates faster and with better long-term outcomes."</p>
+        
+        <p>The system includes user feedback mechanisms and continuous improvement algorithms that learn from successful matches. This data-driven approach ensures that the matching system becomes more effective over time, leading to even higher success rates.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     }
   }
 
