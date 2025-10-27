@@ -65,7 +65,7 @@ export default function Hero() {
                 <span className="d-md-none" style={{ fontSize: 'calc(1.4rem + 1.2vw)' }}>Your Community Brokerage:</span>
               </motion.h1>
               <motion.p 
-                className="lead text-white mb-4 text-center text-lg-start" 
+                className="lead text-white mb-4 text-center text-lg-start d-none d-md-block" 
                 style={{
                   textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
                   fontSize: 'calc(1rem + 0.3vw)',
@@ -90,6 +90,22 @@ export default function Hero() {
                 <Link href="/rentalequity" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Learn More</Link>
                 <Link href="/rewards" className="btn btn-light btn-lg">Download App</Link>
               </motion.div>
+              
+              <motion.p 
+                className="lead text-white mb-4 text-center text-lg-start d-md-none" 
+                style={{
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                  fontSize: 'calc(0.9rem + 0.2vw)',
+                  maxWidth: '100%',
+                  opacity: 0.95,
+                  lineHeight: 1.6
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                Providing a secure network for digital payments and travel services powered by blockchain technology
+              </motion.p>
             </motion.div>
           </div>
           

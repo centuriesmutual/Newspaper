@@ -131,12 +131,7 @@ export default function Footer() {
                 <Link href="/legal" className="text-white text-decoration-none">Legal</Link>
               </li>
             </ul>
-            <div className="d-flex align-items-start mt-3">
-              <i className="bi bi-geo-alt me-2 mt-1" style={{ color: '#14432A' }}></i>
-              <div>
-                Dallas, TX
-              </div>
-            </div>
+
           </div>
         </div>
         <div className="border-top border-secondary pt-4 mt-4">
