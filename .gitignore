@@ -2,3 +2,17 @@ node_modules/
 .next/
 *.log
 .DS_Store
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# GitLab CI/CD
+.gitlab-ci.yml
+
+# Deployment scripts
+deploy.sh
+rollback.sh
