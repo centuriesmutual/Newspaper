@@ -10,8 +10,8 @@ node_modules/
 .env.development
 .env.test
 
-# GitLab CI/CD
-.gitlab-ci.yml
+# GitLab CI/CD - Keep for deployment
+# .gitlab-ci.yml
 
 # Deployment scripts
 deploy.sh
