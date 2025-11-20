@@ -67,7 +67,7 @@ export default function Community() {
                 fontSize: '1.3rem',
                 color: '#495057'
               }}>
-                Find the perfect room and roommate with our trusted member credit rating system. 
+                Find the perfect room and roommate with our patented member trust rating system. 
                 Verified profiles, secure payments, and reliable reviews help you make informed 
                 decisions for your next home.
               </p>
@@ -100,7 +100,7 @@ export default function Community() {
                       <StarIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Credit Ratings</h5>
+                      <h5 className="mb-1 fw-bold">Trust Score</h5>
                       <small className="opacity-75">Reliable scoring system</small>
                     </div>
                   </div>
