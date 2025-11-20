@@ -41,16 +41,16 @@ export default function RentalEquity() {
                     Transform Rent Into Credit
                   </h3>
                   <p className="text-muted mb-4">
-                    Rent is often your largest monthly expense, yet it typically does nothing for your credit score. With Rental Equity, every on-time payment is reported to all three major credit bureaus — Experian, Equifax, and TransUnion.
+                    Rent is often your largest monthly expense, yet it typically does nothing for your trust score. With Rental Equity, Your Trust Score grows with each payment, giving you better standing, more opportunities, and greater confidence across Centuries Mutual.
                   </p>
                   <ul className="list-unstyled">
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#14432A', flexShrink: 0 }} />
-                      <span className="ms-3">Build credit history month after month</span>
+                      <span className="ms-3">Build trust history month after month</span>
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#14432A', flexShrink: 0 }} />
-                      <span className="ms-3">Improve your credit score for future loans</span>
+                      <span className="ms-3">Improve your trust score for future loans</span>
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#14432A', flexShrink: 0 }} />
@@ -58,7 +58,7 @@ export default function RentalEquity() {
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#14432A', flexShrink: 0 }} />
-                      <span className="ms-3">Qualify for better interest rates on mortgages</span>
+                      <span className="ms-3">Qualify for better rates on rentals</span>
                     </li>
                   </ul>
                 </div>
@@ -66,10 +66,10 @@ export default function RentalEquity() {
               <div className="col-lg-6">
                 <div className="card border-0 shadow-lg" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-5" style={{ background: 'linear-gradient(135deg, #14432A 0%, #206542 100%)', color: 'white' }}>
-                    <h4 className="fw-bold mb-4">Credit Building Impact</h4>
+                    <h4 className="fw-bold mb-4">Trust Building Impact</h4>
                     <div className="mb-4">
                       <div className="d-flex justify-content-between mb-2">
-                        <span>Average Credit Score Increase</span>
+                        <span>Average Trust Score Increase</span>
                         <span className="fw-bold">+60 points</span>
                       </div>
                       <div className="progress" style={{ height: '8px', backgroundColor: 'rgba(255,255,255,0.2)' }}>
@@ -190,7 +190,7 @@ export default function RentalEquity() {
                   Blockchain-Powered Payment Processing
                 </h2>
                 <p className="lead text-muted">
-                  Secure, fast payments powered by Circle and Coinbase blockchain technology
+                  Secure, fast payments powered by Coinbase blockchain technology
                 </p>
               </div>
             </div>
