@@ -59,10 +59,10 @@ export default function CommunityModal({ isOpen, onClose, modalType = 'signup' }
               <div>
                 <div className="text-center mb-4">
                   <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                    In-House Credit Rating System
+                    In-House Trust Rating System
                   </h4>
                   <p className="text-muted">
-                    Learn how our proprietary credit rating system works
+                    Learn how our proprietary trust rating system works
                   </p>
                 </div>
 
