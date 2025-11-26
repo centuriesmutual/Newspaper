@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import BlockchainSection from '../components/BlockchainSection'
 import RealEstate from '../components/RealEstate'
 import PaymentTech from '../components/PaymentTech'
 import Community from '../components/Community'
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <BlockchainSection />
         <RealEstate />
         <Community />
         <PaymentTech />

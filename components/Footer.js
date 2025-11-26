@@ -136,36 +136,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      
-      {/* Blockchain Technology Section */}
-      <div style={{
-        background: 'rgba(0, 0, 0, 0.3)',
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-        padding: '2rem 0'
-      }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-10 mx-auto text-center">
-              <p className="mb-2" style={{ 
-                fontSize: '0.9rem',
-                opacity: 0.9,
-                lineHeight: '1.6'
-              }}>
-                <strong>Powered by Patented Blockchain Technology</strong>
-              </p>
-              <p className="mb-0 small" style={{ 
-                fontSize: '0.85rem',
-                opacity: 0.8,
-                lineHeight: '1.5'
-              }}>
-                Our proprietary blockchain system ensures immutable, transparent, and secure contract enforcement 
-                across all platform transactions. This patented technology provides unparalleled trust and reliability 
-                in digital agreements and financial services.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
   )
 } 
