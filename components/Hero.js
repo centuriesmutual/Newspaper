@@ -42,7 +42,7 @@ export default function Hero() {
             paddingTop: '0.25rem'
           }}
         >
-          <div className="col-lg-6 order-lg-2 order-2 order-md-2 order-sm-1">
+          <div className="col-lg-6 order-lg-2 order-2">
             <motion.div 
               className="hero-content"
               initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ export default function Hero() {
             </motion.div>
           </div>
           
-          <div className="col-lg-6 order-lg-1 order-1 order-md-1 order-sm-2">
+          <div className="col-lg-6 order-lg-1 order-1">
             <motion.div 
               className="position-relative"
               initial={{ opacity: 0, x: -20 }}
