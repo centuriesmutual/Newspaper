@@ -1,38 +1,140 @@
 'use client'
 
-import { ShieldCheckIcon } from '@heroicons/react/24/outline'
+import { ShieldCheckIcon, LockClosedIcon, CheckBadgeIcon } from '@heroicons/react/24/outline'
 
 export default function BlockchainSection() {
   return (
     <section className="py-5" style={{ 
-      background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+      background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
       borderTop: '1px solid #e9ecef',
       borderBottom: '1px solid #e9ecef'
     }}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <div className="d-flex align-items-center justify-content-center flex-column flex-md-row gap-4">
-              <div style={{
-                background: 'rgba(20, 67, 42, 0.1)',
-                borderRadius: '16px',
-                width: '64px',
-                height: '64px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}>
-                <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+            <div className="text-center mb-4">
+              <div className="d-inline-flex align-items-center gap-2 mb-3">
+                <CheckBadgeIcon style={{ width: '18px', height: '18px', color: '#14432A' }} />
+                <span style={{ 
+                  color: '#14432A',
+                  fontSize: '0.8rem',
+                  fontWeight: '600',
+                  letterSpacing: '0.5px',
+                  textTransform: 'uppercase'
+                }}>
+                  Patented Technology
+                </span>
               </div>
-              <div className="text-center text-md-start" style={{ flex: 1 }}>
-                <h5 className="fw-bold mb-2" style={{ color: '#14432A', fontSize: '1.1rem' }}>
-                  Powered by Patented Blockchain Technology
-                </h5>
-                <p className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Our proprietary blockchain system ensures immutable, transparent, and secure contract enforcement 
-                  across all platform transactions, providing unparalleled trust and reliability in digital agreements.
-                </p>
+              
+              <h5 className="fw-bold mb-3" style={{ color: '#14432A', fontSize: '1.1rem' }}>
+                Powered by Patented Blockchain Technology
+              </h5>
+              
+              <p className="text-muted mb-4" style={{ fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto' }}>
+                Our proprietary blockchain system ensures immutable, transparent, and secure contract enforcement 
+                across all platform transactions, providing unparalleled trust and reliability in digital agreements.
+              </p>
+            </div>
+
+            {/* Feature Icons */}
+            <div className="row g-3">
+              <div className="col-md-4 text-center">
+                <div style={{
+                  background: '#ffffff',
+                  borderRadius: '12px',
+                  padding: '1.5rem 1rem',
+                  border: '1px solid #e9ecef',
+                  height: '100%'
+                }}>
+                  <ShieldCheckIcon style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    color: '#14432A',
+                    marginBottom: '0.75rem'
+                  }} />
+                  <h6 style={{ 
+                    color: '#14432A',
+                    fontSize: '0.95rem',
+                    fontWeight: '600',
+                    marginBottom: '0.5rem'
+                  }}>
+                    Immutable
+                  </h6>
+                  <p style={{ 
+                    color: '#6c757d',
+                    fontSize: '0.85rem',
+                    margin: 0,
+                    lineHeight: '1.5'
+                  }}>
+                    Permanent, tamper-proof records
+                  </p>
+                </div>
+              </div>
+              
+              <div className="col-md-4 text-center">
+                <div style={{
+                  background: '#ffffff',
+                  borderRadius: '12px',
+                  padding: '1.5rem 1rem',
+                  border: '1px solid #e9ecef',
+                  height: '100%'
+                }}>
+                  <LockClosedIcon style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    color: '#14432A',
+                    marginBottom: '0.75rem'
+                  }} />
+                  <h6 style={{ 
+                    color: '#14432A',
+                    fontSize: '0.95rem',
+                    fontWeight: '600',
+                    marginBottom: '0.5rem'
+                  }}>
+                    Secure
+                  </h6>
+                  <p style={{ 
+                    color: '#6c757d',
+                    fontSize: '0.85rem',
+                    margin: 0,
+                    lineHeight: '1.5'
+                  }}>
+                    Enterprise-grade security protocols
+                  </p>
+                </div>
+              </div>
+              
+              <div className="col-md-4 text-center">
+                <div style={{
+                  background: '#ffffff',
+                  borderRadius: '12px',
+                  padding: '1.5rem 1rem',
+                  border: '1px solid #e9ecef',
+                  height: '100%'
+                }}>
+                  <CheckBadgeIcon style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    color: '#14432A',
+                    marginBottom: '0.75rem'
+                  }} />
+                  <h6 style={{ 
+                    color: '#14432A',
+                    fontSize: '0.95rem',
+                    fontWeight: '600',
+                    marginBottom: '0.5rem'
+                  }}>
+                    Transparent
+                  </h6>
+                  <p style={{ 
+                    color: '#6c757d',
+                    fontSize: '0.85rem',
+                    margin: 0,
+                    lineHeight: '1.5'
+                  }}>
+                    Full visibility and accountability
+                  </p>
+                </div>
               </div>
             </div>
           </div>
