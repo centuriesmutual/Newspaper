@@ -27,8 +27,18 @@ export default function Login() {
     setIsSubmitting(true)
     
     try {
-      // Redirect to Auth0 login with email/password connection and return to dashboard
-      window.location.href = `/api/auth/login?connection=Username-Password-Authentication&login_hint=${encodeURIComponent(formData.email)}&returnTo=/dashboard`
+      // Accept any credentials and redirect to dashboard
+      // Store user session in localStorage
+      localStorage.setItem('user', JSON.stringify({
+        email: formData.email,
+        loggedIn: true,
+        timestamp: Date.now()
+      }))
+      
+      // Small delay for better UX
+      setTimeout(() => {
+        router.push('/dashboard')
+      }, 500)
     } catch (error) {
       console.error('Login error:', error)
       setIsSubmitting(false)

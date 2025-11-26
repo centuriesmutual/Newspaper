@@ -305,7 +305,7 @@ export default function Newspaper() {
                         color: '#000000',
                         lineHeight: '1.2'
                       }}>
-                        Credit Rating System Gains Widespread Adoption
+                        In-House Trust Score System Gains Widespread Adoption
                       </h3>
                       <p className="text-muted mb-2" style={{ fontSize: '0.9rem' }}>
                         By Technology Reporter • 2 hours ago
@@ -318,7 +318,7 @@ export default function Newspaper() {
                     lineHeight: '1.5',
                     color: '#000000'
                   }}>
-                    The new member credit rating system has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches.
+                    The new member in-house trust score system based on our recommendation engine has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches.
                   </p>
                   <div className="d-flex align-items-center mt-3">
                     <button className="btn btn-danger btn-sm me-2" style={{ fontSize: '0.8rem' }}>Read More</button>
@@ -604,7 +604,7 @@ export default function Newspaper() {
                       color: '#000000',
                       lineHeight: '1.3'
                     }}>
-                      Credit Rating System Reaches 5,000 Members
+                      In-House Trust Score System Reaches 5,000 Members
                     </h5>
                     <p className="text-muted mb-0" style={{ fontSize: '0.8rem' }}>
                       10 hours ago
@@ -748,7 +748,7 @@ export default function Newspaper() {
                       color: '#000000',
                       lineHeight: '1.3'
                     }}>
-                      Credit Rating Expansion
+                      In-House Trust Score Expansion
                     </h5>
                     <p style={{ 
                       fontFamily: "'Times New Roman', serif",
@@ -756,7 +756,7 @@ export default function Newspaper() {
                       lineHeight: '1.4',
                       color: '#000000'
                     }}>
-                      The member credit rating system now serves over 5,000 verified users with a 95% successful matching rate for roommate compatibility.
+                      The member in-house trust score system based on our recommendation engine now serves over 5,000 verified users with a 95% successful matching rate for roommate compatibility.
                     </p>
                   </Link>
                 </div>

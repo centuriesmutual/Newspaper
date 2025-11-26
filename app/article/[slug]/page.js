@@ -76,16 +76,16 @@ export default function ArticlePage({ params }) {
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     'credit-rating-5000-members': {
-      title: 'Credit Rating System Reaches 5,000 Members',
+      title: 'In-House Trust Score System Reaches 5,000 Members',
       author: 'Technology Reporter',
       publishDate: '10 hours ago',
       category: 'Technology',
       content: `
-        <p>The member credit rating system has reached a significant milestone with over 5,000 verified members and 2,100 successful matches in the first quarter.</p>
+        <p>The member in-house trust score system based on our recommendation engine has reached a significant milestone with over 5,000 verified members and 2,100 successful matches in the first quarter.</p>
         
         <p>This achievement demonstrates the growing trust in digital verification systems and the effectiveness of the platform's matching algorithms.</p>
         
-        <p>"Reaching 5,000 members is a testament to the value our credit rating system provides," said the platform's technology director. "Users are finding it increasingly valuable for making informed decisions about roommate matches."</p>
+        <p>"Reaching 5,000 members is a testament to the value our in-house trust score system based on our recommendation engine provides," said the platform's technology director. "Users are finding it increasingly valuable for making informed decisions about roommate matches."</p>
         
         <p>The system uses advanced algorithms to assess compatibility and provide users with detailed insights about potential roommates and property matches.</p>
       `,
@@ -140,18 +140,18 @@ export default function ArticlePage({ params }) {
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     'credit-rating-widespread-adoption': {
-      title: 'Credit Rating System Gains Widespread Adoption',
+      title: 'In-House Trust Score System Gains Widespread Adoption',
       author: 'Technology Reporter',
       publishDate: '2 hours ago',
       category: 'Technology',
       content: `
-        <p>The new member credit rating system has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches. This milestone demonstrates the platform's effectiveness in connecting compatible roommates and property seekers.</p>
+        <p>The new member in-house trust score system based on our recommendation engine has seen widespread adoption, with over 5,000 verified members and 2,100 successful matches. This milestone demonstrates the platform's effectiveness in connecting compatible roommates and property seekers.</p>
         
         <p>The system uses advanced algorithms to assess user compatibility, verify credentials, and match individuals based on lifestyle preferences, financial profiles, and living requirements. This data-driven approach has significantly improved matching success rates.</p>
         
         <p>"The adoption rate has exceeded our expectations," said the platform's technology director. "Users appreciate the transparency and reliability that our verification system provides."</p>
         
-        <p>The credit rating system includes automated background checks, financial verification, and compatibility scoring. This comprehensive approach helps users make informed decisions and reduces risks associated with roommate matching and property rentals.</p>
+        <p>The in-house trust score system based on our recommendation engine includes automated background checks, financial verification, and compatibility scoring. This comprehensive approach helps users make informed decisions and reduces risks associated with roommate matching and property rentals.</p>
       `,
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },

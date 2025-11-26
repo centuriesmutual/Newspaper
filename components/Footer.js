@@ -21,10 +21,6 @@ export default function Footer() {
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-  
-  if (pathname !== '/') {
-    return null
-  }
 
   // Calculate responsive sizes - use default values until mounted
   const getLogoSize = () => {

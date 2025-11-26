@@ -55,7 +55,7 @@ export default function RealEstate() {
                       <UsersIcon style={{ width: '24px', height: '24px' }} />
                     </div>
                     <div>
-                      <h5 className="mb-1 fw-bold">Credit Based Community</h5>
+                      <h5 className="mb-1 fw-bold">Trust Score Based Community</h5>
                       <small className="opacity-75">Verified trustworthy renters</small>
                     </div>
                   </div>

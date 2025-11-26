@@ -38,7 +38,7 @@ export default function RentalEquity() {
                     <ChartBarIcon style={{ width: '40px', height: '40px', color: '#14432A' }} />
                   </div>
                   <h3 className="h2 fw-bold mb-4" style={{ color: '#14432A' }}>
-                    Transform Rent Into Credit
+                    Transform Rent Into Trust Score
                   </h3>
                   <p className="text-muted mb-4">
                     Rent is often your largest monthly expense, yet it typically does nothing for your trust score. With Rental Equity, Your Trust Score grows with each payment, giving you better standing, more opportunities, and greater confidence across Centuries Mutual.
@@ -319,7 +319,7 @@ export default function RentalEquity() {
                     </li>
                     <li className="mb-3 d-flex">
                       <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#206542', flexShrink: 0 }} />
-                      <span className="ms-3">In-house social credit system for verified tenants</span>
+                      <span className="ms-3">In-house trust score system based on our recommendation engine for verified tenants</span>
                     </li>
                   </ul>
                 </div>

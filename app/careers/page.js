@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Navbar from '../../components/Navbar'
 
 export default function Careers() {
   const [selectedPosition, setSelectedPosition] = useState(null)
@@ -221,8 +222,10 @@ export default function Careers() {
   ]
 
   return (
-    <div className="min-h-screen bg-light">
-      {/* Hero Section */}
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-light">
+        {/* Hero Section */}
       <div className="bg-white py-5">
         <div className="container">
           <div className="row align-items-center">
@@ -482,6 +485,7 @@ export default function Careers() {
         </div>
       )}
 
-    </div>
+      </div>
+    </>
   )
 }

@@ -326,9 +326,9 @@ export default function LearnMore() {
                         </div>
                       </div>
                       <div>
-                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Better Credit, Better Rates</h5>
+                        <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>Better Trust Score, Better Rates</h5>
                         <p className="text-muted mb-0">
-                          Your improved credit score from Rental Equity translates directly to better mortgage rates, potentially saving you thousands over the life of your loan.
+                          Your improved in-house trust score from Rental Equity based on our recommendation engine translates directly to better mortgage rates, potentially saving you thousands over the life of your loan.
                         </p>
                       </div>
                     </div>

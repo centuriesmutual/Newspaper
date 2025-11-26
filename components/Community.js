@@ -61,7 +61,7 @@ export default function Community() {
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
               }}>
-                Member Credit Rating System
+                Member In-House Trust Score System
               </h1>
               <p className="lead mb-5" style={{ 
                 fontSize: '1.3rem',

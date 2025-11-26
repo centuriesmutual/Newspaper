@@ -29,18 +29,18 @@ export default function CreditRatingDisplay() {
           fontFamily: "'Playfair Display', serif",
           textShadow: '0 2px 4px rgba(0,0,0,0.1)'
         }}>
-          In-House Credit Rating System
+          In-House Trust Score System
         </h3>
         <p style={{ 
           color: '#6b7280', 
           fontSize: '16px',
           marginBottom: '0'
         }}>
-          Transparent in-house ratings (1-300 scale) and verified member system
+          Transparent in-house trust score based on our recommendation engine (1-300 scale) and verified member system
         </p>
       </div>
       
-      {/* Clean Credit Score Illustration */}
+      {/* Clean In-House Trust Score Illustration */}
       <div className="text-center mb-5">
         <div style={{
           background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
@@ -51,7 +51,7 @@ export default function CreditRatingDisplay() {
           maxWidth: '400px',
           margin: '0 auto'
         }}>
-          {/* Clean Credit Score Circle - No Shadow */}
+          {/* Clean In-House Trust Score Circle - No Shadow */}
           <div style={{
             width: '120px',
             height: '120px',
@@ -92,7 +92,7 @@ export default function CreditRatingDisplay() {
             fontWeight: '600',
             marginBottom: '8px'
           }}>
-            Credit Score
+            In-House Trust Score
           </div>
           
           {/* Rating Badge */}
@@ -163,7 +163,7 @@ export default function CreditRatingDisplay() {
             </svg>
           </div>
           <div>
-            <h5 className="fw-bold mb-2" style={{ color: '#14432A', fontSize: '18px' }}>Credit Score Display</h5>
+            <h5 className="fw-bold mb-2" style={{ color: '#14432A', fontSize: '18px' }}>In-House Trust Score Display</h5>
             <p className="text-muted mb-0" style={{ fontSize: '15px' }}>Transparent in-house ratings for all members</p>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function CommunityModal({ isOpen, onClose, modalType = 'signup' }
         >
           <div className="modal-header border-0 p-4" style={{ background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)' }}>
             <h4 className="modal-title text-white fw-bold">
-              {modalType === 'credit-info' ? 'Credit Rating System' : (isSignUp ? 'Join Our Community' : 'Welcome Back')}
+              {modalType === 'credit-info' ? 'In-House Trust Score System' : (isSignUp ? 'Join Our Community' : 'Welcome Back')}
             </h4>
             <button 
               type="button" 
@@ -73,10 +73,10 @@ export default function CommunityModal({ isOpen, onClose, modalType = 'signup' }
                   border: '1px solid rgba(20, 67, 42, 0.1)'
                 }}>
                   <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                    How Our Credit Rating System Works
+                    How Our In-House Trust Score System Works
                   </h5>
                   <p className="mb-3" style={{ fontSize: '15px', color: '#495057' }}>
-                    Our proprietary credit rating system (1-300 scale) evaluates members based on multiple 
+                    Our proprietary in-house trust score based on our recommendation engine (1-300 scale) evaluates members based on multiple 
                     social and financial factors to ensure safe, reliable roommate matching and property transactions.
                   </p>
                   
@@ -98,7 +98,7 @@ export default function CommunityModal({ isOpen, onClose, modalType = 'signup' }
                         <li className="mb-1">• Payment history & reliability</li>
                         <li className="mb-1">• Employment verification</li>
                         <li className="mb-1">• Bank account verification</li>
-                        <li className="mb-1">• Credit history analysis</li>
+                        <li className="mb-1">• Trust score history analysis</li>
                       </ul>
                     </div>
                   </div>

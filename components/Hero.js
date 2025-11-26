@@ -9,7 +9,7 @@ export default function Hero() {
     <section 
       className="hero-section position-relative overflow-hidden" 
       style={{ 
-        minHeight: '85vh',
+        minHeight: '60vh',
         backgroundColor: '#14432A',
         paddingTop: '0',
         paddingBottom: '0.5rem'
@@ -18,13 +18,13 @@ export default function Hero() {
       <style jsx>{`
         @media (max-width: 640px) {
           .hero-section {
-            min-height: 80vh !important;
+            min-height: 55vh !important;
             overflow-x: hidden !important;
             padding-top: 0.5rem !important;
             padding-bottom: 0.5rem !important;
           }
           .hero-row {
-            min-height: 80vh !important;
+            min-height: 55vh !important;
             overflow-x: hidden !important;
             padding-top: 0.25rem !important;
           }
@@ -38,7 +38,7 @@ export default function Hero() {
         <div 
           className="row align-items-center hero-row" 
           style={{ 
-            minHeight: '85vh',
+            minHeight: '60vh',
             paddingTop: '0.25rem'
           }}
         >
@@ -117,22 +117,21 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
             >
               <div className="mb-4 overflow-hidden d-none d-lg-block" style={{ 
-                height: '650px',
-                width: '180%',
-                marginLeft: '-40%',
+                height: '400px',
+                width: '100%',
                 position: 'relative',
                 marginTop: '20px',
                 borderRadius: '24px'
               }}>
                 <Image
-                  src="/mountians.jpeg"
-                  alt="Majestic Mountains"
+                  src="/buffalo2.png"
+                  alt="Majestic Bison"
                   fill
                   priority
                   quality={100}
                   style={{
-                    objectFit: 'contain',
-                    objectPosition: 'center',
+                    objectFit: 'cover',
+                    objectPosition: 'center bottom',
                     transform: 'scale(1)',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.15), 0 1px 8px rgba(0,0,0,0.1)',
                     borderRadius: '24px'
@@ -140,22 +139,22 @@ export default function Hero() {
                 />
               </div>
               <div className="mb-3 overflow-hidden d-lg-none" style={{ 
-                height: '400px',
+                height: '250px',
                 position: 'relative',
                 marginTop: '0',
                 marginBottom: '1.5rem',
                 borderRadius: '20px'
               }}>
                 <Image
-                  src="/mountians.jpeg"
-                  alt="Majestic Mountains"
+                  src="/buffalo2.png"
+                  alt="Majestic Bison"
                   fill
                   priority
                   quality={100}
                   className="rounded-3"
                   style={{
                     objectFit: 'cover',
-                    objectPosition: 'center bottom',
+                    objectPosition: 'center',
                     transform: 'scale(1)',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.15), 0 1px 8px rgba(0,0,0,0.1)'
                   }}

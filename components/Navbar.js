@@ -13,6 +13,8 @@ export default function Navbar() {
   const isSignupPage = pathname === '/signup'
   const isHomePage = pathname === '/'
   const isRentalEquityPage = pathname === '/rentalequity'
+  const isInvestorRelationsPage = pathname === '/investor-relations'
+  const isCareersPage = pathname === '/careers'
 
   useEffect(() => {
     setMounted(true)
@@ -102,18 +104,6 @@ export default function Navbar() {
         }
       `}</style>
       
-      {/* Top Bar - Only show on homepage */}
-      {isHomePage && (
-        <div className="top-bar">
-          <div className="container">
-            <div className="d-flex align-items-center">
-              <i className="bi bi-newspaper me-2"></i>
-              <Link href="/newspaper">Newspaper</Link>
-            </div>
-          </div>
-        </div>
-      )}
-      
       <nav className="navbar navbar-light bg-white py-1">
         <div className="container d-flex justify-content-between align-items-center">
           {isLoginPage ? (
@@ -150,7 +140,7 @@ export default function Navbar() {
               </div>
             </Link>
           )}
-          {!isLoginPage && !isSignupPage && !isRentalEquityPage && (
+          {!isLoginPage && !isSignupPage && !isRentalEquityPage && !isInvestorRelationsPage && !isCareersPage && (
             <Link 
               href="/login" 
               className="btn btn-primary px-2 px-lg-4 py-1 py-lg-2 mobile-login"
