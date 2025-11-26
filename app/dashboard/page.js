@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import Navbar from '../../components/Navbar'
 import { 
   MagnifyingGlassIcon,
   UserGroupIcon,
@@ -143,8 +142,16 @@ export default function Dashboard() {
     { id: 3, name: 'Casey Williams', lastMessage: 'Would love to chat more', timestamp: '2 days ago', unread: 0 }
   ]
 
-  const filteredProfiles = roommateProfiles.filter(profile => {
-    const matchesSearch = profile.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  if (!user) {
+    return null // Will redirect
+  }
+
+  // Check if any search or filters are active
+  const hasActiveSearch = searchQuery.trim().length > 0
+  const hasActiveFilters = filters.maxRent || filters.location || filters.trustScore
+  
+  const filteredProfiles = (hasActiveSearch || hasActiveFilters) ? roommateProfiles.filter(profile => {
+    const matchesSearch = !hasActiveSearch || profile.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          profile.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          profile.bio.toLowerCase().includes(searchQuery.toLowerCase())
     
@@ -153,47 +160,11 @@ export default function Dashboard() {
     const matchesTrustScore = !filters.trustScore || profile.trustScore >= parseInt(filters.trustScore)
 
     return matchesSearch && matchesRent && matchesLocation && matchesTrustScore
-  })
-
-  if (!user) {
-    return null // Will redirect
-  }
+  }) : []
 
   return (
     <>
-      <Navbar />
       <main style={{ minHeight: '100vh', background: '#f8f9fa' }}>
-        {/* Header */}
-        <div style={{ 
-          background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
-          color: 'white',
-          padding: '2rem 0'
-        }}>
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-md-8">
-                <h1 className="display-5 fw-bold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Find Your Perfect Roommate
-                </h1>
-                <p className="lead mb-0" style={{ opacity: 0.95 }}>
-                  Connect with verified roommates based on compatibility and trust scores
-                </p>
-              </div>
-              <div className="col-md-4 text-md-end mt-3 mt-md-0">
-                <div style={{
-                  background: 'rgba(255, 255, 255, 0.2)',
-                  borderRadius: '12px',
-                  padding: '16px',
-                  display: 'inline-block'
-                }}>
-                  <div className="small mb-1" style={{ opacity: 0.9 }}>Your Trust Score</div>
-                  <div className="h3 mb-0 fw-bold">275</div>
-                  <div className="small" style={{ opacity: 0.9 }}>Excellent</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Navigation Tabs */}
         <div style={{ background: 'white', borderBottom: '2px solid #e9ecef' }}>
@@ -333,17 +304,20 @@ export default function Dashboard() {
                   </div>
                 </div>
 
-                {/* Results Count */}
-                <div className="mb-3">
-                  <p className="text-muted mb-0">
-                    Found <strong>{filteredProfiles.length}</strong> {filteredProfiles.length === 1 ? 'roommate' : 'roommates'}
-                  </p>
-                </div>
+                {/* Results Count or Empty State */}
+                {hasActiveSearch || hasActiveFilters ? (
+                  <>
+                    <div className="mb-3">
+                      <p className="text-muted mb-0">
+                        Found <strong>{filteredProfiles.length}</strong> {filteredProfiles.length === 1 ? 'roommate' : 'roommates'}
+                      </p>
+                    </div>
 
-                {/* Roommate Cards */}
-                <div className="row g-4">
-                  {filteredProfiles.map((profile) => (
-                    <div key={profile.id} className="col-md-6">
+                    {/* Roommate Cards */}
+                    <div className="row g-4">
+                      {filteredProfiles.length > 0 ? (
+                        filteredProfiles.map((profile) => (
+                          <div key={profile.id} className="col-md-6">
                       <div 
                         className="card border-0 shadow-sm h-100" 
                         style={{ 
@@ -457,9 +431,26 @@ export default function Dashboard() {
                           </div>
                         </div>
                       </div>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="col-12">
+                          <div className="text-center py-5">
+                            <p className="text-muted">No roommates found matching your search criteria.</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  ))}
-                </div>
+                  </>
+                ) : (
+                  <div className="col-12">
+                    <div className="text-center py-5">
+                      <MagnifyingGlassIcon style={{ width: '48px', height: '48px', color: '#6c757d', marginBottom: '1rem' }} />
+                      <h5 className="text-muted mb-2">Start Your Search</h5>
+                      <p className="text-muted">Use the search bar or filters above to find your perfect roommate.</p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}
