@@ -14,7 +14,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <OfferingsOverview />
         <RealEstate />
         <Community />
         <PaymentTech />

@@ -33,6 +33,15 @@ import BoxSDK from 'box-node-sdk';
 
 export async function GET() {
   try {
+    // Check if Box credentials are configured
+    if (!process.env.BOX_CLIENT_ID || !process.env.BOX_CLIENT_SECRET) {
+      return Response.json({
+        success: false,
+        error: 'Box API credentials not configured',
+        message: 'Please configure BOX_CLIENT_ID and BOX_CLIENT_SECRET environment variables',
+      }, { status: 503 });
+    }
+
     // Initialize Box SDK
     const sdk = new BoxSDK({
       clientID: process.env.BOX_CLIENT_ID,
