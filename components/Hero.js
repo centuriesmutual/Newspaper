@@ -20,13 +20,13 @@ export default function Hero() {
           .hero-section {
             min-height: 55vh !important;
             overflow-x: hidden !important;
-            padding-top: 3rem !important;
-            padding-bottom: 0.5rem !important;
+            padding-top: 2.5rem !important;
+            padding-bottom: 1.5rem !important;
           }
           .hero-row {
             min-height: 55vh !important;
             overflow-x: hidden !important;
-            padding-top: 1rem !important;
+            padding-top: 0.75rem !important;
           }
           .hero-content {
             overflow-x: hidden !important;
