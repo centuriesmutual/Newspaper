@@ -135,10 +135,10 @@ export default function Newspaper() {
       </header>
 
       {/* Main Content */}
-      <div className="container py-4 main-content" style={{ paddingTop: '170px !important' }}>
+      <div className="container py-4 main-content" style={{ paddingTop: '170px !important', maxWidth: '1200px' }}>
 
         {/* Main Layout */}
-        <div className="row">
+        <div className="row justify-content-center">
           {/* Left Column - Main Story */}
           <div className="col-lg-8">
             {/* Featured Story */}
@@ -513,9 +513,9 @@ export default function Newspaper() {
           </div>
 
           {/* Box.com Articles Section */}
-          <div className="col-lg-8 mb-5">
+          <div className="col-lg-12 mb-5">
             <div className="border-top pt-4">
-              <h3 className="fw-bold mb-2" style={{ 
+              <h3 className="fw-bold mb-2 text-center" style={{ 
                 fontFamily: "'Times New Roman', serif",
                 fontSize: '1.8rem',
                 color: '#000000'
@@ -528,7 +528,7 @@ export default function Newspaper() {
 
           {/* Right Sidebar */}
           <div className="col-lg-4">
-            <div className="ps-4">
+            <div className="ps-lg-4">
               {/* Featured Articles */}
               <div className="mb-4">
                 
@@ -789,8 +789,8 @@ export default function Newspaper() {
 
 
         {/* Minimal Footer */}
-        <div className="row mt-5 pt-4 border-top">
-          <div className="col-12 text-center">
+        <div className="row mt-5 pt-4 border-top justify-content-center">
+          <div className="col-lg-10 text-center">
             <p className="text-muted mb-0" style={{ 
               fontSize: '0.9rem',
               fontFamily: "'Times New Roman', serif"

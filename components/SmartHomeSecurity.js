@@ -48,88 +48,6 @@ export default function SmartHomeSecurity() {
           </div>
           
           <div className="col-lg-6">
-            <div className="position-relative">
-              <div style={{
-                background: 'rgba(255,255,255,0.95)',
-                borderRadius: '20px',
-                padding: '50px',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-                backdropFilter: 'blur(10px)'
-              }}>
-                <h3 className="mb-4 fw-bold" style={{ color: '#14432A' }}>Security System Dashboard</h3>
-                <div className="row g-3 mb-4">
-                  <div className="col-6">
-                    <div className="text-center p-3" style={{ 
-                      background: '#f8f9fa', 
-                      borderRadius: '12px',
-                      border: '2px solid #e9ecef'
-                    }}>
-                      <HomeIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
-                      <div className="mt-2">
-                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>100%</h6>
-                        <small className="text-muted">Coverage</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="text-center p-3" style={{ 
-                      background: '#f8f9fa', 
-                      borderRadius: '12px',
-                      border: '2px solid #e9ecef'
-                    }}>
-                      <LockClosedIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
-                      <div className="mt-2">
-                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>256-bit</h6>
-                        <small className="text-muted">Encryption</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>System Status</h6>
-                  <div className="space-y-2">
-                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">All Systems Active</span>
-                      <span className="text-success fw-bold">✓ Online</span>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Smart Sensors</span>
-                      <span className="text-success fw-bold">✓ Monitoring</span>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
-                      <span className="fw-medium">Automated Alerts</span>
-                      <span className="text-success fw-bold">✓ Enabled</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-3">
-                  <small className="text-muted d-block mb-2">Powered by</small>
-                  <div className="d-flex gap-3 align-items-center">
-                    <span className="badge" style={{ 
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      color: '#14432A',
-                      padding: '8px 16px',
-                      fontSize: '0.9rem'
-                    }}>
-                      Lumen Technologies
-                    </span>
-                    <span className="badge" style={{ 
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      color: '#14432A',
-                      padding: '8px 16px',
-                      fontSize: '0.9rem'
-                    }}>
-                      Texas Instruments
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-lg-6">
             <div className="text-dark" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
@@ -255,6 +173,88 @@ export default function SmartHomeSecurity() {
                   Learn More
                 </Link>
               </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="col-lg-6">
+            <div className="position-relative">
+              <div style={{
+                background: 'rgba(255,255,255,0.95)',
+                borderRadius: '20px',
+                padding: '50px',
+                boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+                backdropFilter: 'blur(10px)'
+              }}>
+                <h3 className="mb-4 fw-bold" style={{ color: '#14432A' }}>Security System Dashboard</h3>
+                <div className="row g-3 mb-4">
+                  <div className="col-6">
+                    <div className="text-center p-3" style={{ 
+                      background: '#f8f9fa', 
+                      borderRadius: '12px',
+                      border: '2px solid #e9ecef'
+                    }}>
+                      <HomeIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                      <div className="mt-2">
+                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>100%</h6>
+                        <small className="text-muted">Coverage</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="text-center p-3" style={{ 
+                      background: '#f8f9fa', 
+                      borderRadius: '12px',
+                      border: '2px solid #e9ecef'
+                    }}>
+                      <LockClosedIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                      <div className="mt-2">
+                        <h6 className="mb-1 fw-bold" style={{ color: '#14432A' }}>256-bit</h6>
+                        <small className="text-muted">Encryption</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>System Status</h6>
+                  <div className="space-y-2">
+                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
+                      <span className="fw-medium">All Systems Active</span>
+                      <span className="text-success fw-bold">✓ Online</span>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
+                      <span className="fw-medium">Smart Sensors</span>
+                      <span className="text-success fw-bold">✓ Monitoring</span>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center p-2" style={{ background: '#f8f9fa', borderRadius: '8px' }}>
+                      <span className="fw-medium">Automated Alerts</span>
+                      <span className="text-success fw-bold">✓ Enabled</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-3">
+                  <small className="text-muted d-block mb-2">Powered by</small>
+                  <div className="d-flex gap-3 align-items-center">
+                    <span className="badge" style={{ 
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      color: '#14432A',
+                      padding: '8px 16px',
+                      fontSize: '0.9rem'
+                    }}>
+                      Lumen Technologies
+                    </span>
+                    <span className="badge" style={{ 
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      color: '#14432A',
+                      padding: '8px 16px',
+                      fontSize: '0.9rem'
+                    }}>
+                      Texas Instruments
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

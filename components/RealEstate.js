@@ -12,7 +12,7 @@ export default function RealEstate() {
       overflow: 'hidden',
       display: 'flex',
       alignItems: 'center',
-      padding: '2rem 0'
+      padding: '1rem 0'
     }}>
       {/* Background Pattern */}
       <div style={{
