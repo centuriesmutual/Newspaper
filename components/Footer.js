@@ -98,6 +98,9 @@ export default function Footer() {
               <li className="mb-2">
                 <Link href="/contact" className="text-white text-decoration-none">Help Desk</Link>
               </li>
+              <li className="mb-2">
+                <Link href="/shop" className="text-white text-decoration-none">Shop</Link>
+              </li>
             </ul>
           </div>
           <div className="col-lg-3 mb-4 mb-lg-0 footer-content">

@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import BlockchainSection from '../components/BlockchainSection'
 import RealEstate from '../components/RealEstate'
 import PaymentTech from '../components/PaymentTech'
-import SecurityCameras from '../components/SecurityCameras'
+import NetworkTechnology from '../components/NetworkTechnology'
 import NetworkDevices from '../components/NetworkDevices'
 import SmartHomeSecurity from '../components/SmartHomeSecurity'
 import Community from '../components/Community'
@@ -22,7 +22,7 @@ export default function Home() {
         <RealEstate />
         <Community />
         <PaymentTech />
-        <SecurityCameras />
+        <NetworkTechnology />
         <NetworkDevices />
         <SmartHomeSecurity />
         <Legacy />
