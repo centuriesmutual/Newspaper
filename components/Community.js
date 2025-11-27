@@ -167,11 +167,8 @@ export default function Community() {
                 >
                   Find Roommates
                 </button>
-                <button 
-                  onClick={() => {
-                    setModalType('credit-info')
-                    setIsModalOpen(true)
-                  }}
+                <Link 
+                  href="/trust-score" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -191,7 +188,7 @@ export default function Community() {
                   }}
                 >
                   More Information
-                </button>
+                </Link>
               </div>
             </div>
           </div>

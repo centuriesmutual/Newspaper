@@ -112,7 +112,7 @@ export default function RealEstate() {
               
               <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
                 <Link 
-                  href="/rentalequity" 
+                  href="/browse-rooms" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -136,7 +136,7 @@ export default function RealEstate() {
                   Browse Rooms
                 </Link>
                 <Link 
-                  href="/contact" 
+                  href="/child-care" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',
@@ -155,7 +155,7 @@ export default function RealEstate() {
                     e.target.style.background = 'transparent';
                   }}
                 >
-                  Get Help
+                  Child Care
                 </Link>
               </div>
             </div>
