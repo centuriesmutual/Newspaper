@@ -1,6 +1,8 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { ShieldCheckIcon, LockClosedIcon, CheckBadgeIcon } from '@heroicons/react/24/outline'
+import { sectionAnimation, staggerContainer, cardAnimation } from '../utils/animations'
 
 export default function BlockchainSection() {
   return (
@@ -12,7 +14,7 @@ export default function BlockchainSection() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <div className="text-center mb-4">
+            <motion.div className="text-center mb-4" {...sectionAnimation}>
               <div className="d-inline-flex align-items-center gap-2 mb-3">
                 <CheckBadgeIcon style={{ width: '18px', height: '18px', color: '#14432A' }} />
                 <span style={{ 
@@ -34,11 +36,17 @@ export default function BlockchainSection() {
                 Our proprietary blockchain system ensures immutable, transparent, and secure contract enforcement 
                 across all platform transactions, providing unparalleled trust and reliability in digital agreements.
               </p>
-            </div>
+            </motion.div>
 
             {/* Feature Icons */}
-            <div className="row g-3">
-              <div className="col-md-4 text-center">
+            <motion.div 
+              className="row g-3"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
                 <div style={{
                   background: '#ffffff',
                   borderRadius: '12px',
@@ -102,9 +110,9 @@ export default function BlockchainSection() {
                     Enterprise-grade security protocols
                   </p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="col-md-4 text-center">
+              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
                 <div style={{
                   background: '#ffffff',
                   borderRadius: '12px',
@@ -135,8 +143,8 @@ export default function BlockchainSection() {
                     Full visibility and accountability
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

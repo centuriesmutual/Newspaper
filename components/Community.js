@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { UsersIcon, ChatBubbleLeftRightIcon, HeartIcon, StarIcon, CalendarDaysIcon, TrophyIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import CommunityModal from './CommunityModal'
 import CreditRatingDisplay from './CryptoWalletVisualization'
+import { slideInLeft, slideInRight, staggerContainer, staggerItem } from '../utils/animations'
 
 export default function Community() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -33,7 +35,7 @@ export default function Community() {
       
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInLeft}>
             <div className="position-relative" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
@@ -53,9 +55,9 @@ export default function Community() {
                 <CreditRatingDisplay />
               </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInRight}>
             <div className="text-dark" style={{ marginTop: '4rem' }}>
               <h1 className="display-2 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
@@ -72,8 +74,15 @@ export default function Community() {
                 decisions for your next home.
               </p>
               
-              <div className="row g-3 mb-4" style={{ marginBottom: '2rem' }}>
-                <div className="col-md-6">
+              <motion.div 
+                className="row g-3 mb-4" 
+                style={{ marginBottom: '2rem' }}
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, margin: '-50px' }}
+              >
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -88,8 +97,8 @@ export default function Community() {
                       <small className="opacity-75">ID & background checked</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -104,8 +113,8 @@ export default function Community() {
                       <small className="opacity-75">Reliable scoring system</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -120,8 +129,8 @@ export default function Community() {
                       <small className="opacity-75">Safe communication</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -136,10 +145,17 @@ export default function Community() {
                       <small className="opacity-75">Compatible preferences</small>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               
-              <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
+              <motion.div 
+                className="d-flex gap-3 flex-wrap" 
+                style={{ marginTop: '1.5rem' }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <button 
                   onClick={() => {
                     setModalType('signup')
@@ -189,9 +205,9 @@ export default function Community() {
                 >
                   More Information
                 </Link>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       

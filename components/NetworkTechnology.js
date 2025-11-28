@@ -1,6 +1,8 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { WifiIcon, ServerIcon, ShieldCheckIcon, CheckBadgeIcon } from '@heroicons/react/24/outline'
+import { sectionAnimation, staggerContainer, cardAnimation } from '../utils/animations'
 
 export default function NetworkTechnology() {
   return (
@@ -12,7 +14,7 @@ export default function NetworkTechnology() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <div className="text-center mb-4">
+            <motion.div className="text-center mb-4" {...sectionAnimation}>
               <div className="d-inline-flex align-items-center gap-2 mb-3">
                 <CheckBadgeIcon style={{ width: '18px', height: '18px', color: '#14432A' }} />
                 <span style={{ 
@@ -34,11 +36,17 @@ export default function NetworkTechnology() {
                 Our custom-built network infrastructure ensures high-performance connectivity, enterprise-grade security, 
                 and seamless integration across all devices, providing reliable and secure networking solutions for your home.
               </p>
-            </div>
+            </motion.div>
 
             {/* Feature Icons */}
-            <div className="row g-3">
-              <div className="col-md-4 text-center">
+            <motion.div 
+              className="row g-3"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
                 <div style={{
                   background: '#ffffff',
                   borderRadius: '12px',

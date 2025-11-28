@@ -1,7 +1,9 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { CreditCardIcon, GlobeAltIcon, ChartBarIcon, ShieldCheckIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { sectionAnimation, slideInLeft, slideInRight, staggerContainer, cardAnimation } from '../utils/animations'
 
 export default function PaymentTech() {
   return (
@@ -28,7 +30,7 @@ export default function PaymentTech() {
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
           <div className="col-lg-12">
-            <div className="text-dark text-center mb-5">
+            <motion.div className="text-dark text-center mb-5" {...sectionAnimation}>
               <h1 className="display-3 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
@@ -44,10 +46,10 @@ export default function PaymentTech() {
                 Find and rent real estate with roommates using our comprehensive eDocument system. 
                 Streamline lease agreements, roommate contracts, and property documentation all in one place.
               </p>
-            </div>
+            </motion.div>
           </div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInRight}>
             <div className="position-relative">
               <div style={{
                 background: 'rgba(255,255,255,0.95)',
@@ -112,9 +114,9 @@ export default function PaymentTech() {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInLeft}>
             <div className="text-dark" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
@@ -125,8 +127,15 @@ export default function PaymentTech() {
               `}</style>
               <div className="edocument-text-container">
               
-              <div className="row g-3 mb-4" style={{ marginBottom: '2rem' }}>
-                <div className="col-md-6">
+              <motion.div 
+                className="row g-3 mb-4" 
+                style={{ marginBottom: '2rem' }}
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, margin: '-50px' }}
+              >
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -141,8 +150,8 @@ export default function PaymentTech() {
                       <small className="opacity-75">Electronic lease agreements</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -157,8 +166,8 @@ export default function PaymentTech() {
                       <small className="opacity-75">Secure roommate agreements</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -173,8 +182,8 @@ export default function PaymentTech() {
                       <small className="opacity-75">Complete property files</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -189,10 +198,17 @@ export default function PaymentTech() {
                       <small className="opacity-75">24/7 document access</small>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               
-              <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
+              <motion.div 
+                className="d-flex gap-3 flex-wrap" 
+                style={{ marginTop: '1.5rem' }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <Link 
                   href="/dashboard" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"

@@ -1,7 +1,9 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { HomeIcon, MapPinIcon, KeyIcon, UsersIcon, DocumentTextIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { sectionAnimation, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../utils/animations'
 
 export default function RealEstate() {
   return (
@@ -27,7 +29,7 @@ export default function RealEstate() {
       
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInLeft}>
             <div className="text-dark">
               <h1 className="display-2 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
@@ -43,8 +45,15 @@ export default function RealEstate() {
                 we connect you with the perfect living space that fits your lifestyle and budget.
               </p>
               
-              <div className="row g-3 mb-4" style={{ marginBottom: '2rem' }}>
-                <div className="col-md-6">
+              <motion.div 
+                className="row g-3 mb-4" 
+                style={{ marginBottom: '2rem' }}
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, margin: '-50px' }}
+              >
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -59,8 +68,8 @@ export default function RealEstate() {
                       <small className="opacity-75">Verified trustworthy renters</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -75,8 +84,8 @@ export default function RealEstate() {
                       <small className="opacity-75">Great options available</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -91,8 +100,8 @@ export default function RealEstate() {
                       <small className="opacity-75">Coinbase wallet integration</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -107,10 +116,17 @@ export default function RealEstate() {
                       <small className="opacity-75">Secure digital document management</small>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               
-              <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
+              <motion.div 
+                className="d-flex gap-3 flex-wrap" 
+                style={{ marginTop: '1.5rem' }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <Link 
                   href="/rooms" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
@@ -157,11 +173,11 @@ export default function RealEstate() {
                 >
                   Child Care
                 </Link>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInRight}>
             <div className="position-relative" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
@@ -214,7 +230,7 @@ export default function RealEstate() {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

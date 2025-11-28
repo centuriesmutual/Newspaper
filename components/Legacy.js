@@ -1,13 +1,15 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { slideInLeft, slideInRight } from '../utils/animations'
 
 export default function Legacy() {
   return (
     <section className="py-5">
       <div className="container">
         <div className="row align-items-center g-5">
-          <div className="col-lg-6 position-relative">
+          <motion.div className="col-lg-6 position-relative" {...slideInLeft}>
             <div className="position-relative" style={{ height: '600px', overflow: 'hidden' }}>
               <Image
                 src="/deer.jpeg"
@@ -28,9 +30,9 @@ export default function Legacy() {
               <p className="h3 mb-1">2024</p>
               <p className="mb-0">Est.</p>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInRight}>
             <h2 className="display-5 mb-4" style={{ 
               fontFamily: "'Playfair Display', serif",
               color: '#14432A'
@@ -46,7 +48,7 @@ export default function Legacy() {
               state-of-the-art encryption, secure data handling, and transparent practices, 
               we guide families toward financial security with complete confidence.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

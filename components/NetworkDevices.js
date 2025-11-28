@@ -1,7 +1,9 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { WifiIcon, ServerIcon, SignalIcon, ShieldCheckIcon, BoltIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { sectionAnimation, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../utils/animations'
 
 export default function NetworkDevices() {
   return (
@@ -28,7 +30,7 @@ export default function NetworkDevices() {
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
           <div className="col-lg-12">
-            <div className="text-dark text-center mb-5">
+            <motion.div className="text-dark text-center mb-5" {...sectionAnimation}>
               <h1 className="display-3 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
@@ -47,7 +49,7 @@ export default function NetworkDevices() {
             </div>
           </div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInLeft}>
             <div className="text-dark" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
@@ -58,8 +60,15 @@ export default function NetworkDevices() {
               `}</style>
               <div className="network-text-container">
               
-              <div className="row g-3 mb-4" style={{ marginBottom: '2rem' }}>
-                <div className="col-md-6">
+              <motion.div 
+                className="row g-3 mb-4" 
+                style={{ marginBottom: '2rem' }}
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, margin: '-50px' }}
+              >
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -74,8 +83,8 @@ export default function NetworkDevices() {
                       <small className="opacity-75">High-performance hardware</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -90,8 +99,8 @@ export default function NetworkDevices() {
                       <small className="opacity-75">Advanced threat protection</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -106,8 +115,8 @@ export default function NetworkDevices() {
                       <small className="opacity-75">Remote configuration</small>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
+                </motion.div>
+                <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
                     <div style={{
                       background: 'rgba(20, 67, 42, 0.1)',
@@ -122,10 +131,17 @@ export default function NetworkDevices() {
                       <small className="opacity-75">Whole home coverage</small>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               
-              <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
+              <motion.div 
+                className="d-flex gap-3 flex-wrap" 
+                style={{ marginTop: '1.5rem' }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <Link 
                   href="/shop/network" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
@@ -172,12 +188,12 @@ export default function NetworkDevices() {
                 >
                   Learn More
                 </Link>
-              </div>
+              </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="col-lg-6">
+          <motion.div className="col-lg-6" {...slideInRight}>
             <div className="position-relative">
               <div style={{
                 background: 'rgba(255,255,255,0.95)',
