@@ -4,6 +4,15 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { 
+  sectionAnimation,
+  staggerContainer,
+  staggerItem,
+  cardAnimation,
+  slideInLeft,
+  slideInRight
+} from '../../utils/animations'
 import { 
   UserGroupIcon, 
   ShieldCheckIcon, 
@@ -143,15 +152,21 @@ export default function Hosts() {
         {/* It's Easy to List Section */}
         <section className="py-5">
           <div className="container">
-            <div className="row mb-5">
+            <motion.div className="row mb-5" {...sectionAnimation}>
               <div className="col-lg-8 mx-auto text-center">
                 <h2 className="display-5 fw-bold mb-4" style={{ color: '#222222' }}>
                   It's easy to list your home on Centuries Mutual
                 </h2>
               </div>
-            </div>
-            <div className="row g-4 mb-5">
-              <div className="col-md-4">
+            </motion.div>
+            <motion.div 
+              className="row g-4 mb-5"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-4" variants={staggerItem}>
                 <div className="text-center">
                   <div className="mb-3" style={{
                     width: '80px',
@@ -172,8 +187,8 @@ export default function Hosts() {
                     Go at your own pace, and make changes whenever
                   </p>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={staggerItem}>
                 <div className="text-center">
                   <div className="mb-3" style={{
                     width: '80px',
@@ -191,8 +206,8 @@ export default function Hosts() {
                     Get 1:1 support from experienced hosts at any time
                   </h4>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={staggerItem}>
                 <div className="text-center">
                   <div className="mb-3" style={{
                     width: '80px',
@@ -213,14 +228,20 @@ export default function Hosts() {
                     Now you can hire a local co‑host to help create your listing, get your space ready, and more.
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Co-hosts Section */}
-            <div className="row mb-5">
+            <motion.div className="row mb-5" {...sectionAnimation}>
               <div className="col-12">
                 <h3 className="fw-bold mb-4" style={{ color: '#222222' }}>Find a co-host</h3>
-                <div className="row g-3">
+                <motion.div 
+                  className="row g-3"
+                  variants={staggerContainer}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true, margin: '-50px' }}
+                >
                   {[
                     { name: 'Jorge', location: 'Mexico City, Mexico', rating: 4.89, years: 5 },
                     { name: 'Gabrielle', location: 'North Charleston, USA', rating: 4.98, years: 3 },
@@ -230,7 +251,7 @@ export default function Hosts() {
                     { name: 'Jennifer', location: 'La Quinta, USA', rating: 4.96, years: 4 },
                     { name: 'Kayla', location: 'Los Angeles, USA', rating: 4.96, years: 5 }
                   ].map((host, idx) => (
-                    <div key={idx} className="col-md-3 col-sm-6">
+                    <motion.div key={idx} className="col-md-3 col-sm-6" variants={cardAnimation}>
                       <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '12px' }}>
                         <div className="card-body p-3 text-center">
                           <div className="mb-2" style={{
@@ -257,11 +278,11 @@ export default function Hosts() {
                           <p className="text-muted small mb-0">{host.years} years hosting</p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -269,7 +290,7 @@ export default function Hosts() {
         <section className="py-5" style={{ backgroundColor: '#f7f7f7' }}>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 mb-4 mb-lg-0">
+              <motion.div className="col-lg-6 mb-4 mb-lg-0" {...slideInLeft}>
                 <div className="d-flex align-items-center mb-3">
                   <ShieldCheckIcon style={{ width: '48px', height: '48px', color: '#14432A', marginRight: '16px' }} />
                   <h2 className="fw-bold mb-0" style={{ color: '#222222' }}>Centuries Mutual Protection for Hosts</h2>
@@ -303,8 +324,8 @@ export default function Hosts() {
                 <Link href="#" className="btn btn-outline-dark">
                   Learn about Protection
                 </Link>
-              </div>
-              <div className="col-lg-6">
+              </motion.div>
+              <motion.div className="col-lg-6" {...slideInRight}>
                 <div className="card border-0 shadow-lg" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-5" style={{ background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)', color: 'white' }}>
                     <h4 className="fw-bold mb-4">Protection Details</h4>
@@ -313,7 +334,7 @@ export default function Hosts() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -321,15 +342,21 @@ export default function Hosts() {
         {/* Tools Section */}
         <section className="py-5">
           <div className="container">
-            <div className="row mb-5">
+            <motion.div className="row mb-5" {...sectionAnimation}>
               <div className="col-lg-8 mx-auto text-center">
                 <h2 className="display-5 fw-bold mb-4" style={{ color: '#222222' }}>
                   All the tools you need to host, all in one app
                 </h2>
               </div>
-            </div>
-            <div className="row g-4">
-              <div className="col-md-4">
+            </motion.div>
+            <motion.div 
+              className="row g-4"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-4" variants={cardAnimation}>
                 <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4">
                     <HomeIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
@@ -339,8 +366,8 @@ export default function Hosts() {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={cardAnimation}>
                 <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4">
                     <CalendarIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
@@ -350,8 +377,8 @@ export default function Hosts() {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={cardAnimation}>
                 <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4">
                     <ChatBubbleLeftRightIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
@@ -361,8 +388,8 @@ export default function Hosts() {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
@@ -370,7 +397,7 @@ export default function Hosts() {
         <section className="py-5" style={{ backgroundColor: '#f7f7f7' }}>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 mb-4 mb-lg-0">
+              <motion.div className="col-lg-6 mb-4 mb-lg-0" {...slideInLeft}>
                 <h2 className="display-6 fw-bold mb-4" style={{ color: '#222222' }}>
                   Hosting isn't only for homeowners
                 </h2>
@@ -380,14 +407,14 @@ export default function Hosts() {
                 <Link href="#" className="btn btn-dark btn-lg">
                   Learn more
                 </Link>
-              </div>
-              <div className="col-lg-6">
+              </motion.div>
+              <motion.div className="col-lg-6" {...slideInRight}>
                 <div style={{
                   height: '300px',
                   background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)',
                   borderRadius: '16px'
                 }}></div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -395,7 +422,7 @@ export default function Hosts() {
         {/* FAQ Section */}
         <section className="py-5">
           <div className="container">
-            <div className="row">
+            <motion.div className="row" {...sectionAnimation}>
               <div className="col-lg-8 mx-auto">
                 <h2 className="display-6 fw-bold mb-5 text-center" style={{ color: '#222222' }}>
                   Your questions, answered

@@ -4,6 +4,15 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { 
+  sectionAnimation,
+  staggerContainer,
+  staggerItem,
+  cardAnimation,
+  slideInLeft,
+  slideInRight
+} from '../../utils/animations'
 import { 
   HomeIcon, 
   ShieldCheckIcon, 
@@ -143,15 +152,21 @@ export default function Tenants() {
         {/* It's Easy to Find Section */}
         <section className="py-5">
           <div className="container">
-            <div className="row mb-5">
+            <motion.div className="row mb-5" {...sectionAnimation}>
               <div className="col-lg-8 mx-auto text-center">
                 <h2 className="display-5 fw-bold mb-4" style={{ color: '#222222' }}>
                   It's easy to find your perfect home on Centuries Mutual
                 </h2>
               </div>
-            </div>
-            <div className="row g-4 mb-5">
-              <div className="col-md-4">
+            </motion.div>
+            <motion.div 
+              className="row g-4 mb-5"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-4" variants={staggerItem}>
                 <div className="text-center">
                   <div className="mb-3" style={{
                     width: '80px',
@@ -172,8 +187,8 @@ export default function Tenants() {
                     Browse through thousands of verified properties with our comprehensive search system
                   </p>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={staggerItem}>
                 <div className="text-center">
                   <div className="mb-3" style={{
                     width: '80px',
@@ -194,8 +209,8 @@ export default function Tenants() {
                     All hosts are verified through our comprehensive trust score system
                   </p>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={staggerItem}>
                 <div className="text-center">
                   <div className="mb-3" style={{
                     width: '80px',
@@ -216,8 +231,8 @@ export default function Tenants() {
                     Book with confidence using our blockchain-powered secure payment system
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
@@ -225,7 +240,7 @@ export default function Tenants() {
         <section className="py-5" style={{ backgroundColor: '#f7f7f7' }}>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 mb-4 mb-lg-0">
+              <motion.div className="col-lg-6 mb-4 mb-lg-0" {...slideInLeft}>
                 <div className="d-flex align-items-center mb-3">
                   <ChartBarIcon style={{ width: '48px', height: '48px', color: '#14432A', marginRight: '16px' }} />
                   <h2 className="fw-bold mb-0" style={{ color: '#222222' }}>Build Your Trust Score</h2>
@@ -293,7 +308,7 @@ export default function Tenants() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -301,15 +316,21 @@ export default function Tenants() {
         {/* Tools Section */}
         <section className="py-5">
           <div className="container">
-            <div className="row mb-5">
+            <motion.div className="row mb-5" {...sectionAnimation}>
               <div className="col-lg-8 mx-auto text-center">
                 <h2 className="display-5 fw-bold mb-4" style={{ color: '#222222' }}>
                   All the tools you need to find your home, all in one app
                 </h2>
               </div>
-            </div>
-            <div className="row g-4">
-              <div className="col-md-4">
+            </motion.div>
+            <motion.div 
+              className="row g-4"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-4" variants={cardAnimation}>
                 <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4">
                     <MagnifyingGlassIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
@@ -319,8 +340,8 @@ export default function Tenants() {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={cardAnimation}>
                 <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4">
                     <ShieldCheckIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
@@ -330,8 +351,8 @@ export default function Tenants() {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4">
+              </motion.div>
+              <motion.div className="col-md-4" variants={cardAnimation}>
                 <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4">
                     <CreditCardIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
@@ -341,8 +362,8 @@ export default function Tenants() {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
@@ -350,7 +371,7 @@ export default function Tenants() {
         <section className="py-5" style={{ backgroundColor: '#f7f7f7' }}>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 mb-4 mb-lg-0">
+              <motion.div className="col-lg-6 mb-4 mb-lg-0" {...slideInLeft}>
                 <div className="d-flex align-items-center mb-3">
                   <ShieldCheckIcon style={{ width: '48px', height: '48px', color: '#14432A', marginRight: '16px' }} />
                   <h2 className="fw-bold mb-0" style={{ color: '#222222' }}>Tenant Protection</h2>
@@ -400,7 +421,7 @@ export default function Tenants() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -408,7 +429,7 @@ export default function Tenants() {
         {/* FAQ Section */}
         <section className="py-5">
           <div className="container">
-            <div className="row">
+            <motion.div className="row" {...sectionAnimation}>
               <div className="col-lg-8 mx-auto">
                 <h2 className="display-6 fw-bold mb-5 text-center" style={{ color: '#222222' }}>
                   Your questions, answered
