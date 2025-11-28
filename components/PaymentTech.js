@@ -258,7 +258,7 @@ export default function PaymentTech() {
               </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

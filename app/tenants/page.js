@@ -411,7 +411,7 @@ export default function Tenants() {
                 <Link href="/trustscore" className="btn btn-dark btn-lg">
                   Learn about Trust Scores
                 </Link>
-              </div>
+              </motion.div>
               <div className="col-lg-6">
                 <div className="card border-0 shadow-lg" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-5" style={{ background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)', color: 'white' }}>

@@ -271,9 +271,9 @@ export default function NetworkDevices() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

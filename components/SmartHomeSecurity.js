@@ -342,7 +342,7 @@ export default function SmartHomeSecurity() {
                 </motion.div>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
