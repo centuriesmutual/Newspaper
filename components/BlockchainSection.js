@@ -39,14 +39,8 @@ export default function BlockchainSection() {
             </motion.div>
 
             {/* Feature Icons */}
-            <motion.div 
-              className="row g-3"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true, margin: '-50px' }}
-            >
-              <motion.div className="col-md-4 text-center mb-3" variants={cardAnimation}>
+            <div className="row g-4 mt-4">
+              <div className="col-md-4 text-center">
                 <div className="card border-0 shadow-sm h-100" style={{
                   background: '#ffffff',
                   borderRadius: '12px',
@@ -55,12 +49,11 @@ export default function BlockchainSection() {
                   height: '100%',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                  <div className="mb-3">
+                  <div className="mb-3 d-flex justify-content-center">
                     <ShieldCheckIcon style={{ 
                       width: '40px', 
                       height: '40px', 
-                      color: '#14432A',
-                      margin: '0 auto'
+                      color: '#14432A'
                     }} />
                   </div>
                   <h6 className="fw-bold mb-2" style={{ 
@@ -77,9 +70,9 @@ export default function BlockchainSection() {
                     Permanent, tamper-proof records
                   </p>
                 </div>
-              </motion.div>
+              </div>
               
-              <motion.div className="col-md-4 text-center mb-3" variants={cardAnimation}>
+              <div className="col-md-4 text-center">
                 <div className="card border-0 shadow-sm h-100" style={{
                   background: '#ffffff',
                   borderRadius: '12px',
@@ -88,12 +81,11 @@ export default function BlockchainSection() {
                   height: '100%',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                  <div className="mb-3">
+                  <div className="mb-3 d-flex justify-content-center">
                     <LockClosedIcon style={{ 
                       width: '40px', 
                       height: '40px', 
-                      color: '#14432A',
-                      margin: '0 auto'
+                      color: '#14432A'
                     }} />
                   </div>
                   <h6 className="fw-bold mb-2" style={{ 
@@ -110,9 +102,9 @@ export default function BlockchainSection() {
                     Enterprise-grade security protocols
                   </p>
                 </div>
-              </motion.div>
+              </div>
               
-              <motion.div className="col-md-4 text-center mb-3" variants={cardAnimation}>
+              <div className="col-md-4 text-center">
                 <div className="card border-0 shadow-sm h-100" style={{
                   background: '#ffffff',
                   borderRadius: '12px',
@@ -121,12 +113,11 @@ export default function BlockchainSection() {
                   height: '100%',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                  <div className="mb-3">
+                  <div className="mb-3 d-flex justify-content-center">
                     <CheckBadgeIcon style={{ 
                       width: '40px', 
                       height: '40px', 
-                      color: '#14432A',
-                      margin: '0 auto'
+                      color: '#14432A'
                     }} />
                   </div>
                   <h6 className="fw-bold mb-2" style={{ 
@@ -143,8 +134,8 @@ export default function BlockchainSection() {
                     Full visibility and accountability
                   </p>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
