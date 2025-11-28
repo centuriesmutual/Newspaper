@@ -30,7 +30,13 @@ export default function SmartHomeSecurity() {
       <div className="container">
         <div className="row align-items-center" style={{ padding: '1rem 0' }}>
           <div className="col-lg-12">
-            <motion.div className="text-dark text-center mb-5" {...sectionAnimation}>
+            <motion.div 
+              className="text-dark text-center mb-5" 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-200px' }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
               <h1 className="display-3 fw-bold mb-4" style={{ 
                 fontFamily: "'Playfair Display', serif",
                 color: '#14432A'
@@ -49,7 +55,13 @@ export default function SmartHomeSecurity() {
             </div>
           </div>
           
-          <motion.div className="col-lg-6" {...slideInLeft}>
+          <motion.div 
+            className="col-lg-6" 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-200px' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
             <div className="text-dark" style={{ marginTop: '2rem' }}>
               <style jsx>{`
                 @media (max-width: 991px) {
@@ -66,7 +78,7 @@ export default function SmartHomeSecurity() {
                 variants={staggerContainer}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={{ once: true, margin: '-200px' }}
               >
                 <motion.div className="col-md-6" variants={staggerItem}>
                   <div className="d-flex align-items-center">
@@ -139,7 +151,7 @@ export default function SmartHomeSecurity() {
                 style={{ marginTop: '1.5rem' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={{ once: true, margin: '-200px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <Link 
@@ -193,7 +205,13 @@ export default function SmartHomeSecurity() {
             </div>
           </motion.div>
           
-          <motion.div className="col-lg-6" {...slideInRight}>
+          <motion.div 
+            className="col-lg-6" 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-200px' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
             <div className="position-relative">
               <motion.div 
                 style={{
@@ -205,7 +223,7 @@ export default function SmartHomeSecurity() {
                 }}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={{ once: true, margin: '-200px' }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <motion.h3 
@@ -213,7 +231,7 @@ export default function SmartHomeSecurity() {
                   style={{ color: '#14432A' }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
+                  viewport={{ once: true, margin: '-200px' }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   Security System Dashboard
@@ -257,7 +275,7 @@ export default function SmartHomeSecurity() {
                   className="mb-4"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
+                  viewport={{ once: true, margin: '-200px' }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <h6 className="fw-bold mb-3" style={{ color: '#14432A' }}>System Status</h6>
@@ -299,7 +317,7 @@ export default function SmartHomeSecurity() {
                   className="mb-3"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
+                  viewport={{ once: true, margin: '-200px' }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
                   <small className="text-muted d-block mb-2">Powered by</small>
