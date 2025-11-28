@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { CreditCardIcon, GlobeAltIcon, ChartBarIcon, ShieldCheckIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { sectionAnimation, slideInLeft, slideInRight, staggerContainer, cardAnimation } from '../utils/animations'
+import { sectionAnimation, slideInLeft, slideInRight, staggerContainer, staggerItem, cardAnimation } from '../utils/animations'
 
 export default function PaymentTech() {
   return (
