@@ -498,7 +498,7 @@ export default function Tenants() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </main>
