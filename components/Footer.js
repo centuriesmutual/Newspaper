@@ -96,10 +96,10 @@ export default function Footer() {
                 <Link href="/landlords" className="text-white text-decoration-none">LandLords</Link>
               </li>
               <li className="mb-2">
-                <Link href="/hosts" className="text-white text-decoration-none">Hosts</Link>
+                <Link href="/tenants" className="text-white text-decoration-none">Tenants</Link>
               </li>
               <li className="mb-2">
-                <Link href="/tenants" className="text-white text-decoration-none">Tenants</Link>
+                <Link href="/hosts" className="text-white text-decoration-none">Hosts</Link>
               </li>
               <li className="mb-2">
                 <Link href="/shop" className="text-white text-decoration-none">Shop</Link>
