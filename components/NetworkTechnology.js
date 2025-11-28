@@ -143,8 +143,8 @@ export default function NetworkTechnology() {
                     Seamless device connectivity
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

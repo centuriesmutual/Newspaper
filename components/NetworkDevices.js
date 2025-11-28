@@ -46,7 +46,7 @@ export default function NetworkDevices() {
                 Build a secure, high-performance home network with our custom network devices powered by Lumen Technologies and Texas Instruments. 
                 Enterprise-grade networking solutions for your home.
               </p>
-            </div>
+            </motion.div>
           </div>
           
           <motion.div className="col-lg-6" {...slideInLeft}>

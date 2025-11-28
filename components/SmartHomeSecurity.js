@@ -52,7 +52,7 @@ export default function SmartHomeSecurity() {
                 Complete home security solution integrating cameras, network devices, and smart sensors. 
                 Powered by Lumen Technologies and Texas Instruments for comprehensive home protection.
               </p>
-            </div>
+            </motion.div>
           </div>
           
           <motion.div 
