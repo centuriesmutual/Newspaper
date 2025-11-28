@@ -46,99 +46,99 @@ export default function BlockchainSection() {
               whileInView="animate"
               viewport={{ once: true, margin: '-50px' }}
             >
-              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
-                <div style={{
+              <motion.div className="col-md-4 text-center mb-3" variants={cardAnimation}>
+                <div className="card border-0 shadow-sm h-100" style={{
                   background: '#ffffff',
                   borderRadius: '12px',
-                  padding: '1.5rem 1rem',
+                  padding: '2rem 1.5rem',
                   border: '1px solid #e9ecef',
-                  height: '100%'
+                  height: '100%',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                  <ShieldCheckIcon style={{ 
-                    width: '32px', 
-                    height: '32px', 
+                  <div className="mb-3">
+                    <ShieldCheckIcon style={{ 
+                      width: '40px', 
+                      height: '40px', 
+                      color: '#14432A',
+                      margin: '0 auto'
+                    }} />
+                  </div>
+                  <h6 className="fw-bold mb-2" style={{ 
                     color: '#14432A',
+                    fontSize: '1rem',
                     marginBottom: '0.75rem'
-                  }} />
-                  <h6 style={{ 
-                    color: '#14432A',
-                    fontSize: '0.95rem',
-                    fontWeight: '600',
-                    marginBottom: '0.5rem'
                   }}>
                     Immutable
                   </h6>
-                  <p style={{ 
-                    color: '#6c757d',
-                    fontSize: '0.85rem',
-                    margin: 0,
-                    lineHeight: '1.5'
+                  <p className="text-muted mb-0" style={{ 
+                    fontSize: '0.9rem',
+                    lineHeight: '1.6'
                   }}>
                     Permanent, tamper-proof records
                   </p>
                 </div>
               </motion.div>
               
-              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
-                <div style={{
+              <motion.div className="col-md-4 text-center mb-3" variants={cardAnimation}>
+                <div className="card border-0 shadow-sm h-100" style={{
                   background: '#ffffff',
                   borderRadius: '12px',
-                  padding: '1.5rem 1rem',
+                  padding: '2rem 1.5rem',
                   border: '1px solid #e9ecef',
-                  height: '100%'
+                  height: '100%',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                  <LockClosedIcon style={{ 
-                    width: '32px', 
-                    height: '32px', 
+                  <div className="mb-3">
+                    <LockClosedIcon style={{ 
+                      width: '40px', 
+                      height: '40px', 
+                      color: '#14432A',
+                      margin: '0 auto'
+                    }} />
+                  </div>
+                  <h6 className="fw-bold mb-2" style={{ 
                     color: '#14432A',
+                    fontSize: '1rem',
                     marginBottom: '0.75rem'
-                  }} />
-                  <h6 style={{ 
-                    color: '#14432A',
-                    fontSize: '0.95rem',
-                    fontWeight: '600',
-                    marginBottom: '0.5rem'
                   }}>
                     Secure
                   </h6>
-                  <p style={{ 
-                    color: '#6c757d',
-                    fontSize: '0.85rem',
-                    margin: 0,
-                    lineHeight: '1.5'
+                  <p className="text-muted mb-0" style={{ 
+                    fontSize: '0.9rem',
+                    lineHeight: '1.6'
                   }}>
                     Enterprise-grade security protocols
                   </p>
                 </div>
               </motion.div>
               
-              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
-                <div style={{
+              <motion.div className="col-md-4 text-center mb-3" variants={cardAnimation}>
+                <div className="card border-0 shadow-sm h-100" style={{
                   background: '#ffffff',
                   borderRadius: '12px',
-                  padding: '1.5rem 1rem',
+                  padding: '2rem 1.5rem',
                   border: '1px solid #e9ecef',
-                  height: '100%'
+                  height: '100%',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                  <CheckBadgeIcon style={{ 
-                    width: '32px', 
-                    height: '32px', 
+                  <div className="mb-3">
+                    <CheckBadgeIcon style={{ 
+                      width: '40px', 
+                      height: '40px', 
+                      color: '#14432A',
+                      margin: '0 auto'
+                    }} />
+                  </div>
+                  <h6 className="fw-bold mb-2" style={{ 
                     color: '#14432A',
+                    fontSize: '1rem',
                     marginBottom: '0.75rem'
-                  }} />
-                  <h6 style={{ 
-                    color: '#14432A',
-                    fontSize: '0.95rem',
-                    fontWeight: '600',
-                    marginBottom: '0.5rem'
                   }}>
                     Transparent
                   </h6>
-                  <p style={{ 
-                    color: '#6c757d',
-                    fontSize: '0.85rem',
-                    margin: 0,
-                    lineHeight: '1.5'
+                  <p className="text-muted mb-0" style={{ 
+                    fontSize: '0.9rem',
+                    lineHeight: '1.6'
                   }}>
                     Full visibility and accountability
                   </p>
