@@ -491,7 +491,7 @@ export default function Hosts() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </main>

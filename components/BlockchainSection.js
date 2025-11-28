@@ -77,9 +77,9 @@ export default function BlockchainSection() {
                     Permanent, tamper-proof records
                   </p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="col-md-4 text-center">
+              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
                 <div style={{
                   background: '#ffffff',
                   borderRadius: '12px',

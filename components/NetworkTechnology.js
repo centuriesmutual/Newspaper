@@ -77,9 +77,9 @@ export default function NetworkTechnology() {
                     WiFi 6E and 10Gbps speeds
                   </p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="col-md-4 text-center">
+              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
                 <div style={{
                   background: '#ffffff',
                   borderRadius: '12px',
@@ -110,9 +110,9 @@ export default function NetworkTechnology() {
                     Enterprise-grade security protocols
                   </p>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="col-md-4 text-center">
+              <motion.div className="col-md-4 text-center" variants={cardAnimation}>
                 <div style={{
                   background: '#ffffff',
                   borderRadius: '12px',
