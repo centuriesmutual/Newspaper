@@ -15,6 +15,8 @@ export default function Navbar() {
   const isRentalEquityPage = pathname === '/rentalequity'
   const isInvestorRelationsPage = pathname === '/investor-relations'
   const isCareersPage = pathname === '/careers'
+  const isChildCarePage = pathname === '/child-care'
+  const isTrustScorePage = pathname === '/trustscore'
 
   useEffect(() => {
     setMounted(true)
@@ -140,7 +142,7 @@ export default function Navbar() {
               </div>
             </Link>
           )}
-          {!isLoginPage && !isSignupPage && !isRentalEquityPage && !isInvestorRelationsPage && !isCareersPage && (
+          {!isLoginPage && !isSignupPage && !isRentalEquityPage && !isInvestorRelationsPage && !isCareersPage && !isChildCarePage && !isTrustScorePage && (
             <Link 
               href="/login" 
               className="btn btn-primary px-2 px-lg-4 py-1 py-lg-2 mobile-login"

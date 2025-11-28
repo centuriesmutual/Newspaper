@@ -88,7 +88,7 @@ export default function Hero() {
                 style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
               >
                 <Link href="/rentalequity" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Learn More</Link>
-                <Link href="/rewards" className="btn btn-light btn-lg">Download App</Link>
+                <Link href="/downloads" className="btn btn-light btn-lg">Download App</Link>
               </motion.div>
               
               <motion.p 

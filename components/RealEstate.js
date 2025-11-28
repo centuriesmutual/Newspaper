@@ -112,7 +112,7 @@ export default function RealEstate() {
               
               <div className="d-flex gap-3 flex-wrap" style={{ marginTop: '1.5rem' }}>
                 <Link 
-                  href="/browse-rooms" 
+                  href="/rooms" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',

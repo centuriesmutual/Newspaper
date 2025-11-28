@@ -93,10 +93,13 @@ export default function Footer() {
             <h5 className="mb-3">Community</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
+                <Link href="/landlords" className="text-white text-decoration-none">LandLords</Link>
               </li>
               <li className="mb-2">
-                <Link href="/contact" className="text-white text-decoration-none">Help Desk</Link>
+                <Link href="/hosts" className="text-white text-decoration-none">Hosts</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/tenants" className="text-white text-decoration-none">Tenants</Link>
               </li>
               <li className="mb-2">
                 <Link href="/shop" className="text-white text-decoration-none">Shop</Link>
@@ -107,10 +110,10 @@ export default function Footer() {
             <h5 className="mb-3">Company</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/partners" className="text-white text-decoration-none">Subsidiaries</Link>
+                <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
               </li>
               <li className="mb-2">
-                <Link href="/investor-relations" className="text-white text-decoration-none">Investor Relations</Link>
+                <Link href="/contact" className="text-white text-decoration-none">Help Desk</Link>
               </li>
               <li className="mb-2">
                 <Link href="/careers" className="text-white text-decoration-none">Careers</Link>

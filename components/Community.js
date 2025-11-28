@@ -168,7 +168,7 @@ export default function Community() {
                   Find Roommates
                 </button>
                 <Link 
-                  href="/trust-score" 
+                  href="/trustscore" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',

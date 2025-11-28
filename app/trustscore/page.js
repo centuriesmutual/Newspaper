@@ -1,13 +1,15 @@
 'use client'
 
-import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import { 
   ShieldCheckIcon, 
   CheckCircleIcon,
   UserGroupIcon,
-  ChartBarIcon
+  ChartBarIcon,
+  HomeIcon,
+  CreditCardIcon,
+  BanknotesIcon
 } from '@heroicons/react/24/outline'
 
 export default function TrustScore() {
@@ -191,9 +193,91 @@ export default function TrustScore() {
                   </div>
                 </div>
 
+                {/* Rental Equity Section */}
+                <div className="card border-0 shadow-sm mb-5" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-5">
+                    <div className="row align-items-center mb-4">
+                      <div className="col-md-8">
+                        <div className="d-flex align-items-center mb-3">
+                          <ChartBarIcon style={{ width: '32px', height: '32px', color: '#14432A', marginRight: '12px' }} />
+                          <h3 className="fw-bold mb-0" style={{ color: '#14432A', fontSize: '1.75rem' }}>Rental Equity</h3>
+                        </div>
+                        <p className="mb-4" style={{ fontSize: '1.1rem', color: '#495057' }}>
+                          Transform your rent payments into trust score growth. With Rental Equity, every on-time rent payment helps build your trust score, giving you better standing, more opportunities, and greater confidence across Centuries Mutual.
+                        </p>
+                        <ul className="list-unstyled mb-0">
+                          <li className="mb-3 d-flex align-items-start">
+                            <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#10b981', marginRight: '12px', marginTop: '2px', flexShrink: 0 }} />
+                            <div>
+                              <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Build Trust History</h5>
+                              <p className="text-muted mb-0">Build trust history month after month with consistent on-time payments</p>
+                            </div>
+                          </li>
+                          <li className="mb-3 d-flex align-items-start">
+                            <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#10b981', marginRight: '12px', marginTop: '2px', flexShrink: 0 }} />
+                            <div>
+                              <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Improve Your Score</h5>
+                              <p className="text-muted mb-0">Improve your trust score for future loans and better rental opportunities</p>
+                            </div>
+                          </li>
+                          <li className="mb-3 d-flex align-items-start">
+                            <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#10b981', marginRight: '12px', marginTop: '2px', flexShrink: 0 }} />
+                            <div>
+                              <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Pathway to Homeownership</h5>
+                              <p className="text-muted mb-0">Create a pathway to homeownership through consistent rental equity building</p>
+                            </div>
+                          </li>
+                          <li className="d-flex align-items-start">
+                            <CheckCircleIcon style={{ width: '24px', height: '24px', color: '#10b981', marginRight: '12px', marginTop: '2px', flexShrink: 0 }} />
+                            <div>
+                              <h5 className="fw-bold mb-1" style={{ color: '#14432A' }}>Better Rates</h5>
+                              <p className="text-muted mb-0">Qualify for better rates on rentals and future housing opportunities</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col-md-4">
+                        <div className="card border-0" style={{ 
+                          background: 'linear-gradient(135deg, #14432A 0%, #1a5436 100%)', 
+                          color: 'white',
+                          borderRadius: '16px'
+                        }}>
+                          <div className="card-body p-4 text-center">
+                            <h4 className="fw-bold mb-4">Trust Building Impact</h4>
+                            <div className="mb-4">
+                              <div className="d-flex justify-content-between mb-2">
+                                <span>Average Trust Score Increase</span>
+                                <span className="fw-bold">+60 points</span>
+                              </div>
+                              <div className="progress" style={{ height: '8px', backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                                <div className="progress-bar" style={{ width: '75%', backgroundColor: 'white' }}></div>
+                              </div>
+                            </div>
+                            <div className="mb-4">
+                              <div className="d-flex justify-content-between mb-2">
+                                <span>Time to See Results</span>
+                                <span className="fw-bold">3-6 months</span>
+                              </div>
+                              <div className="progress" style={{ height: '8px', backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                                <div className="progress-bar" style={{ width: '50%', backgroundColor: 'white' }}></div>
+                              </div>
+                            </div>
+                            <p className="mb-0 mt-4" style={{ fontSize: '0.85rem', opacity: 0.9 }}>
+                              * Results based on average user data from renters with consistent on-time payments.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* CTA Section */}
                 <div className="text-center">
-                  <Link href="/contact" className="btn btn-primary btn-lg px-5 py-3 fw-bold">
+                  <Link href="/rentalequity" className="btn btn-primary btn-lg px-5 py-3 fw-bold me-3">
+                    Learn More About Rental Equity
+                  </Link>
+                  <Link href="/contact" className="btn btn-outline-primary btn-lg px-5 py-3 fw-bold">
                     Get Started
                   </Link>
                 </div>
@@ -202,7 +286,6 @@ export default function TrustScore() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }
