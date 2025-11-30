@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { WifiIcon, ServerIcon, ShieldCheckIcon, CheckBadgeIcon } from '@heroicons/react/24/outline'
+import { PhoneIcon, ServerIcon, ShieldCheckIcon, CheckBadgeIcon, CpuChipIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 import { sectionAnimation, staggerContainer, cardAnimation } from '../utils/animations'
 
 export default function NetworkTechnology() {
@@ -29,7 +30,7 @@ export default function NetworkTechnology() {
               </div>
               
               <h5 className="fw-bold mb-3" style={{ color: '#14432A', fontSize: '1.1rem' }}>
-                Powered by Lumen Technologies and Texas Instruments
+                Enterprise-Grade Network Infrastructure
               </h5>
               
               <p className="text-muted mb-4" style={{ fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto' }}>
@@ -41,99 +42,132 @@ export default function NetworkTechnology() {
             {/* Feature Icons */}
             <div className="row g-4 mt-4">
               <div className="col-md-4 text-center">
-                <div className="card border-0 shadow-sm h-100" style={{
-                  background: '#ffffff',
-                  borderRadius: '12px',
-                  padding: '2rem 1.5rem',
-                  border: '1px solid #e9ecef',
-                  height: '100%',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-                }}>
-                  <div className="mb-3 d-flex justify-content-center">
-                    <WifiIcon style={{ 
-                      width: '40px', 
-                      height: '40px', 
-                      color: '#14432A'
-                    }} />
-                  </div>
-                  <h6 className="fw-bold mb-2" style={{ 
-                    color: '#14432A',
-                    fontSize: '1rem',
-                    marginBottom: '0.75rem'
-                  }}>
-                    High-Performance
-                  </h6>
-                  <p className="text-muted mb-0" style={{ 
-                    fontSize: '0.9rem',
-                    lineHeight: '1.6'
-                  }}>
-                    WiFi 6E and 10Gbps speeds
-                  </p>
-                </div>
+                <Link href="/private-phone-messaging" className="text-decoration-none">
+                  <motion.div 
+                    className="card border-0 shadow-sm h-100" 
+                    style={{
+                      background: '#ffffff',
+                      borderRadius: '12px',
+                      padding: '2rem 1.5rem',
+                      border: '1px solid #e9ecef',
+                      height: '100%',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease'
+                    }}
+                    whileHover={{ 
+                      transform: 'translateY(-5px)',
+                      boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
+                    }}
+                  >
+                    <div className="mb-3 d-flex justify-content-center">
+                      <PhoneIcon style={{ 
+                        width: '40px', 
+                        height: '40px', 
+                        color: '#14432A'
+                      }} />
+                    </div>
+                    <h6 className="fw-bold mb-2" style={{ 
+                      color: '#14432A',
+                      fontSize: '1rem',
+                      marginBottom: '0.75rem'
+                    }}>
+                      Private Phone and Messaging Protocol
+                    </h6>
+                    <p className="text-muted mb-0" style={{ 
+                      fontSize: '0.9rem',
+                      lineHeight: '1.6'
+                    }}>
+                      Get a phone number and messaging system
+                    </p>
+                  </motion.div>
+                </Link>
               </div>
               
               <div className="col-md-4 text-center">
-                <div className="card border-0 shadow-sm h-100" style={{
-                  background: '#ffffff',
-                  borderRadius: '12px',
-                  padding: '2rem 1.5rem',
-                  border: '1px solid #e9ecef',
-                  height: '100%',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-                }}>
-                  <div className="mb-3 d-flex justify-content-center">
-                    <ShieldCheckIcon style={{ 
-                      width: '40px', 
-                      height: '40px', 
-                      color: '#14432A'
-                    }} />
-                  </div>
-                  <h6 className="fw-bold mb-2" style={{ 
-                    color: '#14432A',
-                    fontSize: '1rem',
-                    marginBottom: '0.75rem'
-                  }}>
-                    Secure
-                  </h6>
-                  <p className="text-muted mb-0" style={{ 
-                    fontSize: '0.9rem',
-                    lineHeight: '1.6'
-                  }}>
-                    Enterprise-grade security protocols
-                  </p>
-                </div>
+                <Link href="/in-house-security" className="text-decoration-none">
+                  <motion.div 
+                    className="card border-0 shadow-sm h-100" 
+                    style={{
+                      background: '#ffffff',
+                      borderRadius: '12px',
+                      padding: '2rem 1.5rem',
+                      border: '1px solid #e9ecef',
+                      height: '100%',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease'
+                    }}
+                    whileHover={{ 
+                      transform: 'translateY(-5px)',
+                      boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
+                    }}
+                  >
+                    <div className="mb-3 d-flex justify-content-center">
+                      <ShieldCheckIcon style={{ 
+                        width: '40px', 
+                        height: '40px', 
+                        color: '#14432A'
+                      }} />
+                    </div>
+                    <h6 className="fw-bold mb-2" style={{ 
+                      color: '#14432A',
+                      fontSize: '1rem',
+                      marginBottom: '0.75rem'
+                    }}>
+                      In-House Crafted Security System
+                    </h6>
+                    <p className="text-muted mb-0" style={{ 
+                      fontSize: '0.9rem',
+                      lineHeight: '1.6'
+                    }}>
+                      Our cameras and systems are made in-house
+                    </p>
+                  </motion.div>
+                </Link>
               </div>
               
               <div className="col-md-4 text-center">
-                <div className="card border-0 shadow-sm h-100" style={{
-                  background: '#ffffff',
-                  borderRadius: '12px',
-                  padding: '2rem 1.5rem',
-                  border: '1px solid #e9ecef',
-                  height: '100%',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-                }}>
-                  <div className="mb-3 d-flex justify-content-center">
-                    <ServerIcon style={{ 
-                      width: '40px', 
-                      height: '40px', 
-                      color: '#14432A'
-                    }} />
-                  </div>
-                  <h6 className="fw-bold mb-2" style={{ 
-                    color: '#14432A',
-                    fontSize: '1rem',
-                    marginBottom: '0.75rem'
-                  }}>
-                    Integrated
-                  </h6>
-                  <p className="text-muted mb-0" style={{ 
-                    fontSize: '0.9rem',
-                    lineHeight: '1.6'
-                  }}>
-                    Seamless device connectivity
-                  </p>
-                </div>
+                <Link href="/ai-powered-technology" className="text-decoration-none">
+                  <motion.div 
+                    className="card border-0 shadow-sm h-100" 
+                    style={{
+                      background: '#ffffff',
+                      borderRadius: '12px',
+                      padding: '2rem 1.5rem',
+                      border: '1px solid #e9ecef',
+                      height: '100%',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease'
+                    }}
+                    whileHover={{ 
+                      transform: 'translateY(-5px)',
+                      boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
+                    }}
+                  >
+                    <div className="mb-3 d-flex justify-content-center">
+                      <CpuChipIcon style={{ 
+                        width: '40px', 
+                        height: '40px', 
+                        color: '#14432A'
+                      }} />
+                    </div>
+                    <h6 className="fw-bold mb-2" style={{ 
+                      color: '#14432A',
+                      fontSize: '1rem',
+                      marginBottom: '0.75rem'
+                    }}>
+                      AI Powered Technology
+                    </h6>
+                    <p className="text-muted mb-0" style={{ 
+                      fontSize: '0.9rem',
+                      lineHeight: '1.6'
+                    }}>
+                      Advanced anomaly detection technology
+                    </p>
+                  </motion.div>
+                </Link>
               </div>
             </div>
           </div>
