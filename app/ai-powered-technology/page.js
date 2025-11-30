@@ -17,6 +17,14 @@ import {
 export default function AIPoweredTechnology() {
   return (
     <>
+      <style jsx global>{`
+        footer .row:first-child {
+          display: none !important;
+        }
+        footer .border-top {
+          border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+      `}</style>
       <Navbar />
       <main>
         {/* Hero Section */}
