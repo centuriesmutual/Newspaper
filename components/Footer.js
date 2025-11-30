@@ -153,7 +153,7 @@ export default function Footer() {
         </div>
         <div className="border-top border-secondary pt-4 mt-4">
           <p className="text-center text-md-center text-start mb-0">
-            © {mounted ? new Date().getFullYear() : '2026'} Centuries Mutual. All rights reserved.
+            © 2026 Centuries Mutual. All rights reserved.
           </p>
         </div>
       </div>
