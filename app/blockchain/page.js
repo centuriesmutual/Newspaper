@@ -1,13 +1,18 @@
 'use client'
 
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CubeIcon, EnvelopeIcon, UserGroupIcon, MagnifyingGlassIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
 export default function Blockchain() {
   return (
     <>
+      <style jsx global>{`
+        footer {
+          display: none !important;
+        }
+      `}</style>
       <Navbar />
       <main>
         {/* Hero Section */}
@@ -17,7 +22,7 @@ export default function Blockchain() {
         }}>
           <div className="container py-5">
             <div className="row align-items-center">
-              <div className="col-lg-8 mx-auto text-center">
+              <div className="col-lg-6 mb-4 mb-lg-0">
                 <h1 className="display-3 fw-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                   BlockChain - Your Secure Block Space
                 </h1>
@@ -27,13 +32,25 @@ export default function Blockchain() {
                 <p className="fs-5 mb-5">
                   Experience a new dimension of digital interaction with our blockchain-powered block space featuring secure messaging, contact management, room listings, and pay-as-you-go communications.
                 </p>
-                <div className="d-flex gap-3 justify-content-center">
+                <div className="d-flex gap-3 flex-wrap">
                   <Link href="/signup" className="btn btn-light btn-lg px-5 py-3">
                     Get Started
                   </Link>
                   <Link href="/contact" className="btn btn-outline-light btn-lg px-5 py-3">
                     Learn More
                   </Link>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="position-relative" style={{ height: '500px', borderRadius: '20px', overflow: 'hidden' }}>
+                  <Image
+                    src="/deer.jpeg"
+                    alt="BlockChain Block Space"
+                    fill
+                    priority
+                    quality={100}
+                    style={{ objectFit: 'cover', borderRadius: '20px' }}
+                  />
                 </div>
               </div>
             </div>
@@ -362,7 +379,6 @@ export default function Blockchain() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }

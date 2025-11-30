@@ -1,13 +1,18 @@
 'use client'
 
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import { UserGroupIcon, HeartIcon, ShieldCheckIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
 
 export default function IndividualFamilyServices() {
   return (
     <>
+      <style jsx global>{`
+        footer {
+          display: none !important;
+        }
+      `}</style>
       <Navbar />
       <main>
         {/* Hero Section */}
@@ -17,7 +22,7 @@ export default function IndividualFamilyServices() {
         }}>
           <div className="container py-5">
             <div className="row align-items-center">
-              <div className="col-lg-8 mx-auto text-center">
+              <div className="col-lg-6 mb-4 mb-lg-0">
                 <h1 className="display-3 fw-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                   Individual & Family Services
                 </h1>
@@ -27,13 +32,25 @@ export default function IndividualFamilyServices() {
                 <p className="fs-5 mb-5">
                   Get the protection you need with personalized health insurance plans and access to professional counseling services as an added value benefit with Centuries Mutual.
                 </p>
-                <div className="d-flex gap-3 justify-content-center">
+                <div className="d-flex gap-3 flex-wrap">
                   <Link href="/apply" className="btn btn-light btn-lg px-5 py-3">
                     Get Started
                   </Link>
                   <Link href="/contact" className="btn btn-outline-light btn-lg px-5 py-3">
                     Learn More
                   </Link>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="position-relative" style={{ height: '500px', borderRadius: '20px', overflow: 'hidden' }}>
+                  <Image
+                    src="/mountians.jpeg"
+                    alt="Individual & Family Services"
+                    fill
+                    priority
+                    quality={100}
+                    style={{ objectFit: 'cover', borderRadius: '20px' }}
+                  />
                 </div>
               </div>
             </div>
@@ -311,7 +328,6 @@ export default function IndividualFamilyServices() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }
