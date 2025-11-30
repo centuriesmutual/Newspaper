@@ -121,7 +121,7 @@ export default function BlockchainSection() {
                       fontSize: '0.9rem',
                       lineHeight: '1.6'
                     }}>
-                      Secure block space with messaging, contacts, room listings, and a For You Page
+                      Secure block space with messaging, contacts, room listings, with For You content
                     </p>
                   </motion.div>
                 </Link>
