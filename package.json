@@ -19,9 +19,14 @@
     "bootstrap-icons": "^1.11.3",
     "box-node-sdk": "^4.0.0",
     "framer-motion": "^12.23.24",
+    "jspdf": "^3.0.4",
+    "meilisearch": "^0.54.0",
     "next": "^14.2.25",
+    "pdfkit": "^0.17.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-signature-canvas": "^1.1.0-alpha.2",
+    "signature_pad": "^5.1.2",
     "three": "^0.158.0"
   }
 }

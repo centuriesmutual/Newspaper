@@ -37,7 +37,7 @@ export default function IndividualFamilyServices() {
                   Get the protection you need with personalized health insurance plans and access to professional counseling services as an added value benefit with Centuries Mutual.
                 </p>
                 <div className="d-flex gap-3 flex-wrap">
-                  <Link href="/apply" className="btn btn-light btn-lg px-5 py-3">
+                  <Link href="/enrollment" className="btn btn-light btn-lg px-5 py-3">
                     Get Started
                   </Link>
                   <Link href="/contact" className="btn btn-outline-light btn-lg px-5 py-3">
@@ -320,8 +320,8 @@ export default function IndividualFamilyServices() {
                   Get comprehensive health insurance coverage and access to professional counseling services today.
                 </p>
                 <div className="d-flex gap-3 justify-content-center">
-                  <Link href="/apply" className="btn btn-primary btn-lg px-5 py-3">
-                    Apply Now
+                  <Link href="/enrollment" className="btn btn-primary btn-lg px-5 py-3">
+                    Enroll Now
                   </Link>
                   <Link href="/contact" className="btn btn-outline-primary btn-lg px-5 py-3">
                     Contact Us
