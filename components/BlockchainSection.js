@@ -46,11 +46,11 @@ export default function BlockchainSection() {
                   <motion.div 
                     className="card border-0 shadow-sm h-100" 
                     style={{
-                      background: '#ffffff',
-                      borderRadius: '12px',
-                      padding: '2rem 1.5rem',
-                      border: '1px solid #e9ecef',
-                      height: '100%',
+                  background: '#ffffff',
+                  borderRadius: '12px',
+                  padding: '2rem 1.5rem',
+                  border: '1px solid #e9ecef',
+                  height: '100%',
                       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                       cursor: 'pointer',
                       transition: 'all 0.3s ease'
@@ -60,26 +60,26 @@ export default function BlockchainSection() {
                       boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
                     }}
                   >
-                    <div className="mb-3 d-flex justify-content-center">
+                  <div className="mb-3 d-flex justify-content-center">
                       <UserGroupIcon style={{ 
-                        width: '40px', 
-                        height: '40px', 
-                        color: '#14432A'
-                      }} />
-                    </div>
-                    <h6 className="fw-bold mb-2" style={{ 
-                      color: '#14432A',
-                      fontSize: '1rem',
-                      marginBottom: '0.75rem'
-                    }}>
+                      width: '40px', 
+                      height: '40px', 
+                      color: '#14432A'
+                    }} />
+                  </div>
+                  <h6 className="fw-bold mb-2" style={{ 
+                    color: '#14432A',
+                    fontSize: '1rem',
+                    marginBottom: '0.75rem'
+                  }}>
                       Individual & Family Services
-                    </h6>
-                    <p className="text-muted mb-0" style={{ 
-                      fontSize: '0.9rem',
-                      lineHeight: '1.6'
-                    }}>
-                      Comprehensive health insurance and counseling services for individuals and families
-                    </p>
+                  </h6>
+                  <p className="text-muted mb-0" style={{ 
+                    fontSize: '0.9rem',
+                    lineHeight: '1.6'
+                  }}>
+                      Comprehensive health insurance and health services for individuals and families
+                  </p>
                   </motion.div>
                 </Link>
               </div>
@@ -89,11 +89,11 @@ export default function BlockchainSection() {
                   <motion.div 
                     className="card border-0 shadow-sm h-100" 
                     style={{
-                      background: '#ffffff',
-                      borderRadius: '12px',
-                      padding: '2rem 1.5rem',
-                      border: '1px solid #e9ecef',
-                      height: '100%',
+                  background: '#ffffff',
+                  borderRadius: '12px',
+                  padding: '2rem 1.5rem',
+                  border: '1px solid #e9ecef',
+                  height: '100%',
                       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                       cursor: 'pointer',
                       transition: 'all 0.3s ease'
@@ -103,26 +103,26 @@ export default function BlockchainSection() {
                       boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
                     }}
                   >
-                    <div className="mb-3 d-flex justify-content-center">
+                  <div className="mb-3 d-flex justify-content-center">
                       <CubeIcon style={{ 
-                        width: '40px', 
-                        height: '40px', 
-                        color: '#14432A'
-                      }} />
-                    </div>
-                    <h6 className="fw-bold mb-2" style={{ 
-                      color: '#14432A',
-                      fontSize: '1rem',
-                      marginBottom: '0.75rem'
-                    }}>
+                      width: '40px', 
+                      height: '40px', 
+                      color: '#14432A'
+                    }} />
+                  </div>
+                  <h6 className="fw-bold mb-2" style={{ 
+                    color: '#14432A',
+                    fontSize: '1rem',
+                    marginBottom: '0.75rem'
+                  }}>
                       BlockChain
-                    </h6>
-                    <p className="text-muted mb-0" style={{ 
-                      fontSize: '0.9rem',
-                      lineHeight: '1.6'
-                    }}>
+                  </h6>
+                  <p className="text-muted mb-0" style={{ 
+                    fontSize: '0.9rem',
+                    lineHeight: '1.6'
+                  }}>
                       Secure block space with messaging, contacts, room listings, with For You content
-                    </p>
+                  </p>
                   </motion.div>
                 </Link>
               </div>
@@ -132,11 +132,11 @@ export default function BlockchainSection() {
                   <motion.div 
                     className="card border-0 shadow-sm h-100" 
                     style={{
-                      background: '#ffffff',
-                      borderRadius: '12px',
-                      padding: '2rem 1.5rem',
-                      border: '1px solid #e9ecef',
-                      height: '100%',
+                  background: '#ffffff',
+                  borderRadius: '12px',
+                  padding: '2rem 1.5rem',
+                  border: '1px solid #e9ecef',
+                  height: '100%',
                       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                       cursor: 'pointer',
                       transition: 'all 0.3s ease'
@@ -146,26 +146,26 @@ export default function BlockchainSection() {
                       boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
                     }}
                   >
-                    <div className="mb-3 d-flex justify-content-center">
+                  <div className="mb-3 d-flex justify-content-center">
                       <DocumentCheckIcon style={{ 
-                        width: '40px', 
-                        height: '40px', 
-                        color: '#14432A'
-                      }} />
-                    </div>
-                    <h6 className="fw-bold mb-2" style={{ 
-                      color: '#14432A',
-                      fontSize: '1rem',
-                      marginBottom: '0.75rem'
-                    }}>
+                      width: '40px', 
+                      height: '40px', 
+                      color: '#14432A'
+                    }} />
+                  </div>
+                  <h6 className="fw-bold mb-2" style={{ 
+                    color: '#14432A',
+                    fontSize: '1rem',
+                    marginBottom: '0.75rem'
+                  }}>
                       Audit & Compliance
-                    </h6>
-                    <p className="text-muted mb-0" style={{ 
-                      fontSize: '0.9rem',
-                      lineHeight: '1.6'
-                    }}>
+                  </h6>
+                  <p className="text-muted mb-0" style={{ 
+                    fontSize: '0.9rem',
+                    lineHeight: '1.6'
+                  }}>
                       Automated smart contract governance and claims handling for financial contracts
-                    </p>
+                  </p>
                   </motion.div>
                 </Link>
               </div>

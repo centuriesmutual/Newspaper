@@ -99,7 +99,7 @@ export default function Hero() {
                 style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
               >
                 <Link 
-                  href="/tenants" 
+                  href="/contact" 
                   className="btn btn-sm text-white"
                   style={{ 
                     fontSize: '0.7rem',
@@ -118,10 +118,10 @@ export default function Hero() {
                     e.target.style.borderColor = 'rgba(255,255,255,0.3)';
                   }}
                 >
-                  Tenants
+                  Contact Us
                 </Link>
                 <Link 
-                  href="/landlords" 
+                  href="/rooms" 
                   className="btn btn-sm text-white"
                   style={{ 
                     fontSize: '0.7rem',
@@ -140,7 +140,7 @@ export default function Hero() {
                     e.target.style.borderColor = 'rgba(255,255,255,0.3)';
                   }}
                 >
-                  Landlords
+                  Spaces
                 </Link>
                 <Link 
                   href="/newspaper" 
