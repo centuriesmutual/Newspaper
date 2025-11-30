@@ -126,17 +126,6 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-lg-2 mb-4 mb-lg-0 footer-content">
-            <h5 className="mb-3">Services</h5>
-            <ul className="list-unstyled footer-links">
-              <li className="mb-2">
-                <Link href="/shop" className="text-white text-decoration-none">Shop</Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/network" className="text-white text-decoration-none">Network</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-2 mb-4 mb-lg-0 footer-content">
             <h5 className="mb-3">Company</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
@@ -147,6 +136,17 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link href="/careers" className="text-white text-decoration-none">Careers</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-2 mb-4 mb-lg-0 footer-content">
+            <h5 className="mb-3">Services</h5>
+            <ul className="list-unstyled footer-links">
+              <li className="mb-2">
+                <Link href="/shop" className="text-white text-decoration-none">Shop</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/network" className="text-white text-decoration-none">Network</Link>
               </li>
             </ul>
           </div>
