@@ -1,6 +1,7 @@
 'use client'
 
 import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { UserGroupIcon, HeartIcon, ShieldCheckIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
@@ -9,8 +10,11 @@ export default function IndividualFamilyServices() {
   return (
     <>
       <style jsx global>{`
-        footer {
+        footer .row:first-child {
           display: none !important;
+        }
+        footer .border-top {
+          border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
       `}</style>
       <Navbar />
@@ -328,6 +332,7 @@ export default function IndividualFamilyServices() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   )
 }
