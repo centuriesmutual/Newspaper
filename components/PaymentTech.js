@@ -210,7 +210,7 @@ export default function PaymentTech() {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <Link 
-                  href="/dashboard" 
+                  href="/edocuments-audit-tracking" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
                     borderRadius: '12px',

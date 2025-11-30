@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
 import { 
   DocumentTextIcon, 
   ShieldCheckIcon, 
@@ -11,12 +12,17 @@ import {
   LockClosedIcon,
   CloudArrowUpIcon,
   DocumentCheckIcon,
-  UserGroupIcon
+  UserGroupIcon,
+  VideoCameraIcon,
+  PhoneIcon,
+  ChatBubbleLeftRightIcon,
+  CogIcon
 } from '@heroicons/react/24/outline'
 
 export default function EDocumentSystem() {
   return (
     <>
+      <Navbar />
       <main>
         {/* Hero Section with Framed Image */}
         <section className="py-5" style={{ 
@@ -39,17 +45,17 @@ export default function EDocumentSystem() {
                   color: '#495057',
                   lineHeight: '1.8'
                 }}>
-                  Find and rent real estate with roommates using our comprehensive eDocument system. 
-                  Streamline lease agreements, roommate contracts, and property documentation all in one secure place.
+                  Legally binding electronic documents with verified video communications and telecommunications. 
+                  Every interaction is admissible in court through our secure, blockchain-backed messaging protocol.
                 </p>
                 <p className="mb-4" style={{ color: '#6c757d' }}>
-                  Our platform automates the entire documentation process, from initial lease agreements to 
-                  roommate contracts and verification documents. Complete all necessary paperwork in minutes 
-                  rather than days.
+                  Our eDocument system integrates with edge compute systems and smart contracts to enforce a secure 
+                  platform for roommates, partners, and cohabitants. All communications are verified, encrypted, and 
+                  legally binding.
                 </p>
                 <div className="d-flex gap-3 flex-wrap">
                   <Link 
-                    href="/dashboard" 
+                    href="/edocuments-audit-tracking" 
                     className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                     style={{ 
                       borderRadius: '12px',
@@ -57,7 +63,7 @@ export default function EDocumentSystem() {
                       borderColor: '#14432A'
                     }}
                   >
-                    Access Dashboard
+                    Access Documents
                   </Link>
                   <Link 
                     href="/contact" 
@@ -107,7 +113,7 @@ export default function EDocumentSystem() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Legally Binding Documents Section */}
         <section className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
           <div className="container">
             <div className="row mb-5">
@@ -116,66 +122,17 @@ export default function EDocumentSystem() {
                   color: '#14432A',
                   fontFamily: "'Playfair Display', serif"
                 }}>
-                  Comprehensive Document Management
+                  Legally Binding Electronic Documents
                 </h2>
                 <p className="lead text-muted">
-                  Everything you need to manage your real estate and roommate documentation
+                  Our eDocument system creates legally binding agreements that are recognized and enforceable in court. 
+                  Every document is cryptographically signed, timestamped, and stored with complete audit trails.
                 </p>
               </div>
             </div>
 
             <div className="row g-4">
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                  <div className="card-body p-4 text-center">
-                    <div className="mb-3">
-                      <div style={{
-                        background: 'rgba(20, 67, 42, 0.1)',
-                        borderRadius: '12px',
-                        width: '64px',
-                        height: '64px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        margin: '0 auto'
-                      }}>
-                        <DocumentTextIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
-                      </div>
-                    </div>
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Digital Leases</h5>
-                    <p className="text-muted mb-0">
-                      Electronic lease agreements that are legally binding and easy to manage
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
-                  <div className="card-body p-4 text-center">
-                    <div className="mb-3">
-                      <div style={{
-                        background: 'rgba(20, 67, 42, 0.1)',
-                        borderRadius: '12px',
-                        width: '64px',
-                        height: '64px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        margin: '0 auto'
-                      }}>
-                        <UserGroupIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
-                      </div>
-                    </div>
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Roommate Contracts</h5>
-                    <p className="text-muted mb-0">
-                      Secure roommate agreements with clear terms and responsibilities
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3">
+              <div className="col-md-6 col-lg-4">
                 <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4 text-center">
                     <div className="mb-3">
@@ -192,15 +149,42 @@ export default function EDocumentSystem() {
                         <DocumentCheckIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                       </div>
                     </div>
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Property Documents</h5>
+                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Court Admissible</h5>
                     <p className="text-muted mb-0">
-                      Complete property files including inspections and maintenance records
+                      All documents meet legal standards for admissibility in court proceedings. Digital signatures 
+                      are legally recognized and binding.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="col-md-6 col-lg-3">
+              <div className="col-md-6 col-lg-4">
+                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4 text-center">
+                    <div className="mb-3">
+                      <div style={{
+                        background: 'rgba(20, 67, 42, 0.1)',
+                        borderRadius: '12px',
+                        width: '64px',
+                        height: '64px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        margin: '0 auto'
+                      }}>
+                        <LockClosedIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
+                      </div>
+                    </div>
+                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Cryptographic Security</h5>
+                    <p className="text-muted mb-0">
+                      Documents are secured with advanced cryptographic signatures that ensure authenticity, 
+                      integrity, and non-repudiation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6 col-lg-4">
                 <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '16px' }}>
                   <div className="card-body p-4 text-center">
                     <div className="mb-3">
@@ -217,9 +201,10 @@ export default function EDocumentSystem() {
                         <ClockIcon style={{ width: '32px', height: '32px', color: '#14432A' }} />
                       </div>
                     </div>
-                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Instant Access</h5>
+                    <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Timestamped Records</h5>
                     <p className="text-muted mb-0">
-                      24/7 document access from anywhere, anytime
+                      Every document is timestamped with blockchain-verified timestamps that provide 
+                      irrefutable proof of when documents were created and signed.
                     </p>
                   </div>
                 </div>
@@ -228,7 +213,7 @@ export default function EDocumentSystem() {
           </div>
         </section>
 
-        {/* How It Works Section */}
+        {/* Verified Communications Section */}
         <section className="py-5 bg-white">
           <div className="container">
             <div className="row mb-5">
@@ -237,91 +222,88 @@ export default function EDocumentSystem() {
                   color: '#14432A',
                   fontFamily: "'Playfair Display', serif"
                 }}>
-                  How It Works
+                  Verified Video & Telecommunications
                 </h2>
                 <p className="lead text-muted">
-                  Simple, secure, and streamlined document management
+                  Every video communication and telephone call is verified, recorded, and stored in a format 
+                  that is admissible as evidence in legal proceedings.
                 </p>
               </div>
             </div>
 
-            <div className="row g-4">
-              <div className="col-md-4">
-                <div className="text-center">
-                  <div className="mb-4">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '80px',
-                      height: '80px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      margin: '0 auto'
-                    }}>
-                      <span className="fw-bold" style={{ color: '#14432A', fontSize: '2rem' }}>1</span>
+            <div className="row g-4 mb-5">
+              <div className="col-md-6">
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <div className="mb-3">
+                      <VideoCameraIcon style={{ width: '48px', height: '48px', color: '#14432A' }} />
                     </div>
+                    <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Verified Video Communications</h4>
+                    <p className="text-muted">
+                      All video calls and meetings are automatically recorded with participant verification, 
+                      timestamp authentication, and cryptographic integrity checks. These recordings serve as 
+                      legally admissible evidence of agreements, discussions, and interactions.
+                    </p>
+                    <ul className="list-unstyled mt-3">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Participant identity verification
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Timestamp authentication
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Cryptographic integrity verification
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Court-admissible recordings
+                      </li>
+                    </ul>
                   </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Upload Documents</h5>
-                  <p className="text-muted">
-                    Upload your lease agreements, contracts, and property documents to our secure platform. 
-                    All documents are encrypted and stored safely.
-                  </p>
                 </div>
               </div>
 
-              <div className="col-md-4">
-                <div className="text-center">
-                  <div className="mb-4">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '80px',
-                      height: '80px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      margin: '0 auto'
-                    }}>
-                      <span className="fw-bold" style={{ color: '#14432A', fontSize: '2rem' }}>2</span>
+              <div className="col-md-6">
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <div className="mb-3">
+                      <PhoneIcon style={{ width: '48px', height: '48px', color: '#14432A' }} />
                     </div>
+                    <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Verified Telecommunications</h4>
+                    <p className="text-muted">
+                      Telephone calls and voice communications are recorded with caller ID verification, 
+                      call metadata authentication, and secure storage. Every conversation is preserved 
+                      as legally admissible evidence.
+                    </p>
+                    <ul className="list-unstyled mt-3">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Caller ID verification
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Call metadata authentication
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Encrypted voice recordings
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Legal evidence preservation
+                      </li>
+                    </ul>
                   </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Digital Signatures</h5>
-                  <p className="text-muted">
-                    Sign documents electronically with legally binding digital signatures. 
-                    All parties can sign from anywhere, anytime.
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="text-center">
-                  <div className="mb-4">
-                    <div style={{
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      borderRadius: '50%',
-                      width: '80px',
-                      height: '80px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      margin: '0 auto'
-                    }}>
-                      <span className="fw-bold" style={{ color: '#14432A', fontSize: '2rem' }}>3</span>
-                    </div>
-                  </div>
-                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Manage & Track</h5>
-                  <p className="text-muted">
-                    Track document status, manage renewals, and access all your documents 
-                    in one centralized dashboard.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Secure Messaging Protocol Section */}
         <section className="py-5" style={{ backgroundColor: '#14432A', color: 'white' }}>
           <div className="container">
             <div className="row mb-5">
@@ -329,15 +311,41 @@ export default function EDocumentSystem() {
                 <h2 className="display-5 fw-bold mb-3" style={{ 
                   fontFamily: "'Playfair Display', serif"
                 }}>
-                  Why Choose Our eDocument System?
+                  Secure & Backed Messaging Protocol
                 </h2>
                 <p className="lead" style={{ opacity: 0.95 }}>
-                  Secure, efficient, and user-friendly document management
+                  Our communication systems use a secure, blockchain-backed messaging protocol that ensures 
+                  every message is encrypted, authenticated, and permanently recorded.
                 </p>
               </div>
             </div>
 
             <div className="row g-4">
+              <div className="col-md-6">
+                <div className="d-flex align-items-start">
+                  <div className="me-4">
+                    <div style={{
+                      background: 'rgba(255, 255, 255, 0.2)',
+                      borderRadius: '12px',
+                      width: '56px',
+                      height: '56px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}>
+                      <ChatBubbleLeftRightIcon style={{ width: '28px', height: '28px', color: 'white' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <h5 className="fw-bold mb-3">End-to-End Encryption</h5>
+                    <p style={{ opacity: 0.9 }}>
+                      All messages are encrypted end-to-end, ensuring that only the intended recipients can 
+                      read the content. Even our systems cannot decrypt messages without proper authorization.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="col-md-6">
                 <div className="d-flex align-items-start">
                   <div className="me-4">
@@ -354,60 +362,10 @@ export default function EDocumentSystem() {
                     </div>
                   </div>
                   <div>
-                    <h5 className="fw-bold mb-3">Bank-Level Security</h5>
+                    <h5 className="fw-bold mb-3">Blockchain-Backed Storage</h5>
                     <p style={{ opacity: 0.9 }}>
-                      All documents are encrypted with military-grade security. Your sensitive information 
-                      is protected with the same technology used by major financial institutions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="d-flex align-items-start">
-                  <div className="me-4">
-                    <div style={{
-                      background: 'rgba(255, 255, 255, 0.2)',
-                      borderRadius: '12px',
-                      width: '56px',
-                      height: '56px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
-                    }}>
-                      <LockClosedIcon style={{ width: '28px', height: '28px', color: 'white' }} />
-                    </div>
-                  </div>
-                  <div>
-                    <h5 className="fw-bold mb-3">Legally Binding</h5>
-                    <p style={{ opacity: 0.9 }}>
-                      All digital signatures are legally binding and recognized by courts. 
-                      Your documents have the same legal standing as paper documents.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="d-flex align-items-start">
-                  <div className="me-4">
-                    <div style={{
-                      background: 'rgba(255, 255, 255, 0.2)',
-                      borderRadius: '12px',
-                      width: '56px',
-                      height: '56px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
-                    }}>
-                      <CloudArrowUpIcon style={{ width: '28px', height: '28px', color: 'white' }} />
-                    </div>
-                  </div>
-                  <div>
-                    <h5 className="fw-bold mb-3">Cloud Storage</h5>
-                    <p style={{ opacity: 0.9 }}>
-                      Access your documents from anywhere with cloud storage. Never lose a document again 
-                      with automatic backups and version control.
+                      Every message is stored on the blockchain, creating an immutable record that cannot be 
+                      altered or deleted. This provides permanent proof of all communications.
                     </p>
                   </div>
                 </div>
@@ -429,10 +387,35 @@ export default function EDocumentSystem() {
                     </div>
                   </div>
                   <div>
-                    <h5 className="fw-bold mb-3">Automated Workflows</h5>
+                    <h5 className="fw-bold mb-3">Message Authentication</h5>
                     <p style={{ opacity: 0.9 }}>
-                      Streamline your document processes with automated workflows. 
-                      Get reminders for renewals and important deadlines.
+                      Each message includes cryptographic signatures that verify the sender's identity and 
+                      ensure message integrity. This prevents tampering and provides legal proof of communication.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="d-flex align-items-start">
+                  <div className="me-4">
+                    <div style={{
+                      background: 'rgba(255, 255, 255, 0.2)',
+                      borderRadius: '12px',
+                      width: '56px',
+                      height: '56px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}>
+                      <LockClosedIcon style={{ width: '28px', height: '28px', color: 'white' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <h5 className="fw-bold mb-3">Legal Admissibility</h5>
+                    <p style={{ opacity: 0.9 }}>
+                      All messages are stored in a format that meets legal standards for evidence. The 
+                      blockchain verification and cryptographic signatures ensure messages are admissible in court.
                     </p>
                   </div>
                 </div>
@@ -441,8 +424,216 @@ export default function EDocumentSystem() {
           </div>
         </section>
 
+        {/* Edge Compute & Smart Contracts Section */}
+        <section className="py-5 bg-light">
+          <div className="container">
+            <div className="row mb-5">
+              <div className="col-lg-8 mx-auto text-center">
+                <h2 className="display-5 fw-bold mb-3" style={{ 
+                  color: '#14432A',
+                  fontFamily: "'Playfair Display', serif"
+                }}>
+                  Edge Compute Systems & Smart Contracts
+                </h2>
+                <p className="lead text-muted">
+                  Our communication systems interact with edge compute systems and smart contracts to enforce 
+                  a secure platform for roommates, partners, and cohabitants.
+                </p>
+              </div>
+            </div>
+
+            <div className="row g-4">
+              <div className="col-md-6">
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <div className="mb-3">
+                      <CogIcon style={{ width: '48px', height: '48px', color: '#14432A' }} />
+                    </div>
+                    <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Edge Compute Integration</h4>
+                    <p className="text-muted">
+                      Our communication systems leverage edge compute infrastructure to process and verify 
+                      communications in real-time. This ensures low latency, high security, and immediate 
+                      verification of all interactions.
+                    </p>
+                    <ul className="list-unstyled mt-3">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Real-time communication processing
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Low-latency verification
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Distributed security enforcement
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Scalable infrastructure
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <div className="mb-3">
+                      <DocumentCheckIcon style={{ width: '48px', height: '48px', color: '#14432A' }} />
+                    </div>
+                    <h4 className="fw-bold mb-3" style={{ color: '#14432A' }}>Smart Contract Enforcement</h4>
+                    <p className="text-muted">
+                      Smart contracts automatically enforce agreements between roommates, partners, and cohabitants. 
+                      These contracts execute automatically based on predefined conditions, ensuring compliance and 
+                      providing transparent dispute resolution.
+                    </p>
+                    <ul className="list-unstyled mt-3">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Automated agreement enforcement
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Transparent contract execution
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Immutable contract records
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Dispute resolution automation
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="row mt-5">
+              <div className="col-lg-10 mx-auto">
+                <div className="alert mb-0 p-4" style={{ 
+                  backgroundColor: '#14432A15', 
+                  border: 'none',
+                  borderRadius: '16px'
+                }}>
+                  <div className="d-flex align-items-start">
+                    <ShieldCheckIcon style={{ width: '32px', height: '32px', color: '#14432A', flexShrink: 0 }} />
+                    <div className="ms-3">
+                      <h5 className="fw-bold mb-2" style={{ color: '#14432A' }}>
+                        Complete Security Platform
+                      </h5>
+                      <p className="mb-0 text-muted">
+                        Our eDocument system creates a comprehensive security platform for roommates, partners, 
+                        and cohabitants. By integrating edge compute systems and smart contracts, we ensure that 
+                        every communication, agreement, and interaction is verified, encrypted, and legally 
+                        enforceable. This provides complete protection and peace of mind for all parties involved.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-5">
+          <div className="container">
+            <div className="row mb-5">
+              <div className="col-lg-8 mx-auto text-center">
+                <h2 className="display-5 fw-bold mb-3" style={{ 
+                  color: '#14432A',
+                  fontFamily: "'Playfair Display', serif"
+                }}>
+                  Why Choose Our eDocument System?
+                </h2>
+                <p className="lead text-muted">
+                  Secure, legally binding, and court-admissible documentation for all your agreements
+                </p>
+              </div>
+            </div>
+
+            <div className="row g-4">
+              <div className="col-md-4">
+                <div className="text-center">
+                  <div className="mb-4">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '50%',
+                      width: '80px',
+                      height: '80px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto'
+                    }}>
+                      <span className="fw-bold" style={{ color: '#14432A', fontSize: '2rem' }}>1</span>
+                    </div>
+                  </div>
+                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Legally Binding</h5>
+                  <p className="text-muted">
+                    All documents are legally binding and admissible in court. Digital signatures have the 
+                    same legal standing as physical signatures.
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-md-4">
+                <div className="text-center">
+                  <div className="mb-4">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '50%',
+                      width: '80px',
+                      height: '80px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto'
+                    }}>
+                      <span className="fw-bold" style={{ color: '#14432A', fontSize: '2rem' }}>2</span>
+                    </div>
+                  </div>
+                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Verified Communications</h5>
+                  <p className="text-muted">
+                    Every video call and telephone conversation is verified and stored as legally admissible 
+                    evidence. All communications are cryptographically secured.
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-md-4">
+                <div className="text-center">
+                  <div className="mb-4">
+                    <div style={{
+                      background: 'rgba(20, 67, 42, 0.1)',
+                      borderRadius: '50%',
+                      width: '80px',
+                      height: '80px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto'
+                    }}>
+                      <span className="fw-bold" style={{ color: '#14432A', fontSize: '2rem' }}>3</span>
+                    </div>
+                  </div>
+                  <h5 className="fw-bold mb-3" style={{ color: '#14432A' }}>Smart Contract Enforcement</h5>
+                  <p className="text-muted">
+                    Agreements are automatically enforced through smart contracts integrated with edge compute 
+                    systems, ensuring compliance and security.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-5 bg-white">
+        <section className="py-5 bg-light">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 mx-auto">
@@ -452,11 +643,11 @@ export default function EDocumentSystem() {
                 }}>
                   <div className="card-body p-5 text-center">
                     <h3 className="fw-bold mb-3" style={{ color: '#14432A' }}>
-                      Ready to Streamline Your Document Management?
+                      Ready to Secure Your Agreements?
                     </h3>
                     <p className="lead mb-4" style={{ color: '#495057' }}>
-                      Join thousands of users who are already managing their real estate and roommate 
-                      documents more efficiently with our eDocument system.
+                      Start using our legally binding eDocument system with verified communications and 
+                      smart contract enforcement today.
                     </p>
                     <div className="d-flex gap-3 justify-content-center flex-wrap">
                       <Link 
@@ -468,7 +659,7 @@ export default function EDocumentSystem() {
                           borderColor: '#14432A'
                         }}
                       >
-                        Get Started
+                        Access Documents
                       </Link>
                       <Link 
                         href="/contact" 
@@ -494,4 +685,3 @@ export default function EDocumentSystem() {
     </>
   )
 }
-
