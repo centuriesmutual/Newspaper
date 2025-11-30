@@ -121,28 +121,6 @@ export default function Hero() {
                   Spaces
                 </Link>
                 <Link 
-                  href="/contact" 
-                  className="btn btn-sm text-white"
-                  style={{ 
-                    fontSize: '0.7rem',
-                    padding: '0.25rem 0.5rem',
-                    border: '1px solid rgba(255,255,255,0.3)',
-                    borderRadius: '4px',
-                    background: 'rgba(255,255,255,0.1)',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.background = 'rgba(255,255,255,0.2)';
-                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.background = 'rgba(255,255,255,0.1)';
-                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
-                  }}
-                >
-                  Contact Us
-                </Link>
-                <Link 
                   href="/newspaper" 
                   className="btn btn-sm text-white"
                   style={{ 
@@ -163,6 +141,28 @@ export default function Hero() {
                   }}
                 >
                   Newspaper
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="btn btn-sm text-white"
+                  style={{ 
+                    fontSize: '0.7rem',
+                    padding: '0.25rem 0.5rem',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '4px',
+                    background: 'rgba(255,255,255,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.2)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.1)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                  }}
+                >
+                  Contact Us
                 </Link>
               </motion.div>
               
