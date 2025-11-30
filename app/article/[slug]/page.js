@@ -251,7 +251,7 @@ export default function ArticlePage({ params }) {
           <div className="text-center">
             <h1>Article Not Found</h1>
             <p>The article you're looking for doesn't exist.</p>
-            <Link href="https://newspaper.centuriesmutual.com" className="btn btn-primary">Back to Newspaper</Link>
+            <Link href="/newspaper" className="btn btn-primary">Back to Newspaper</Link>
           </div>
         </div>
       </main>
@@ -284,7 +284,7 @@ export default function ArticlePage({ params }) {
       }}>
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            <Link href="https://newspaper.centuriesmutual.com" className="text-decoration-none">
+            <Link href="/newspaper" className="text-decoration-none">
               <h1 style={{ 
                 fontFamily: "'Times New Roman', serif",
                 fontSize: '2rem',
@@ -295,7 +295,7 @@ export default function ArticlePage({ params }) {
                 Centuries Mutual Times
               </h1>
             </Link>
-            <Link href="https://newspaper.centuriesmutual.com" className="btn btn-outline-dark btn-sm">
+            <Link href="/newspaper" className="btn btn-outline-dark btn-sm">
               Back to Newspaper
             </Link>
           </div>
