@@ -511,9 +511,12 @@ export default function Newspaper() {
             </div>
 
           </div>
+        </div>
 
-          {/* Box.com Articles Section */}
-          <div className="col-lg-12 mb-5">
+        {/* Columns and Sidebar Row - Side by Side */}
+        <div className="row justify-content-center mt-4">
+          {/* Columns Section */}
+          <div className="col-lg-8 mb-5">
             <div className="border-top pt-4">
               <h3 className="fw-bold mb-2 text-center" style={{ 
                 fontFamily: "'Times New Roman', serif",
@@ -527,7 +530,7 @@ export default function Newspaper() {
           </div>
 
           {/* Right Sidebar */}
-          <div className="col-lg-4">
+          <div className="col-lg-4 mb-5">
             <div className="ps-lg-4">
               {/* Featured Articles */}
               <div className="mb-4">

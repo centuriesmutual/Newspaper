@@ -37,7 +37,7 @@ export default function Login() {
       
       // Small delay for better UX
       setTimeout(() => {
-        router.push('/dashboard')
+        window.location.href = 'https://block.centuriesmutual.com'
       }, 500)
     } catch (error) {
       console.error('Login error:', error)

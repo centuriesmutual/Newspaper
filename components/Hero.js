@@ -138,7 +138,7 @@ export default function Hero() {
                   Spaces
                 </motion.a>
                 <motion.a 
-                  href="/newspaper" 
+                  href="https://newspaper.centuriesmutual.com" 
                   className="btn btn-sm text-white"
                   style={{ 
                     fontSize: '0.7rem',

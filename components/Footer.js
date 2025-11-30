@@ -115,7 +115,7 @@ export default function Footer() {
             <h5 className="mb-3">Company</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/newspaper" className="text-white text-decoration-none">Newspaper</Link>
+                <Link href="https://newspaper.centuriesmutual.com" className="text-white text-decoration-none">Newspaper</Link>
               </li>
               <li className="mb-2">
                 <Link href="/contact" className="text-white text-decoration-none">Help Desk</Link>

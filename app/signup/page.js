@@ -30,8 +30,8 @@ export default function Signup() {
     setIsSubmitting(true)
     
     try {
-      // Redirect to Auth0 signup with email/password connection and return to dashboard
-      window.location.href = `/api/auth/login?screen_hint=signup&connection=Username-Password-Authentication&login_hint=${encodeURIComponent(formData.email)}&returnTo=/dashboard`
+      // Redirect to Auth0 signup with email/password connection and return to block subdomain
+      window.location.href = `/api/auth/login?screen_hint=signup&connection=Username-Password-Authentication&login_hint=${encodeURIComponent(formData.email)}&returnTo=https://block.centuriesmutual.com`
     } catch (error) {
       console.error('Signup error:', error)
       setIsSubmitting(false)
