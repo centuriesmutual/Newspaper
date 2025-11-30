@@ -85,10 +85,129 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
+                style={{ marginBottom: '1rem', position: 'relative', zIndex: 5 }}
               >
                 <Link href="/rentalequity" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Learn More</Link>
                 <Link href="/downloads" className="btn btn-light btn-lg">Download App</Link>
+              </motion.div>
+              
+              <motion.div 
+                className="d-flex gap-1 justify-content-center justify-content-lg-start flex-wrap px-3 px-sm-0"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
+              >
+                <Link 
+                  href="/tenants" 
+                  className="btn btn-sm text-white"
+                  style={{ 
+                    fontSize: '0.7rem',
+                    padding: '0.25rem 0.5rem',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '4px',
+                    background: 'rgba(255,255,255,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.2)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.1)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                  }}
+                >
+                  Tenants
+                </Link>
+                <Link 
+                  href="/rooms" 
+                  className="btn btn-sm text-white"
+                  style={{ 
+                    fontSize: '0.7rem',
+                    padding: '0.25rem 0.5rem',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '4px',
+                    background: 'rgba(255,255,255,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.2)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.1)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                  }}
+                >
+                  Spaces
+                </Link>
+                <Link 
+                  href="/landlords" 
+                  className="btn btn-sm text-white"
+                  style={{ 
+                    fontSize: '0.7rem',
+                    padding: '0.25rem 0.5rem',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '4px',
+                    background: 'rgba(255,255,255,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.2)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.1)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                  }}
+                >
+                  Landlords
+                </Link>
+                <Link 
+                  href="/newspaper" 
+                  className="btn btn-sm text-white"
+                  style={{ 
+                    fontSize: '0.7rem',
+                    padding: '0.25rem 0.5rem',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '4px',
+                    background: 'rgba(255,255,255,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.2)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.1)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                  }}
+                >
+                  Newspaper
+                </Link>
+                <Link 
+                  href="/shop" 
+                  className="btn btn-sm text-white"
+                  style={{ 
+                    fontSize: '0.7rem',
+                    padding: '0.25rem 0.5rem',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '4px',
+                    background: 'rgba(255,255,255,0.1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.2)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.1)';
+                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                  }}
+                >
+                  Shop
+                </Link>
               </motion.div>
               
               <motion.p 
