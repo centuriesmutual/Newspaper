@@ -331,10 +331,13 @@ export default function LandLords() {
                 <h2 className="display-5 fw-bold mb-4" style={{ color: '#222222' }}>
                   Comprehensive Property Management
                 </h2>
+                <p className="lead text-muted mb-5">
+                  Everything you need to manage your properties efficiently, from tenant screening to financial reporting, all in one integrated platform.
+                </p>
               </div>
             </motion.div>
             <motion.div 
-              className="row g-4"
+              className="row g-4 mb-5"
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
@@ -345,9 +348,23 @@ export default function LandLords() {
                   <div className="card-body p-4">
                     <ShieldCheckIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
                     <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Verified Tenants</h4>
-                    <p className="text-muted">
+                    <p className="text-muted mb-3">
                       Access our in-house trust score system to find reliable tenants with verified backgrounds and payment history.
                     </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Background checks & credit verification
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Trust score evaluation
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Rental history verification
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -356,9 +373,23 @@ export default function LandLords() {
                   <div className="card-body p-4">
                     <CreditCardIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
                     <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Secure Payments</h4>
-                    <p className="text-muted">
+                    <p className="text-muted mb-3">
                       Receive rent payments instantly through our blockchain-powered payment system with Coinbase Wallet integration.
                     </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Automated rent collection
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Instant payment notifications
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Multiple payment methods
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -367,9 +398,23 @@ export default function LandLords() {
                   <div className="card-body p-4">
                     <DocumentTextIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
                     <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Document Management</h4>
-                    <p className="text-muted">
+                    <p className="text-muted mb-3">
                       Manage all your leases, contracts, and property documents in one secure platform.
                     </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Legally binding eDocuments
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Digital signature support
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Cloud storage & backup
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -378,9 +423,23 @@ export default function LandLords() {
                   <div className="card-body p-4">
                     <CalendarIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
                     <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Lease Management</h4>
-                    <p className="text-muted">
+                    <p className="text-muted mb-3">
                       Track lease terms, renewals, and important dates with automated reminders.
                     </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Automated renewal reminders
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Lease term tracking
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Important date notifications
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -389,9 +448,23 @@ export default function LandLords() {
                   <div className="card-body p-4">
                     <ChatBubbleLeftRightIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
                     <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Tenant Communication</h4>
-                    <p className="text-muted">
+                    <p className="text-muted mb-3">
                       Secure messaging platform for all tenant communications and support.
                     </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        In-app messaging system
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Maintenance request tracking
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Document sharing
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -400,12 +473,140 @@ export default function LandLords() {
                   <div className="card-body p-4">
                     <ChartBarIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
                     <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Analytics & Reports</h4>
-                    <p className="text-muted">
+                    <p className="text-muted mb-3">
                       Track income, expenses, and property performance with detailed analytics.
                     </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Income & expense tracking
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Performance dashboards
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Tax-ready reports
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
+            </motion.div>
+
+            {/* Additional Property Management Features */}
+            <motion.div 
+              className="row g-4 mt-4"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <motion.div className="col-md-6 col-lg-4" variants={cardAnimation}>
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <KeyIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
+                    <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Maintenance Management</h4>
+                    <p className="text-muted mb-3">
+                      Streamline maintenance requests and track work orders from submission to completion.
+                    </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Request tracking system
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Vendor management
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Cost tracking & budgeting
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div className="col-md-6 col-lg-4" variants={cardAnimation}>
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <HomeIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
+                    <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Property Inspections</h4>
+                    <p className="text-muted mb-3">
+                      Schedule and document property inspections with photo uploads and detailed reports.
+                    </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Inspection scheduling
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Photo documentation
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Condition reports
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div className="col-md-6 col-lg-4" variants={cardAnimation}>
+                <div className="card border-0 shadow-sm h-100" style={{ borderRadius: '16px' }}>
+                  <div className="card-body p-4">
+                    <UserGroupIcon style={{ width: '48px', height: '48px', color: '#14432A', marginBottom: '20px' }} />
+                    <h4 className="fw-bold mb-3" style={{ color: '#222222' }}>Tenant Portal</h4>
+                    <p className="text-muted mb-3">
+                      Provide tenants with their own portal to pay rent, submit requests, and access documents.
+                    </p>
+                    <ul className="list-unstyled small text-muted">
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Self-service portal
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Payment history access
+                      </li>
+                      <li className="mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2"></i>
+                        Document downloads
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Benefits Summary */}
+            <motion.div className="row mt-5" {...sectionAnimation}>
+              <div className="col-lg-10 mx-auto">
+                <div className="card border-0 shadow-sm" style={{ 
+                  borderRadius: '16px',
+                  background: 'linear-gradient(135deg, rgba(20, 67, 42, 0.05) 0%, rgba(20, 67, 42, 0.1) 100%)'
+                }}>
+                  <div className="card-body p-5">
+                    <div className="row align-items-center">
+                      <div className="col-md-8">
+                        <h3 className="fw-bold mb-3" style={{ color: '#222222' }}>
+                          Complete Property Management Solution
+                        </h3>
+                        <p className="text-muted mb-0">
+                          Our comprehensive platform handles every aspect of property management, from initial listing to ongoing maintenance. 
+                          Save time, reduce costs, and maximize your property's potential with our integrated tools and services.
+                        </p>
+                      </div>
+                      <div className="col-md-4 text-center text-md-end">
+                        <Link href="/contact" className="btn btn-primary btn-lg px-4 py-3">
+                          Get Started
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>

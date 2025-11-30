@@ -8,6 +8,14 @@ import { HomeIcon, CreditCardIcon, ShieldCheckIcon, ChartBarIcon, CheckCircleIco
 export default function RentalEquity() {
   return (
     <>
+      <style jsx global>{`
+        footer .row:first-child {
+          display: none !important;
+        }
+        footer .border-top {
+          border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+      `}</style>
       <Navbar />
       <main>
 
