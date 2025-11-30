@@ -206,7 +206,7 @@ export default function Login() {
       {/* Footer */}
       <footer className="py-2 py-md-3 text-center">
         <p className="text-muted small mb-0">
-          © 2025 Centuries Mutual. All rights reserved.
+          © 2026 Centuries Mutual. All rights reserved.
         </p>
       </footer>
     </div>

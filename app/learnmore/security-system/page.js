@@ -40,7 +40,7 @@ export default function SecuritySystemLearnMore() {
                   lineHeight: '1.8',
                   opacity: 0.95
                 }}>
-                  Complete home security solution integrating cameras, network devices, and smart sensors. Powered by Lumen Technologies and Texas Instruments for comprehensive home protection.
+                  Complete home security solution integrating cameras, network devices, and smart sensors. Enterprise-grade security for comprehensive home protection.
                 </p>
               </div>
             </div>
@@ -209,16 +209,6 @@ export default function SecuritySystemLearnMore() {
                     <h3 className="fw-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                       Powered by Industry Leaders
                     </h3>
-                    <div className="d-flex gap-4 justify-content-center flex-wrap">
-                      <div>
-                        <h5 className="fw-bold mb-2">Lumen Technologies</h5>
-                        <p className="mb-0" style={{ opacity: 0.9 }}>Enterprise-grade security infrastructure</p>
-                      </div>
-                      <div>
-                        <h5 className="fw-bold mb-2">Texas Instruments</h5>
-                        <p className="mb-0" style={{ opacity: 0.9 }}>Advanced sensor and processing technology</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

@@ -18,9 +18,14 @@ export default function CTA() {
             </p>
           </motion.div>
           <motion.div className="col-lg-4 text-center text-lg-center mt-4 mt-lg-0" {...slideInRight}>
-            <Link href="/about" className="btn btn-light btn-lg px-4">
+            <motion.a 
+              href="/about" 
+              className="btn btn-light btn-lg px-4"
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.1 }}
+            >
               Learn More About Us
-            </Link>
+            </motion.a>
           </motion.div>
         </div>
       </div>

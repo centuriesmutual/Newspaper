@@ -20,7 +20,7 @@ export default function Shop() {
       id: 1,
       category: 'Security Cameras',
       title: '4K Ultra HD Security Camera System',
-      description: 'Custom-built security cameras with 4K Ultra HD quality, night vision, motion detection, and cloud storage. Powered by Lumen Technologies and Texas Instruments.',
+      description: 'Custom-built security cameras with 4K Ultra HD quality, night vision, motion detection, and cloud storage.',
       features: [
         '4K Ultra HD Video Quality',
         '24/7 Live Monitoring',
@@ -92,7 +92,7 @@ export default function Shop() {
                   lineHeight: '1.8',
                   opacity: 0.95
                 }}>
-                  Custom-built network products powered by Lumen Technologies and Texas Instruments. 
+                  Custom-built network products. 
                   Secure your home with our advanced security cameras, network devices, and smart home systems.
                 </p>
               </div>
@@ -186,22 +186,6 @@ export default function Shop() {
                           <div className="mb-3">
                             <small className="text-muted d-block mb-2">Powered by</small>
                             <div className="d-flex gap-2 flex-wrap">
-                              <span className="badge" style={{ 
-                                background: 'rgba(20, 67, 42, 0.1)',
-                                color: '#14432A',
-                                padding: '6px 12px',
-                                fontSize: '0.8rem'
-                              }}>
-                                Lumen Technologies
-                              </span>
-                              <span className="badge" style={{ 
-                                background: 'rgba(20, 67, 42, 0.1)',
-                                color: '#14432A',
-                                padding: '6px 12px',
-                                fontSize: '0.8rem'
-                              }}>
-                                Texas Instruments
-                              </span>
                             </div>
                           </div>
                           <button 

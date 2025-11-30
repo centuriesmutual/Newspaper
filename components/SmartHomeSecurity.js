@@ -50,7 +50,7 @@ export default function SmartHomeSecurity() {
                 margin: '0 auto'
               }}>
                 Complete home security solution integrating cameras, network devices, and smart sensors. 
-                Powered by Lumen Technologies and Texas Instruments for comprehensive home protection.
+                Enterprise-grade security for comprehensive home protection.
               </p>
             </motion.div>
           </div>
@@ -322,22 +322,6 @@ export default function SmartHomeSecurity() {
                 >
                   <small className="text-muted d-block mb-2">Powered by</small>
                   <div className="d-flex gap-3 align-items-center">
-                    <span className="badge" style={{ 
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      color: '#14432A',
-                      padding: '8px 16px',
-                      fontSize: '0.9rem'
-                    }}>
-                      Lumen Technologies
-                    </span>
-                    <span className="badge" style={{ 
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      color: '#14432A',
-                      padding: '8px 16px',
-                      fontSize: '0.9rem'
-                    }}>
-                      Texas Instruments
-                    </span>
                   </div>
                 </motion.div>
               </motion.div>

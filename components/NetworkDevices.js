@@ -43,7 +43,7 @@ export default function NetworkDevices() {
                 maxWidth: '800px',
                 margin: '0 auto'
               }}>
-                Build a secure, high-performance home network with our custom network devices powered by Lumen Technologies and Texas Instruments. 
+                Build a secure, high-performance home network with our custom network devices. 
                 Enterprise-grade networking solutions for your home.
               </p>
             </motion.div>
@@ -252,24 +252,6 @@ export default function NetworkDevices() {
                 
                 <div className="mb-3">
                   <small className="text-muted d-block mb-2">Powered by</small>
-                  <div className="d-flex gap-3 align-items-center">
-                    <span className="badge" style={{ 
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      color: '#14432A',
-                      padding: '8px 16px',
-                      fontSize: '0.9rem'
-                    }}>
-                      Lumen Technologies
-                    </span>
-                    <span className="badge" style={{ 
-                      background: 'rgba(20, 67, 42, 0.1)',
-                      color: '#14432A',
-                      padding: '8px 16px',
-                      fontSize: '0.9rem'
-                    }}>
-                      Texas Instruments
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>

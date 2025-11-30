@@ -87,8 +87,23 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 style={{ marginBottom: '1rem', position: 'relative', zIndex: 5 }}
               >
-                <Link href="/rentalequity" className="btn btn-outline-light btn-lg" style={{ position: 'relative', zIndex: 10 }}>Learn More</Link>
-                <Link href="/downloads" className="btn btn-light btn-lg">Download App</Link>
+                <motion.a 
+                  href="/rentalequity" 
+                  className="btn btn-outline-light btn-lg" 
+                  style={{ position: 'relative', zIndex: 10 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  Learn More
+                </motion.a>
+                <motion.a 
+                  href="/downloads" 
+                  className="btn btn-light btn-lg"
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  Download App
+                </motion.a>
               </motion.div>
               
               <motion.div 
@@ -98,7 +113,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.7 }}
                 style={{ marginBottom: '2rem', position: 'relative', zIndex: 5 }}
               >
-                <Link 
+                <motion.a 
                   href="/rooms" 
                   className="btn btn-sm text-white"
                   style={{ 
@@ -117,10 +132,12 @@ export default function Hero() {
                     e.target.style.background = 'rgba(255,255,255,0.1)';
                     e.target.style.borderColor = 'rgba(255,255,255,0.3)';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Spaces
-                </Link>
-                <Link 
+                </motion.a>
+                <motion.a 
                   href="/newspaper" 
                   className="btn btn-sm text-white"
                   style={{ 
@@ -139,10 +156,12 @@ export default function Hero() {
                     e.target.style.background = 'rgba(255,255,255,0.1)';
                     e.target.style.borderColor = 'rgba(255,255,255,0.3)';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Newspaper
-                </Link>
-                <Link 
+                </motion.a>
+                <motion.a 
                   href="/contact" 
                   className="btn btn-sm text-white"
                   style={{ 
@@ -161,9 +180,11 @@ export default function Hero() {
                     e.target.style.background = 'rgba(255,255,255,0.1)';
                     e.target.style.borderColor = 'rgba(255,255,255,0.3)';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Contact Us
-                </Link>
+                </motion.a>
               </motion.div>
               
               <motion.p 

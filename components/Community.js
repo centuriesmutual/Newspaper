@@ -156,7 +156,7 @@ export default function Community() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <button 
+                <motion.button
                   onClick={() => {
                     setModalType('signup')
                     setIsModalOpen(true)
@@ -180,10 +180,12 @@ export default function Community() {
                     e.target.style.transform = 'translateY(0)';
                     e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Find Roommates
-                </button>
-                <Link 
+                </motion.button>
+                <motion.a 
                   href="/trustscore" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
@@ -202,9 +204,11 @@ export default function Community() {
                   onMouseLeave={(e) => {
                     e.target.style.background = 'transparent';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   More Information
-                </Link>
+                </motion.a>
               </motion.div>
             </div>
           </motion.div>

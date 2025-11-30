@@ -229,55 +229,6 @@ export default function Endorsements() {
             </div>
           </div>
 
-          {/* Lumen Technologies */}
-          <div className="col-6 col-md-4 col-lg-2">
-            <div 
-              className="endorsement-card"
-              style={{
-                background: 'white',
-                borderRadius: '16px',
-                padding: '24px 20px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer',
-                border: '1px solid rgba(0,0,0,0.05)',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '120px'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)'
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(0, 120, 212, 0.2)'
-                e.currentTarget.style.borderColor = 'rgba(0, 120, 212, 0.3)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)'
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)'
-                e.currentTarget.style.borderColor = 'rgba(0,0,0,0.05)'
-              }}
-            >
-              <div style={{ marginBottom: '12px' }}>
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L2 7L7 12L12 7L22 12L17 7L12 2Z" fill="#0078D4"/>
-                  <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#0078D4"/>
-                </svg>
-              </div>
-              <span style={{
-                color: '#0078D4',
-                fontSize: '0.9rem',
-                fontWeight: '700',
-                fontFamily: 'system-ui, -apple-system, sans-serif',
-                letterSpacing: '-0.3px',
-                textAlign: 'center',
-                lineHeight: '1.2'
-              }}>
-                Lumen Technologies
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

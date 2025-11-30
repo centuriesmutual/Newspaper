@@ -795,7 +795,7 @@ export default function Newspaper() {
               fontSize: '0.9rem',
               fontFamily: "'Times New Roman', serif"
             }}>
-              © 2025 Centuries Mutual. All rights reserved.
+              © 2026 Centuries Mutual. All rights reserved.
             </p>
           </div>
         </div>

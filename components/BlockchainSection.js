@@ -59,6 +59,8 @@ export default function BlockchainSection() {
                       transform: 'translateY(-5px)',
                       boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
                     }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
                   >
                   <div className="mb-3 d-flex justify-content-center">
                       <UserGroupIcon style={{ 
@@ -102,6 +104,8 @@ export default function BlockchainSection() {
                       transform: 'translateY(-5px)',
                       boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
                     }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
                   >
                   <div className="mb-3 d-flex justify-content-center">
                       <CubeIcon style={{ 
@@ -145,6 +149,8 @@ export default function BlockchainSection() {
                       transform: 'translateY(-5px)',
                       boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
                     }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
                   >
                   <div className="mb-3 d-flex justify-content-center">
                       <DocumentCheckIcon style={{ 

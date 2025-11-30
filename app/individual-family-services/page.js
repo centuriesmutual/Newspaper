@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { UserGroupIcon, HeartIcon, ShieldCheckIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline'
 
 export default function IndividualFamilyServices() {
@@ -37,12 +38,22 @@ export default function IndividualFamilyServices() {
                   Get the protection you need with personalized health insurance plans and access to professional counseling services as an added value benefit with Centuries Mutual.
                 </p>
                 <div className="d-flex gap-3 flex-wrap">
-                  <Link href="/enrollment" className="btn btn-light btn-lg px-5 py-3">
-                    Get Started
-                  </Link>
-                  <Link href="/contact" className="btn btn-outline-light btn-lg px-5 py-3">
-                    Learn More
-                  </Link>
+                  <motion.a 
+                    href="/enrollment" 
+                    className="btn btn-light btn-lg px-5 py-3"
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
+                  >
+                    Start Enrollment
+                  </motion.a>
+                  <motion.a 
+                    href="/contact" 
+                    className="btn btn-outline-light btn-lg px-5 py-3"
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
+                  >
+                    Contact Us
+                  </motion.a>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -320,12 +331,22 @@ export default function IndividualFamilyServices() {
                   Get comprehensive health insurance coverage and access to professional counseling services today.
                 </p>
                 <div className="d-flex gap-3 justify-content-center">
-                  <Link href="/enrollment" className="btn btn-primary btn-lg px-5 py-3">
+                  <motion.a 
+                    href="/enrollment" 
+                    className="btn btn-primary btn-lg px-5 py-3"
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
+                  >
                     Enroll Now
-                  </Link>
-                  <Link href="/contact" className="btn btn-outline-primary btn-lg px-5 py-3">
+                  </motion.a>
+                  <motion.a 
+                    href="/contact" 
+                    className="btn btn-outline-primary btn-lg px-5 py-3"
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.1 }}
+                  >
                     Contact Us
-                  </Link>
+                  </motion.a>
                 </div>
               </div>
             </div>

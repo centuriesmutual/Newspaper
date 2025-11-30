@@ -127,7 +127,7 @@ export default function RealEstate() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <Link 
+                <motion.a 
                   href="/rooms" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
@@ -148,10 +148,12 @@ export default function RealEstate() {
                     e.target.style.transform = 'translateY(0)';
                     e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Browse Rooms
-                </Link>
-                <Link 
+                </motion.a>
+                <motion.a 
                   href="/child-care" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
@@ -170,9 +172,11 @@ export default function RealEstate() {
                   onMouseLeave={(e) => {
                     e.target.style.background = 'transparent';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Child Care
-                </Link>
+                </motion.a>
               </motion.div>
             </div>
           </motion.div>
@@ -222,12 +226,15 @@ export default function RealEstate() {
                     <option>1 Bedroom</option>
                   </select>
                 </div>
-                <button 
+                <motion.a 
+                  href="/rooms"
                   className="btn btn-warning btn-lg w-100 fw-bold"
-                  style={{ borderRadius: '10px' }}
+                  style={{ borderRadius: '10px', textDecoration: 'none' }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Search Available Rooms
-                </button>
+                </motion.a>
               </div>
             </div>
           </motion.div>

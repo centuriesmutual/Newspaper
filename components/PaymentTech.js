@@ -106,12 +106,14 @@ export default function PaymentTech() {
                   </div>
                 </div>
                 
-                <button 
+                <motion.button 
                   className="btn btn-warning btn-lg w-100 fw-bold"
                   style={{ borderRadius: '12px' }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   View All Documents
-                </button>
+                </motion.button>
               </div>
             </div>
           </motion.div>
@@ -209,7 +211,7 @@ export default function PaymentTech() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <Link 
+                <motion.a 
                   href="/edocuments-audit-tracking" 
                   className="btn btn-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
@@ -230,10 +232,12 @@ export default function PaymentTech() {
                     e.target.style.transform = 'translateY(0)';
                     e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Access Documents
-                </Link>
-                <Link 
+                </motion.a>
+                <motion.a 
                   href="/edocument-system" 
                   className="btn btn-outline-primary btn-lg px-4 py-3 fw-bold"
                   style={{ 
@@ -252,9 +256,11 @@ export default function PaymentTech() {
                   onMouseLeave={(e) => {
                     e.target.style.background = 'transparent';
                   }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
                 >
                   Learn More
-                </Link>
+                </motion.a>
               </motion.div>
               </div>
             </div>

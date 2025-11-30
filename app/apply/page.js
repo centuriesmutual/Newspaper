@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import SignatureCanvas from 'react-signature-canvas'
 
 export default function Apply() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,8 @@ export default function Apply() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState('')
+  const signaturePadRef = useRef(null)
+  const [signatureData, setSignatureData] = useState(null)
 
   const positions = [
     'Financial Broker',
@@ -38,31 +41,89 @@ export default function Apply() {
     }))
   }
 
+  const handleClearSignature = () => {
+    if (signaturePadRef.current) {
+      signaturePadRef.current.clear()
+      setSignatureData(null)
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        position: '',
-        experience: '',
-        education: '',
-        coverLetter: '',
-        resume: null,
-        portfolio: '',
-        availability: '',
-        salary: '',
-        references: ''
+
+    try {
+      // Get signature if available
+      let signature = null
+      if (signaturePadRef.current && !signaturePadRef.current.isEmpty()) {
+        signature = signaturePadRef.current.toDataURL('image/png')
+        setSignatureData(signature)
+      }
+
+      // Create FormData for submission
+      const submitFormData = new FormData()
+      submitFormData.append('firstName', formData.firstName)
+      submitFormData.append('lastName', formData.lastName)
+      submitFormData.append('email', formData.email)
+      submitFormData.append('phone', formData.phone)
+      submitFormData.append('position', formData.position)
+      submitFormData.append('experience', formData.experience)
+      submitFormData.append('education', formData.education)
+      submitFormData.append('coverLetter', formData.coverLetter)
+      submitFormData.append('portfolio', formData.portfolio || '')
+      submitFormData.append('availability', formData.availability)
+      submitFormData.append('salary', formData.salary || '')
+      submitFormData.append('references', formData.references || '')
+      
+      if (signature) {
+        submitFormData.append('signature', signature)
+      }
+      
+      if (formData.resume) {
+        submitFormData.append('resume', formData.resume)
+      }
+
+      // Submit to API
+      const response = await fetch('/api/apply', {
+        method: 'POST',
+        body: submitFormData
       })
-    }, 2000)
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus('success')
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          position: '',
+          experience: '',
+          education: '',
+          coverLetter: '',
+          resume: null,
+          portfolio: '',
+          availability: '',
+          salary: '',
+          references: ''
+        })
+        if (signaturePadRef.current) {
+          signaturePadRef.current.clear()
+        }
+        setSignatureData(null)
+      } else {
+        setSubmitStatus('error')
+        alert(result.error || 'Failed to submit application. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error submitting application:', error)
+      setSubmitStatus('error')
+      alert('An error occurred while submitting your application. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -312,12 +373,56 @@ export default function Apply() {
                       </div>
                     </div>
 
+                    {/* E-Signature Section */}
+                    <div className="mb-5">
+                      <h4 className="mb-4" style={{ color: '#14432A' }}>E-Signature *</h4>
+                      <p className="text-muted small mb-3">
+                        Please sign below to confirm that all information provided is accurate and complete.
+                      </p>
+                      <div className="border rounded p-3 mb-3" style={{ backgroundColor: '#fff', minHeight: '200px' }}>
+                        <SignatureCanvas
+                          ref={signaturePadRef}
+                          canvasProps={{
+                            width: 600,
+                            height: 200,
+                            className: 'signature-canvas w-100'
+                          }}
+                          backgroundColor="#ffffff"
+                          penColor="#000000"
+                          onEnd={() => {
+                            if (signaturePadRef.current && !signaturePadRef.current.isEmpty()) {
+                              setSignatureData(signaturePadRef.current.toDataURL('image/png'))
+                            }
+                          }}
+                        />
+                      </div>
+                      <div className="d-flex gap-2">
+                        <button
+                          type="button"
+                          className="btn btn-outline-secondary btn-sm"
+                          onClick={handleClearSignature}
+                        >
+                          Clear Signature
+                        </button>
+                        {signatureData && (
+                          <span className="text-success small d-flex align-items-center">
+                            <i className="bi bi-check-circle me-2"></i>Signature captured
+                          </span>
+                        )}
+                      </div>
+                      {!signatureData && (
+                        <div className="text-danger small mt-2">
+                          * Signature is required to submit your application
+                        </div>
+                      )}
+                    </div>
+
                     {/* Submit Button */}
                     <div className="d-flex gap-3 justify-content-center">
                       <button
                         type="submit"
                         className="btn btn-primary btn-lg"
-                        disabled={isSubmitting}
+                        disabled={isSubmitting || !signatureData}
                       >
                         {isSubmitting ? (
                           <>
@@ -334,6 +439,11 @@ export default function Apply() {
                         Cancel
                       </Link>
                     </div>
+                    {!signatureData && (
+                      <div className="text-center mt-3">
+                        <small className="text-muted">Please provide your signature above to enable submission</small>
+                      </div>
+                    )}
                   </form>
                 )}
               </div>
