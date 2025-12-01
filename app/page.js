@@ -59,8 +59,7 @@ export default function Home() {
             <div className="col-12">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-flex align-items-center gap-3">
-                  <Link href="/" className="btn btn-link text-white p-0" style={{ fontSize: '0.8rem', textDecoration: 'none' }}>HOME</Link>
-                  <button className="btn btn-link text-white p-0" style={{ fontSize: '0.8rem', textDecoration: 'none' }}>LOG IN</button>
+                  <Link href="https://centuriesmutual.com" className="btn btn-link text-white p-0" style={{ fontSize: '0.8rem', textDecoration: 'none' }}>HOME</Link>
                 </div>
                 <div className="d-flex align-items-center">
                   <button className="btn btn-link text-white p-0" style={{ fontSize: '1rem', opacity: '1', color: '#ffffff' }}>
